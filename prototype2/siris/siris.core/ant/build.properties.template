@@ -1,0 +1,33 @@
+#Path to the Simulater1 home directory
+#Path to the project home
+#This variable is NOT used in the bulid.xml
+#and only for shortening this file 
+project.name=siris.core
+project.home=${env.HOME}
+siris.home=${project.home}/prototype2/siris
+
+#Project description
+siris.projectdescription=SIRIS Simulator One - Dozer
+
+#Path to the Simulater src and libs
+siris.src=${siris.home}/${project.name}/src
+siris.libs=${siris.home}/lib
+
+#Directory where the class files are stored
+siris.build=${siris.home}/out/production
+
+#Path to scala
+scala.home=${project.home}/scala/current
+
+#Classname that is passed to scala when a "run" target is executed
+siris.propfile.classname=siris.svaractor.Main
+
+#The command line argument for scala to define the java.library.path
+#This is necessary if native libraries are required for the runs
+siris.jvmdefs.nativelibs=-Djava.library.path=lib/jogl2.0/:lib/vrpn/native
+
+#The path from which the jvm is called if a "run" target is invoked
+siris.jvmdefs.runpath=${siris.home}
+
+#additional build parameters:
+scala.compiler.options=-P:continuations:enable

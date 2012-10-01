@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Scala">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../scala/current/lib/scala-library.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../scala/current/src/scala-library-src.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../scala/current/lib" recursive="false" />
+  </library>
+</component>

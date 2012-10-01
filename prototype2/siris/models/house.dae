@@ -1,0 +1,1935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Chris</author>
+      <authoring_tool>OpenCOLLADA2011 x64</authoring_tool>
+      <comments>
+			ColladaMaya export options: 
+			bakeTransforms=0;relativePaths=0;copyTextures=0;exportTriangles=0;exportCgfxFileReferences=1;
+			isSampling=0;curveConstrainSampling=0;removeStaticCurves=1;exportPolygonMeshes=1;exportLights=1;
+			exportCameras=1;exportJointsAndSkin=1;exportAnimations=1;exportInvisibleNodes=0;exportDefaultCameras=0;
+			exportTexCoords=1;exportNormals=1;exportNormalsPerVertex=1;exportVertexColors=1;exportVertexColorsPerVertex=1;
+			exportTexTangents=0;exportTangents=0;exportReferencedMaterials=0;exportMaterialsOnly=0;
+			exportXRefs=1;dereferenceXRefs=1;exportCameraAsLookat=0;cameraXFov=0;cameraYFov=1;doublePrecision=0
+		</comments>
+      <source_data>file:///Users/Chris/Documents/maya/projects/default/untitled</source_data>
+    </contributor>
+    <created>2012-06-14T13:39:25</created>
+    <modified>2012-06-14T13:39:25</modified>
+    <unit name="centimeter" meter="0.01"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+    <material id="ID6" name="material">
+      <instance_effect url="#ID5"/>
+    </material>
+    <material id="ID13" name="Roofing_Shingles_GAF_Estates_">
+      <instance_effect url="#ID14"/>
+    </material>
+    <material id="ID26" name="Cladding_Stucco_White_">
+      <instance_effect url="#ID27"/>
+    </material>
+    <material id="ID55" name="Brick_Colored_Blue_">
+      <instance_effect url="#ID56"/>
+    </material>
+    <material id="ID76" name="Blinds_Wood_White_">
+      <instance_effect url="#ID77"/>
+    </material>
+    <material id="ID89" name="Blinds_Vertical_Pattern_">
+      <instance_effect url="#ID90"/>
+    </material>
+    <material id="ID98" name="Wood_OSB_">
+      <instance_effect url="#ID99"/>
+    </material>
+    <material id="ID147" name="Translucent_Glass_Block_Dark_">
+      <instance_effect url="#ID148"/>
+    </material>
+    <material id="ID160" name="Brick_Pavers_Herringbone_">
+      <instance_effect url="#ID161"/>
+    </material>
+    <material id="ID173" name="__Brick_Pavers_Herringbone_1">
+      <instance_effect url="#ID174"/>
+    </material>
+    <material id="ID186" name="Translucent_Glass_Corrugated_">
+      <instance_effect url="#ID187"/>
+    </material>
+    <material id="ID207" name="edge_color000255">
+      <instance_effect url="#ID208"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="ID90">
+      <profile_COMMON>
+        <newparam sid="ID91-surface">
+          <surface type="2D">
+            <init_from>ID91</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID91-sampler">
+          <sampler2D>
+            <source>ID91-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID91-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID77">
+      <profile_COMMON>
+        <newparam sid="ID78-surface">
+          <surface type="2D">
+            <init_from>ID78</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID78-sampler">
+          <sampler2D>
+            <source>ID78-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID78-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID56">
+      <profile_COMMON>
+        <newparam sid="ID57-surface">
+          <surface type="2D">
+            <init_from>ID57</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID57-sampler">
+          <sampler2D>
+            <source>ID57-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID57-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID161">
+      <profile_COMMON>
+        <newparam sid="ID162-surface">
+          <surface type="2D">
+            <init_from>ID162</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID162-sampler">
+          <sampler2D>
+            <source>ID162-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID162-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID27">
+      <profile_COMMON>
+        <newparam sid="ID28-surface">
+          <surface type="2D">
+            <init_from>ID28</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID28-sampler">
+          <sampler2D>
+            <source>ID28-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID28-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID14">
+      <profile_COMMON>
+        <newparam sid="ID15-surface">
+          <surface type="2D">
+            <init_from>ID15</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID15-sampler">
+          <sampler2D>
+            <source>ID15-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID15-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID148">
+      <profile_COMMON>
+        <newparam sid="ID149-surface">
+          <surface type="2D">
+            <init_from>ID149</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID149-sampler">
+          <sampler2D>
+            <source>ID149-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID149-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0.2 0.2 0.2 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID187">
+      <profile_COMMON>
+        <newparam sid="ID188-surface">
+          <surface type="2D">
+            <init_from>ID188</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID188-sampler">
+          <sampler2D>
+            <source>ID188-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID188-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0.2 0.2 0.2 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID99">
+      <profile_COMMON>
+        <newparam sid="ID100-surface">
+          <surface type="2D">
+            <init_from>ID100</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID100-sampler">
+          <sampler2D>
+            <source>ID100-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID100-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID174">
+      <profile_COMMON>
+        <newparam sid="ID175-surface">
+          <surface type="2D">
+            <init_from>ID175</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="ID175-sampler">
+          <sampler2D>
+            <source>ID175-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="ID175-sampler" texcoord="TEX0">
+                <extra>
+                  <technique profile="OpenCOLLADAMaya">
+                    <blend_mode>NONE</blend_mode>
+                    <coverageU>1</coverageU>
+                    <coverageV>1</coverageV>
+                    <fast>0</fast>
+                    <mirrorU>0</mirrorU>
+                    <mirrorV>0</mirrorV>
+                    <noiseU>0</noiseU>
+                    <noiseV>0</noiseV>
+                    <offsetU>0</offsetU>
+                    <offsetV>0</offsetV>
+                    <repeatU>1</repeatU>
+                    <repeatV>1</repeatV>
+                    <rotateFrame>0</rotateFrame>
+                    <rotateUV>0</rotateUV>
+                    <stagger>0</stagger>
+                    <translateFrameU>0</translateFrameU>
+                    <translateFrameV>0</translateFrameV>
+                    <wrapU>1</wrapU>
+                    <wrapV>1</wrapV>
+                  </technique>
+                </extra>
+              </texture>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID208">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0 0 0 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="lambert1-fx">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.4 0.4 0.4 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="ID5">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <color>1 1 1 1</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images>
+    <image id="ID91" name="ID91">
+      <init_from>house/Blinds_Vertical_Pattern_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID91</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID78" name="ID78">
+      <init_from>house/Blinds_Wood_White_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID78</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID57" name="ID57">
+      <init_from>house/Brick_Colored_Blue_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID57</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID162" name="ID162">
+      <init_from>house/Brick_Pavers_Herringbone_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID162</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID28" name="ID28">
+      <init_from>house/Cladding_Stucco_White_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID28</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID15" name="ID15">
+      <init_from>house/Roofing_Shingles_GAF_Estates_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID15</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID149" name="ID149">
+      <init_from>house/Translucent_Glass_Block_Dark_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID149</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID188" name="ID188">
+      <init_from>house/Translucent_Glass_Corrugated_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID188</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID100" name="ID100">
+      <init_from>house/Wood_OSB_.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID100</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+    <image id="ID175" name="ID175">
+      <init_from>house/__Brick_Pavers_Herringbone_1.jpg</init_from>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <dgnode_type>kFile</dgnode_type>
+          <image_sequence>0</image_sequence>
+          <originalMayaNodeId>ID175</originalMayaNodeId>
+        </technique>
+      </extra>
+    </image>
+  </library_images>
+  <library_geometries>
+    <geometry id="ID4" name="ID4">
+      <mesh>
+        <source id="ID4-positions" name="ID4-positions">
+          <float_array id="ID4-positions-array" count="216">259.6779 260 54.87734 246.9198 260 0 259.6779 260 0 246.9198 260 54.87734 259.6779 260 0 259.6779 26.7833 0 259.6779 260 54.87734 259.6779 266 160 259.6779 26.7833 160 259.6779 266 79.87733 259.6779 279 54.87734 259.6779 279 79.87733 259.6779 260 54.87734 246.9198 279 54.87734 246.9198 260 54.87734 259.6779 279 54.87734 246.9198 279 54.87734 246.9198 266 79.87733 246.9198 260 54.87734 246.9198 279 79.87733 246.9198 260 0 246.9198 39.7833 160 246.9198 39.7833 0 246.9198 266 160 259.6779 279 0 246.9198 260 0 246.9198 279 0 259.6779 260 0 0 279 0 6.677861 39.7833 0 0 0 0 63.24246 39.7833 0 122.3116 39.7833 0 246.9198 39.7833 0 270.4907 279 0 259.6779 26.7833 0 407 279 0 346.4907 272 0 346.4907 279 0 6.677861 26.7833 0 407 0 0 270.4907 272 0 259.6779 266 160 246.9198 39.7833 160 246.9198 266 160 6.677861 26.7833 160 6.677861 39.7833 160 259.6779 26.7833 160 259.6779 266 160 246.9198 266 79.87733 259.6779 266 79.87733 246.9198 266 160 259.6779 279 79.87733 246.9198 266 79.87733 246.9198 279 79.87733 259.6779 266 79.87733 246.9198 39.7833 0 223.246 39.7833 69.20678 122.3116 39.7833 0 246.9198 39.7833 160 223.246 39.7833 107.2068 168.246 39.7833 107.2068 122.3116 39.7833 116.6616 63.24246 39.7833 116.6616 6.677861 39.7833 0 63.24246 39.7833 0 6.677861 39.7833 160 168.246 39.7833 69.20678 6.677861 39.7833 0 6.677861 26.7833 160 6.677861 26.7833 0 6.677861 39.7833 160</float_array>
+          <technique_common>
+            <accessor source="#ID4-positions-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID4-normals" name="ID4-normals">
+          <float_array id="ID4-normals-array" count="504">0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID4-normals-array" count="168" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID4-vertices" name="ID4-vertices">
+          <input semantic="POSITION" source="#ID4-positions"/>
+        </vertices>
+        <triangles material="materialSG" count="56">
+          <input semantic="VERTEX" source="#ID4-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID4-normals" offset="1"/>
+          <p>0 0 1 1 2 2 1 3 0 4 3 5 4 6 5 7 6 8 7 9 5 10 8 11 5 12 7 13 6 14 6 15 7 16 9 17 6 18 9 19 10 20 10 21 9 22 11 23 12 24 13 25 14 26 13 27 12 28 15 29 16 30 17 31 18 32 17 33 16 34 19 35 20 36 21 37 22 38 21 39 20 40 18 41 21 42 18 43 23 44 23 45 18 46 17 47 24 48 25 49 26 50 25 51 24 52 27 53 28 54 29 55 30 56 29 57 28 58 26 59 29 60 26 61 31 62 31 63 26 64 32 65 32 66 26 67 33 68 33 69 26 70 25 71 34 72 27 73 24 74 27 75 34 76 35 77 36 78 37 79 38 80 30 81 39 82 40 83 39 84 30 85 29 86 40 87 39 88 35 89 40 90 35 91 41 92 41 93 35 94 34 95 40 96 41 97 37 98 40 99 37 100 36 101 42 102 43 103 44 104 43 105 45 106 46 107 45 108 43 109 47 110 47 111 43 112 42 113 48 114 49 115 50 116 49 117 48 118 51 119 52 120 53 121 54 122 53 123 52 124 55 125 56 126 57 127 58 128 57 129 56 130 59 131 57 132 59 133 60 134 60 135 59 136 61 137 61 138 59 139 62 140 62 141 59 142 63 143 63 144 64 145 65 146 64 147 63 148 66 149 66 150 63 151 59 152 58 153 67 154 62 155 67 156 58 157 57 158 62 159 67 160 61 161 68 162 69 163 70 164 69 165 68 166 71 167</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID4</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID12" name="ID12">
+      <mesh>
+        <source id="ID12-positions" name="ID12-positions">
+          <float_array id="ID12-positions-array" count="36">407 0 174.4926 0 139.131 246.8427 0 0 174.4926 407 139.131 246.8427 0 139.131 246.8427 94.41214 175.9566 227.7939 0 279 174.4926 407 139.131 246.8427 136.4121 175.9566 227.7939 136.4121 203.491 213.5511 94.41214 203.491 213.5511 407 279 174.4926</float_array>
+          <technique_common>
+            <accessor source="#ID12-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID12-normals" name="ID12-normals">
+          <float_array id="ID12-normals-array" count="90">0 -0.4613627 0.8872115 0 -0.4613627 0.8872115 0 -0.4613627 0.8872115 0 -0.4613627 0.8872115 0 -0.4613627 0.8872115 0 -0.4613627 0.8872115 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073 0 0.4594431 0.8882073</float_array>
+          <technique_common>
+            <accessor source="#ID12-normals-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID12-ID21" name="ID12-ID21">
+          <float_array id="ID12-ID21-array" count="24">7.283464 1.93555 0 5.705899 0 1.93555 7.283464 5.705899 0 -0.244442 -1.689552 -1.241273 0 -4.030544 -7.283464 -0.244442 -2.441162 -1.241273 -2.441162 -1.986599 -1.689552 -1.986599 -7.283464 -4.030544</float_array>
+          <technique_common>
+            <accessor source="#ID12-ID21-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID12-vertices" name="ID12-vertices">
+          <input semantic="POSITION" source="#ID12-positions"/>
+        </vertices>
+        <triangles material="Roofing_Shingles_GAF_Estates_SG" count="10">
+          <input semantic="VERTEX" source="#ID12-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID12-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID12-ID21" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 5 9 5 4 10 4 7 11 7 5 12 5 7 13 7 8 14 8 8 15 8 7 16 7 9 17 9 6 18 6 10 19 10 11 20 11 10 21 10 6 22 6 5 23 5 11 24 11 10 25 10 9 26 9 11 27 11 9 28 9 7 29 7</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID12</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID25" name="ID25">
+      <mesh>
+        <source id="ID25-positions" name="ID25-positions">
+          <float_array id="ID25-positions-array" count="96">94.41214 177.4952 261.8487 94.41214 203.491 213.5511 94.41214 175.9566 227.7939 94.41214 204.3566 261.5259 94.41214 204.4909 213.5331 94.41214 205.3564 261.5079 136.4121 177.4952 261.8487 94.41214 175.9566 227.7939 136.4121 175.9566 227.7939 94.41214 177.4952 261.8487 136.4121 177.4952 261.8487 94.41214 204.3566 261.5259 94.41214 177.4952 261.8487 136.4121 204.3566 261.5259 136.4121 204.3566 261.5259 94.41214 205.3564 261.5079 94.41214 204.3566 261.5259 136.4121 205.3564 261.5079 94.41214 205.3564 261.5079 136.4121 204.4909 213.5331 94.41214 204.4909 213.5331 136.4121 205.3564 261.5079 136.4121 204.4909 213.5331 94.41214 203.491 213.5511 94.41214 204.4909 213.5331 136.4121 203.491 213.5511 136.4121 203.491 213.5511 136.4121 177.4952 261.8487 136.4121 175.9566 227.7939 136.4121 204.3566 261.5259 136.4121 204.4909 213.5331 136.4121 205.3564 261.5079</float_array>
+          <technique_common>
+            <accessor source="#ID25-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID25-normals" name="ID25-normals">
+          <float_array id="ID25-normals-array" count="162">-0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0 -0.9989809 0.04513299 0 -0.9989809 0.04513299 0 -0.9989809 0.04513299 0 -0.9989809 0.04513299 0 -0.9989809 0.04513299 0 -0.9989809 0.04513299 0 0.012013 0.9999277 0 0.012013 0.9999277 0 0.012013 0.9999277 0 0.012013 0.9999277 0 0.012013 0.9999277 0 0.012013 0.9999277 0 0.01803801 0.9998373 0 0.01803801 0.9998373 0 0.01803801 0.9998373 0 0.01803801 0.9998373 0 0.01803801 0.9998373 0 0.01803801 0.9998373 0 0.9998373 -0.01803801 0 0.9998373 -0.01803801 0 0.9998373 -0.01803801 0 0.9998373 -0.01803801 0 0.9998373 -0.01803801 0 0.9998373 -0.01803801 0 -0.01803801 -0.9998373 0 -0.01803801 -0.9998373 0 -0.01803801 -0.9998373 0 -0.01803801 -0.9998373 0 -0.01803801 -0.9998373 0 -0.01803801 -0.9998373 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID25-normals-array" count="54" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID25-ID34" name="ID25-ID34">
+          <float_array id="ID25-ID34-array" count="64">-3.882221 3.818149 -4.45081 3.113898 -3.84857 3.321579 -4.469741 3.813443 -4.472679 3.113636 -4.49161 3.81318 2.983643 3.931068 2.065007 3.433992 2.983643 3.433992 2.065007 3.931068 -2.983643 -2.542094 -2.065007 -2.933802 -2.065007 -2.542094 -2.983643 -2.933802 -2.983643 -2.910555 -2.065007 -2.925137 -2.065007 -2.910555 -2.983643 -2.925137 -2.065007 3.866573 -2.983643 3.166914 -2.065007 3.166914 -2.983643 3.866573 2.983643 -2.925137 2.065007 -2.910555 2.065007 -2.925137 2.983643 -2.910555 4.45081 3.113898 3.882221 3.818149 3.84857 3.321579 4.469741 3.813443 4.472679 3.113636 4.49161 3.81318</float_array>
+          <technique_common>
+            <accessor source="#ID25-ID34-array" count="32" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID25-vertices" name="ID25-vertices">
+          <input semantic="POSITION" source="#ID25-positions"/>
+        </vertices>
+        <triangles material="Cladding_Stucco_White_SG" count="18">
+          <input semantic="VERTEX" source="#ID25-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID25-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID25-ID34" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 1 6 1 3 7 3 4 8 4 4 9 4 3 10 3 5 11 5 6 12 6 7 13 7 8 14 8 7 15 7 6 16 6 9 17 9 10 18 10 11 19 11 12 20 12 11 21 11 10 22 10 13 23 13 14 24 14 15 25 15 16 26 16 15 27 15 14 28 14 17 29 17 18 30 18 19 31 19 20 32 20 19 33 19 18 34 18 21 35 21 22 36 22 23 37 23 24 38 24 23 39 23 22 40 22 25 41 25 26 42 26 27 43 27 28 44 28 27 45 27 26 46 26 29 47 29 29 48 29 26 49 26 30 50 30 29 51 29 30 52 30 31 53 31</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID25</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID38" name="ID38">
+      <mesh>
+        <source id="ID38-positions" name="ID38-positions">
+          <float_array id="ID38-positions-array" count="60">270.4907 272 0 303.5967 272 61.24738 346.4907 272 0 270.4907 272 122.9706 303.5967 272 67.24738 309.5967 272 67.24738 309.5967 272 61.24738 346.4907 272 122.9706 270.4907 279 0 270.4907 272 122.9706 270.4907 272 0 270.4907 279 122.9706 346.4907 279 122.9706 270.4907 272 122.9706 270.4907 279 122.9706 346.4907 272 122.9706 346.4907 279 122.9706 346.4907 272 0 346.4907 272 122.9706 346.4907 279 0</float_array>
+          <technique_common>
+            <accessor source="#ID38-positions-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID38-normals" name="ID38-normals">
+          <float_array id="ID38-normals-array" count="126">0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID38-normals-array" count="42" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID38-ID42" name="ID38-ID42">
+          <float_array id="ID38-ID42-array" count="40">-5.916245 0 -6.640347 0.893079 -7.578537 0 -5.916245 1.793097 -6.640347 0.980568 -6.771581 0.980568 -6.771581 0.893079 -7.578537 1.793097 6.102362 0 5.949256 1.793097 5.949256 0 6.102362 1.793097 -7.578537 4.068241 -5.916245 3.966171 -5.916245 4.068241 -7.578537 3.966171 -6.102362 1.793097 -5.949256 0 -5.949256 1.793097 -6.102362 0</float_array>
+          <technique_common>
+            <accessor source="#ID38-ID42-array" count="20" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID38-vertices" name="ID38-vertices">
+          <input semantic="POSITION" source="#ID38-positions"/>
+        </vertices>
+        <triangles material="Cladding_Stucco_White_SG" count="14">
+          <input semantic="VERTEX" source="#ID38-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID38-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID38-ID42" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 1 6 1 3 7 3 4 8 4 4 9 4 3 10 3 5 11 5 2 12 2 6 13 6 7 14 7 6 15 6 2 16 2 1 17 1 7 18 7 6 19 6 5 20 5 7 21 7 5 22 5 3 23 3 8 24 8 9 25 9 10 26 10 9 27 9 8 28 8 11 29 11 12 30 12 13 31 13 14 32 14 13 33 13 12 34 12 15 35 15 16 36 16 17 37 17 18 38 18 17 39 17 16 40 16 19 41 19</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID38</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID46" name="ID46">
+      <mesh>
+        <source id="ID46-positions" name="ID46-positions">
+          <float_array id="ID46-positions-array" count="48">309.5967 272 67.24738 303.5967 275 67.24738 303.5967 272 67.24738 309.5967 275 67.24738 303.5967 275 67.24738 303.5967 272 61.24738 303.5967 272 67.24738 303.5967 275 61.24738 309.5967 275 61.24738 309.5967 272 67.24738 309.5967 272 61.24738 309.5967 275 67.24738 309.5967 275 61.24738 303.5967 272 61.24738 303.5967 275 61.24738 309.5967 272 61.24738</float_array>
+          <technique_common>
+            <accessor source="#ID46-positions-array" count="16" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID46-normals" name="ID46-normals">
+          <float_array id="ID46-normals-array" count="72">0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999</float_array>
+          <technique_common>
+            <accessor source="#ID46-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID46-ID50" name="ID46-ID50">
+          <float_array id="ID46-ID50-array" count="32">6.771581 3.966171 6.640347 4.009915 6.640347 3.966171 6.771581 4.009915 -6.014873 0.980568 -5.949256 0.893079 -5.949256 0.980568 -6.014873 0.893079 6.014873 0.893079 5.949256 0.980568 5.949256 0.893079 6.014873 0.980568 -6.771581 4.009915 -6.640347 3.966171 -6.640347 4.009915 -6.771581 3.966171</float_array>
+          <technique_common>
+            <accessor source="#ID46-ID50-array" count="16" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID46-vertices" name="ID46-vertices">
+          <input semantic="POSITION" source="#ID46-positions"/>
+        </vertices>
+        <triangles material="Cladding_Stucco_White_SG" count="8">
+          <input semantic="VERTEX" source="#ID46-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID46-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID46-ID50" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 5 9 5 4 10 4 7 11 7 8 12 8 9 13 9 10 14 10 9 15 9 8 16 8 11 17 11 12 18 12 13 19 13 14 20 14 13 21 13 12 22 12 15 23 15</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID46</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID54" name="ID54">
+      <mesh>
+        <source id="ID54-positions" name="ID54-positions">
+          <float_array id="ID54-positions-array" count="84">302.6444 275 62.05115 303.5967 275 61.24738 303.3646 275 61.10201 303.5967 275 67.24738 302.1945 275 63.15434 302.0454 275 64.33639 302.2073 275 65.51675 302.6692 275 66.61498 303.3996 275 67.55624 309.5967 275 67.24738 309.8539 275 67.52122 308.9126 275 68.25163 304.3488 275 68.27639 307.8143 275 68.71353 305.4519 275 68.72635 306.634 275 68.87545 305.4041 275 59.90971 307.7665 275 59.89688 306.5844 275 59.74778 308.8697 275 60.34683 304.3059 275 60.3716 309.8188 275 61.06699 309.5967 275 61.24738 310.5493 275 62.00825 311.0111 275 63.10649 311.173 275 64.28685 311.024 275 65.46889 310.574 275 66.57208</float_array>
+          <technique_common>
+            <accessor source="#ID54-positions-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID54-normals" name="ID54-normals">
+          <float_array id="ID54-normals-array" count="252">0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID54-normals-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID54-ID63" name="ID54-ID63">
+          <float_array id="ID54-ID63-array" count="56">-9.929279 4.071598 -9.960522 4.018857 -9.952906 4.009318 -9.960522 4.412558 -9.914517 4.143985 -9.909626 4.221548 -9.914937 4.298999 -9.930092 4.371062 -9.954056 4.432825 -10.15737 4.412558 -10.16581 4.430526 -10.13493 4.478453 -9.985195 4.480078 -10.0989 4.508761 -10.02139 4.509603 -10.06017 4.519386 -10.01982 3.931083 -10.09733 3.930242 -10.05855 3.920458 -10.13352 3.959766 -9.983788 3.961391 -10.16466 4.00702 -10.15737 4.018857 -10.18862 4.068783 -10.20378 4.140845 -10.20909 4.218297 -10.2042 4.295859 -10.18944 4.368247</float_array>
+          <technique_common>
+            <accessor source="#ID54-ID63-array" count="28" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID54-vertices" name="ID54-vertices">
+          <input semantic="POSITION" source="#ID54-positions"/>
+        </vertices>
+        <triangles material="Brick_Colored_Blue_SG" count="28">
+          <input semantic="VERTEX" source="#ID54-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID54-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID54-ID63" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5 3 12 3 5 13 5 6 14 6 3 15 3 6 16 6 7 17 7 3 18 3 7 19 7 8 20 8 3 21 3 8 22 8 9 23 9 9 24 9 8 25 8 10 26 10 10 27 10 8 28 8 11 29 11 11 30 11 8 31 8 12 32 12 11 33 11 12 34 12 13 35 13 13 36 13 12 37 12 14 38 14 13 39 13 14 40 14 15 41 15 16 42 16 17 43 17 18 44 18 17 45 17 16 46 16 19 47 19 19 48 19 16 49 16 20 50 20 19 51 19 20 52 20 21 53 21 21 54 21 20 55 20 2 56 2 21 57 21 2 58 2 22 59 22 21 60 21 22 61 22 23 62 23 22 63 22 2 64 2 1 65 1 23 66 23 22 67 22 9 68 9 23 69 23 9 70 9 24 71 24 24 72 24 9 73 9 25 74 25 25 75 25 9 76 9 26 77 26 26 78 26 9 79 9 27 80 27 27 81 27 9 82 9 10 83 10</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID54</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID67" name="ID67">
+      <mesh>
+        <source id="ID67-positions" name="ID67-positions">
+          <float_array id="ID67-positions-array" count="12">303.5967 275 67.24738 309.5967 275 61.24738 303.5967 275 61.24738 309.5967 275 67.24738</float_array>
+          <technique_common>
+            <accessor source="#ID67-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID67-normals" name="ID67-normals">
+          <float_array id="ID67-normals-array" count="18">0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID67-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID67-ID71" name="ID67-ID71">
+          <float_array id="ID67-ID71-array" count="8">-9.960522 4.412558 -10.15737 4.018857 -9.960522 4.018857 -10.15737 4.412558</float_array>
+          <technique_common>
+            <accessor source="#ID67-ID71-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID67-vertices" name="ID67-vertices">
+          <input semantic="POSITION" source="#ID67-positions"/>
+        </vertices>
+        <triangles material="Brick_Colored_Blue_SG" count="2">
+          <input semantic="VERTEX" source="#ID67-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID67-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID67-ID71" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID67</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID75" name="ID75">
+      <mesh>
+        <source id="ID75-positions" name="ID75-positions">
+          <float_array id="ID75-positions-array" count="12">262.5705 279 79.87733 262.2575 287 79.87733 262.2575 279 79.87733 262.5705 287 79.87733</float_array>
+          <technique_common>
+            <accessor source="#ID75-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID75-normals" name="ID75-normals">
+          <float_array id="ID75-normals-array" count="18">0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999</float_array>
+          <technique_common>
+            <accessor source="#ID75-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID75-ID84" name="ID75-ID84">
+          <float_array id="ID75-ID84-array" count="8">2.871505 45.9472 2.868083 47.26468 2.868083 45.9472 2.871505 47.26468</float_array>
+          <technique_common>
+            <accessor source="#ID75-ID84-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID75-vertices" name="ID75-vertices">
+          <input semantic="POSITION" source="#ID75-positions"/>
+        </vertices>
+        <triangles material="Blinds_Wood_White_SG" count="2">
+          <input semantic="VERTEX" source="#ID75-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID75-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID75-ID84" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID75</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID88" name="ID88">
+      <mesh>
+        <source id="ID88-positions" name="ID88-positions">
+          <float_array id="ID88-positions-array" count="36">262.5705 282.0839 54.93462 237.5705 279 54.87734 237.5705 282.0839 54.93462 246.9198 279 54.87734 259.6779 279 54.87734 262.5705 279 54.87734 262.5705 279 54.87734 262.5705 282.0839 54.93462 259.6779 279 54.87734 246.9198 279 54.87734 237.5705 279 54.87734 237.5705 282.0839 54.93462</float_array>
+          <technique_common>
+            <accessor source="#ID88-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID88-normals" name="ID88-normals">
+          <float_array id="ID88-normals-array" count="72">0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 0.01856899 -0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276 0 -0.01856899 0.9998276</float_array>
+          <technique_common>
+            <accessor source="#ID88-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID88-ID97" name="ID88-ID97">
+          <float_array id="ID88-ID97-array" count="24">-15.90372 17.14448 -14.38949 16.95766 -14.38949 17.14448 -14.95577 16.95766 -15.72852 16.95766 -15.90372 16.95766 -8.614517 11.14437 -8.614517 11.26715 -8.519615 11.14437 -8.101042 11.14437 -7.794307 11.14437 -7.794307 11.26715</float_array>
+          <technique_common>
+            <accessor source="#ID88-ID97-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID88-vertices" name="ID88-vertices">
+          <input semantic="POSITION" source="#ID88-positions"/>
+        </vertices>
+        <triangles material="Blinds_Vertical_Pattern_SG" count="4">
+          <input semantic="VERTEX" source="#ID88-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID88-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID88-ID97" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 4 9 4 0 10 0 5 11 5</p>
+        </triangles>
+        <triangles material="Wood_OSB_SG" count="4">
+          <input semantic="VERTEX" source="#ID88-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID88-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID88-ID97" offset="2" set="0"/>
+          <p>6 12 6 7 13 7 8 14 8 8 15 8 7 16 7 9 17 9 9 18 9 7 19 7 10 20 10 11 21 11 10 22 10 7 23 7</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID88</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID106" name="ID106">
+      <mesh>
+        <source id="ID106-positions" name="ID106-positions">
+          <float_array id="ID106-positions-array" count="24">262.5705 282.0839 54.93462 262.5705 279 79.87733 262.5705 279 54.87734 262.5705 287 79.87733 262.5705 287 79.87733 262.5705 282.0839 54.93462 262.5705 279 79.87733 262.5705 279 54.87734</float_array>
+          <technique_common>
+            <accessor source="#ID106-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID106-normals" name="ID106-normals">
+          <float_array id="ID106-normals-array" count="36">0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID106-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID106-ID110" name="ID106-ID110">
+          <float_array id="ID106-ID110-array" count="20">17.08564 3.327354 16.89885 4.838119 16.89885 3.323885 17.3834 4.838119 17.3834 4.838119 17.08564 3.327354 16.89885 4.838119 16.89885 3.323885 16.89885 4.838119 17.08564 3.327354</float_array>
+          <technique_common>
+            <accessor source="#ID106-ID110-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID106-vertices" name="ID106-vertices">
+          <input semantic="POSITION" source="#ID106-positions"/>
+        </vertices>
+        <triangles material="Blinds_Vertical_Pattern_SG" count="4">
+          <input semantic="VERTEX" source="#ID106-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID106-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID106-ID110" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 7 9 7 6 10 8 5 11 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID106</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID114" name="ID114">
+      <mesh>
+        <source id="ID114-positions" name="ID114-positions">
+          <float_array id="ID114-positions-array" count="36">237.5705 287 79.87733 262.5705 282.0839 54.93462 237.5705 282.0839 54.93462 262.5705 287 79.87733 238.2209 287 79.87733 262.2575 287 79.87733 262.2575 287 79.87733 238.2209 287 79.87733 262.5705 287 79.87733 237.5705 287 79.87733 262.5705 282.0839 54.93462 237.5705 282.0839 54.93462</float_array>
+          <technique_common>
+            <accessor source="#ID114-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID114-normals" name="ID114-normals">
+          <float_array id="ID114-normals-array" count="72">0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 0.9811245 -0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769 0 -0.9811245 0.1933769</float_array>
+          <technique_common>
+            <accessor source="#ID114-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID114-ID118" name="ID114-ID118">
+          <float_array id="ID114-ID118-array" count="24">-14.38949 8.108352 -15.90372 6.568521 -14.38949 6.568521 -15.90372 8.108352 -14.42889 8.108352 -15.88477 8.108352 -2.868083 22.04624 -2.605216 22.04624 -2.871505 22.04624 -2.598102 22.04624 -2.871505 17.85951 -2.598102 17.85951</float_array>
+          <technique_common>
+            <accessor source="#ID114-ID118-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID114-vertices" name="ID114-vertices">
+          <input semantic="POSITION" source="#ID114-positions"/>
+        </vertices>
+        <triangles material="Blinds_Vertical_Pattern_SG" count="4">
+          <input semantic="VERTEX" source="#ID114-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID114-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID114-ID118" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 3 9 3 4 10 4 5 11 5</p>
+        </triangles>
+        <triangles material="Blinds_Wood_White_SG" count="4">
+          <input semantic="VERTEX" source="#ID114-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID114-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID114-ID118" offset="2" set="0"/>
+          <p>6 12 6 7 13 7 8 14 8 7 15 7 9 16 9 8 17 8 8 18 8 9 19 9 10 20 10 11 21 11 10 22 10 9 23 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID114</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID122" name="ID122">
+      <mesh>
+        <source id="ID122-positions" name="ID122-positions">
+          <float_array id="ID122-positions-array" count="24">237.5705 287 79.87733 237.5705 279 54.87734 237.5705 279 79.87733 237.5705 282.0839 54.93462 237.5705 282.0839 54.93462 237.5705 287 79.87733 237.5705 279 54.87734 237.5705 279 79.87733</float_array>
+          <technique_common>
+            <accessor source="#ID122-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID122-normals" name="ID122-normals">
+          <float_array id="ID122-normals-array" count="36">-0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID122-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID122-ID126" name="ID122-ID126">
+          <float_array id="ID122-ID126-array" count="20">-17.3834 4.838119 -16.89885 3.323885 -16.89885 4.838119 -17.08564 3.327354 -17.08564 3.327354 -17.3834 4.838119 -16.89885 3.323885 -16.89885 4.838119 -16.89885 3.323885 -17.3834 4.838119</float_array>
+          <technique_common>
+            <accessor source="#ID122-ID126-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID122-vertices" name="ID122-vertices">
+          <input semantic="POSITION" source="#ID122-positions"/>
+        </vertices>
+        <triangles material="Blinds_Vertical_Pattern_SG" count="4">
+          <input semantic="VERTEX" source="#ID122-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID122-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID122-ID126" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 7 9 7 6 10 8 5 11 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID122</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID130" name="ID130">
+      <mesh>
+        <source id="ID130-positions" name="ID130-positions">
+          <float_array id="ID130-positions-array" count="30">259.6779 279 79.87733 262.5705 279 54.87734 259.6779 279 54.87734 262.5705 279 79.87733 262.2575 279 79.87733 246.9198 279 54.87734 246.9198 279 79.87733 237.5705 279 79.87733 237.5705 279 54.87734 238.2209 279 79.87733</float_array>
+          <technique_common>
+            <accessor source="#ID130-positions-array" count="10" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID130-normals" name="ID130-normals">
+          <float_array id="ID130-normals-array" count="72">0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID130-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID130-ID134" name="ID130-ID134">
+          <float_array id="ID130-ID134-array" count="20">-15.72852 4.838119 -15.90372 3.323885 -15.72852 3.323885 -15.90372 4.838119 -15.88477 4.838119 -14.95577 3.323885 -14.95577 4.838119 -14.38949 4.838119 -14.38949 3.323885 -14.42889 4.838119</float_array>
+          <technique_common>
+            <accessor source="#ID130-ID134-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID130-vertices" name="ID130-vertices">
+          <input semantic="POSITION" source="#ID130-positions"/>
+        </vertices>
+        <triangles material="Blinds_Vertical_Pattern_SG" count="8">
+          <input semantic="VERTEX" source="#ID130-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID130-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID130-ID134" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 3 6 3 0 7 0 4 8 4 5 9 5 0 10 0 2 11 2 0 12 0 5 13 5 6 14 6 7 15 7 5 16 5 8 17 8 5 18 5 7 19 7 6 20 6 6 21 6 7 22 7 9 23 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID130</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID138" name="ID138">
+      <mesh>
+        <source id="ID138-positions" name="ID138-positions">
+          <float_array id="ID138-positions-array" count="12">238.2209 279 79.87733 237.5705 287 79.87733 237.5705 279 79.87733 238.2209 287 79.87733</float_array>
+          <technique_common>
+            <accessor source="#ID138-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID138-normals" name="ID138-normals">
+          <float_array id="ID138-normals-array" count="18">0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999</float_array>
+          <technique_common>
+            <accessor source="#ID138-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID138-ID142" name="ID138-ID142">
+          <float_array id="ID138-ID142-array" count="8">2.605216 45.9472 2.598102 47.26468 2.598102 45.9472 2.605216 47.26468</float_array>
+          <technique_common>
+            <accessor source="#ID138-ID142-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID138-vertices" name="ID138-vertices">
+          <input semantic="POSITION" source="#ID138-positions"/>
+        </vertices>
+        <triangles material="Blinds_Wood_White_SG" count="2">
+          <input semantic="VERTEX" source="#ID138-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID138-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID138-ID142" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID138</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID146" name="ID146">
+      <mesh>
+        <source id="ID146-positions" name="ID146-positions">
+          <float_array id="ID146-positions-array" count="24">93.67162 0 109.2769 42.67162 0 64.27692 93.67162 0 64.27692 42.67162 0 109.2769 42.67162 0 109.2769 93.67162 0 109.2769 42.67162 0 64.27692 93.67162 0 64.27692</float_array>
+          <technique_common>
+            <accessor source="#ID146-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID146-normals" name="ID146-normals">
+          <float_array id="ID146-normals-array" count="36">0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID146-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID146-ID155" name="ID146-ID155">
+          <float_array id="ID146-ID155-array" count="20">2.04881 2.390134 0.933325 1.405882 2.04881 1.405882 0.933325 2.390134 0.933325 2.390134 2.04881 2.390134 0.933325 1.405882 2.04881 1.405882 0.933325 1.405882 2.04881 2.390134</float_array>
+          <technique_common>
+            <accessor source="#ID146-ID155-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID146-vertices" name="ID146-vertices">
+          <input semantic="POSITION" source="#ID146-positions"/>
+        </vertices>
+        <triangles material="Translucent_Glass_Block_Dark_SG" count="4">
+          <input semantic="VERTEX" source="#ID146-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID146-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID146-ID155" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 7 9 7 6 10 8 5 11 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID146</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID159" name="ID159">
+      <mesh>
+        <source id="ID159-positions" name="ID159-positions">
+          <float_array id="ID159-positions-array" count="66">407 0 0 227.0594 0 63.27691 0 0 0 407 0 174.4926 227.0594 0 109.2769 172.0594 0 109.2769 93.67162 0 109.2769 42.67162 0 109.2769 42.67162 0 64.27692 0 0 174.4926 172.0594 0 63.27691 93.67162 0 64.27692 407 279 0 407 0 174.4926 407 0 0 407 139.131 246.8427 407 279 174.4926 0 139.131 246.8427 0 0 0 0 0 174.4926 0 279 0 0 279 174.4926</float_array>
+          <technique_common>
+            <accessor source="#ID159-positions-array" count="22" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID159-normals" name="ID159-normals">
+          <float_array id="ID159-normals-array" count="180">0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID159-normals-array" count="60" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID159-ID168" name="ID159-ID168">
+          <float_array id="ID159-ID168-array" count="48">13.35302 0 7.449455 2.076014 0 0 13.35302 5.724823 7.449455 3.585201 5.644994 3.585201 3.073216 3.585201 1.399987 3.585201 1.399987 2.108823 0 5.724823 5.644994 2.076014 3.073216 2.108823 9.153543 0 4.564664 8.098514 9.153543 5.724823 -4.564664 8.098514 -9.153543 0 -9.153543 5.724823 0 5.724823 0 0 0 5.724823 0 0 0 5.724823 0 0</float_array>
+          <technique_common>
+            <accessor source="#ID159-ID168-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID159-vertices" name="ID159-vertices">
+          <input semantic="POSITION" source="#ID159-positions"/>
+        </vertices>
+        <triangles material="Brick_Pavers_Herringbone_SG" count="20">
+          <input semantic="VERTEX" source="#ID159-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID159-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID159-ID168" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 1 6 1 3 7 3 4 8 4 4 9 4 3 10 3 5 11 5 5 12 5 3 13 3 6 14 6 6 15 6 3 16 3 7 17 7 2 18 2 8 19 8 9 20 9 8 21 8 2 22 2 10 23 10 10 24 10 2 25 2 1 26 1 8 27 8 10 28 10 11 29 11 9 30 9 8 31 8 7 32 7 9 33 9 7 34 7 3 35 3 5 36 5 11 37 11 10 38 10 11 39 11 5 40 5 6 41 6 12 42 12 13 43 18 14 44 19 13 45 20 12 46 12 15 47 13 15 48 13 12 49 12 16 50 14 17 51 15 18 52 21 19 53 22 18 54 23 17 55 15 20 56 16 20 57 16 17 58 15 21 59 17</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID159</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID172" name="ID172">
+      <mesh>
+        <source id="ID172-positions" name="ID172-positions">
+          <float_array id="ID172-positions-array" count="72">237.5705 279 54.87734 198.7167 279 71.97059 237.5705 279 79.87733 136.7167 279 71.97059 198.7167 279 122.9706 238.2209 279 79.87733 246.9198 279 79.87733 259.6779 279 79.87733 262.2575 279 79.87733 262.5705 279 79.87733 0 279 0 246.9198 279 0 0 279 174.4926 259.6779 279 0 270.4907 279 0 136.7167 279 122.9706 270.4907 279 122.9706 346.4907 279 122.9706 407 279 0 346.4907 279 0 407 279 174.4926 262.5705 279 54.87734 259.6779 279 54.87734 246.9198 279 54.87734</float_array>
+          <technique_common>
+            <accessor source="#ID172-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID172-normals" name="ID172-normals">
+          <float_array id="ID172-normals-array" count="234">0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID172-normals-array" count="78" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID172-ID181" name="ID172-ID181">
+          <float_array id="ID172-ID181-array" count="48">-7.794307 1.800438 -6.519576 2.36124 -7.794307 2.620648 -4.485455 2.36124 -6.519576 4.034468 -7.815648 2.620648 -8.101042 2.620648 -8.519614 2.620648 -8.604248 2.620648 -8.614517 2.620648 0 0 -8.101042 0 0 5.724823 -8.519614 0 -8.874367 0 -4.485455 4.034468 -8.874367 4.034468 -11.3678 4.034468 -13.35302 0 -11.3678 0 -13.35302 5.724823 -8.614517 1.800438 -8.519614 1.800438 -8.101042 1.800438</float_array>
+          <technique_common>
+            <accessor source="#ID172-ID181-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID172-vertices" name="ID172-vertices">
+          <input semantic="POSITION" source="#ID172-positions"/>
+        </vertices>
+        <triangles material="__Brick_Pavers_Herringbone_1SG" count="26">
+          <input semantic="VERTEX" source="#ID172-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID172-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID172-ID181" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 2 6 2 1 7 1 4 8 4 2 9 2 4 10 4 5 11 5 5 12 5 4 13 4 6 14 6 6 15 6 4 16 4 7 17 7 7 18 7 4 19 4 8 20 8 8 21 8 4 22 4 9 23 9 10 24 10 3 25 3 11 26 11 3 27 3 10 28 10 12 29 12 11 30 11 3 31 3 13 32 13 13 33 13 3 34 3 14 35 14 14 36 14 3 37 3 0 38 0 3 39 3 12 40 12 15 41 15 15 42 15 12 43 12 4 44 4 4 45 4 12 46 12 16 47 16 16 48 16 12 49 12 17 50 17 17 51 17 18 52 18 19 53 19 18 54 18 17 55 17 20 56 20 20 57 20 17 58 17 12 59 12 14 60 14 21 61 21 16 62 16 21 63 21 14 64 14 0 65 0 21 66 21 0 67 0 22 68 22 16 69 16 21 70 21 9 71 9 16 72 16 9 73 9 4 74 4 23 75 23 22 76 22 0 77 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID172</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID185" name="ID185">
+      <mesh>
+        <source id="ID185-positions" name="ID185-positions">
+          <float_array id="ID185-positions-array" count="24">198.7167 279 122.9706 136.7167 279 71.97059 198.7167 279 71.97059 136.7167 279 122.9706 136.7167 279 122.9706 198.7167 279 122.9706 136.7167 279 71.97059 198.7167 279 71.97059</float_array>
+          <technique_common>
+            <accessor source="#ID185-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID185-normals" name="ID185-normals">
+          <float_array id="ID185-normals-array" count="36">0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID185-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID185-ID194" name="ID185-ID194">
+          <float_array id="ID185-ID194-array" count="20">6.519576 4.034468 4.485455 2.36124 6.519576 2.36124 4.485455 4.034468 4.485455 4.034468 6.519576 4.034468 4.485455 2.36124 6.519576 2.36124 4.485455 2.36124 6.519576 4.034468</float_array>
+          <technique_common>
+            <accessor source="#ID185-ID194-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID185-vertices" name="ID185-vertices">
+          <input semantic="POSITION" source="#ID185-positions"/>
+        </vertices>
+        <triangles material="Translucent_Glass_Corrugated_SG" count="4">
+          <input semantic="VERTEX" source="#ID185-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID185-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID185-ID194" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 7 9 7 6 10 8 5 11 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID185</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="ID198" name="ID198">
+      <mesh>
+        <source id="ID198-positions" name="ID198-positions">
+          <float_array id="ID198-positions-array" count="24">227.0594 0 109.2769 172.0594 0 63.27691 227.0594 0 63.27691 172.0594 0 109.2769 172.0594 0 109.2769 227.0594 0 109.2769 172.0594 0 63.27691 227.0594 0 63.27691</float_array>
+          <technique_common>
+            <accessor source="#ID198-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID198-normals" name="ID198-normals">
+          <float_array id="ID198-normals-array" count="36">0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0</float_array>
+          <technique_common>
+            <accessor source="#ID198-normals-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="ID198-ID202" name="ID198-ID202">
+          <float_array id="ID198-ID202-array" count="20">4.966303 2.390134 3.763329 1.38401 4.966303 1.38401 3.763329 2.390134 3.763329 2.390134 4.966303 2.390134 3.763329 1.38401 4.966303 1.38401 3.763329 1.38401 4.966303 2.390134</float_array>
+          <technique_common>
+            <accessor source="#ID198-ID202-array" count="10" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="ID198-vertices" name="ID198-vertices">
+          <input semantic="POSITION" source="#ID198-positions"/>
+        </vertices>
+        <triangles material="Translucent_Glass_Block_Dark_SG" count="4">
+          <input semantic="VERTEX" source="#ID198-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#ID198-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#ID198-ID202" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 1 3 1 0 4 0 3 5 3 4 6 4 5 7 5 6 8 6 7 9 7 6 10 8 5 11 9</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADAMaya">
+          <originalMayaNodeId>ID198</originalMayaNodeId>
+          <double_sided>1</double_sided>
+        </technique>
+      </extra>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="untitled">
+      <node id="SketchUp" name="SketchUp" type="NODE">
+        <translate sid="translate">0 0 0</translate>
+        <rotate sid="rotateZ">0 0 1 0</rotate>
+        <rotate sid="rotateY">0 1 0 0</rotate>
+        <rotate sid="rotateX">1 0 0 0</rotate>
+        <scale sid="scale">1 1 1</scale>
+        <node id="ID2" name="instance_0" type="NODE">
+          <translate sid="translate">-209.9891 -129 0</translate>
+          <scale sid="scale">1 1 1</scale>
+          <node id="ID3" name="house" type="NODE">
+            <translate sid="translate">0 0 0</translate>
+            <scale sid="scale">1 1 1</scale>
+            <instance_geometry url="#ID4">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="materialSG" target="#ID6"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID12">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Roofing_Shingles_GAF_Estates_SG" target="#ID13">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID25">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Cladding_Stucco_White_SG" target="#ID26">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID38">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Cladding_Stucco_White_SG" target="#ID26">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID46">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Cladding_Stucco_White_SG" target="#ID26">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID54">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Brick_Colored_Blue_SG" target="#ID55">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID67">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Brick_Colored_Blue_SG" target="#ID55">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID75">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Wood_White_SG" target="#ID76">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID88">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Vertical_Pattern_SG" target="#ID89">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="Wood_OSB_SG" target="#ID98">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID106">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Vertical_Pattern_SG" target="#ID89">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID114">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Vertical_Pattern_SG" target="#ID89">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                  <instance_material symbol="Blinds_Wood_White_SG" target="#ID76">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID122">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Vertical_Pattern_SG" target="#ID89">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID130">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Vertical_Pattern_SG" target="#ID89">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID138">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Blinds_Wood_White_SG" target="#ID76">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID146">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Translucent_Glass_Block_Dark_SG" target="#ID147">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID159">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Brick_Pavers_Herringbone_SG" target="#ID160">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID172">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="__Brick_Pavers_Herringbone_1SG" target="#ID173">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID185">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Translucent_Glass_Corrugated_SG" target="#ID186">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <instance_geometry url="#ID198">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="Translucent_Glass_Block_Dark_SG" target="#ID147">
+                    <bind_vertex_input semantic="TEX0" input_semantic="TEXCOORD" input_set="0"/>
+                  </instance_material>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADAMaya">
+                <originalMayaNodeId>house</originalMayaNodeId>
+              </technique>
+            </extra>
+          </node>
+          <extra>
+            <technique profile="OpenCOLLADAMaya">
+              <originalMayaNodeId>instance_0</originalMayaNodeId>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADAMaya">
+            <originalMayaNodeId>SketchUp</originalMayaNodeId>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>

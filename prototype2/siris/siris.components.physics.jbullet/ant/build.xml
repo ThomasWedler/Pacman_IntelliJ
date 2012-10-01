@@ -1,0 +1,168 @@
+
+<project name="${project.name}" default="usage-info">
+    <property environment="env"/>
+	
+    <property file="build.properties"/>
+	
+    <description>${siris.projectdescription}</description>	
+	
+    <target name="usage-info" description="Prints out a usage help">
+	
+        <echo level="info" message="Usage: ant &lt;target&gt; [-Dsiris.ide.classname=CLASSNAME]"/>
+        <echo level="info" message="target can be one of the following values:"/>
+        <echo level="info" message=""/>
+        <echo level="info" message="         build-fsc - builds the project using fsc"/>
+        <echo level="info" message="      build-scalac - builds the project using scalac"/>
+        <echo level="info" message="             clean - clears all class files"/>
+        <echo level="info" message="               run - runs the project using the classname specified in the build.properties file"/>
+        <echo level="info" message=""/>
+        <echo level="info" message="   build-clean-fsc - clears all class files and then builds the project using fsc"/>
+        <echo level="info" message="build-clean-scalac - clears all class files and then builds the project using scalac"/>
+        <echo level="info" message=" build-and-run-fsc - builds the project using fsc and then runs it"/>
+        <echo level="info" message=" build-and-run-fsc - builds the project using scalac and then runs it"/>
+        <echo level="info" message=""/>
+        <echo level="info" message="If a CLASSNAME is passed all run targets use this classname insted of the one"/>
+        <echo level="info" message="define in the build.properties file."/>
+		
+    </target>
+
+    <target name="init">
+	  
+		<!-- Declare paths -->
+        <path id="scala.compilerlibs">
+            <pathelement location="${scala.home}/lib/scala-compiler.jar"/>
+            <pathelement location="${scala.home}/lib/scala-library.jar"/>
+        </path>
+
+        <path id="scala.alllibs">
+            <fileset dir="${scala.home}/lib">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+
+        <path id="siris.libs.path">
+            <fileset dir="${siris.libs}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </path>
+		
+		<!-- Init Scalas antlib.xml -->
+        <taskdef resource="scala/tools/ant/antlib.xml">
+            <classpath>
+                <path refid="scala.compilerlibs"/>
+            </classpath>	
+        </taskdef>
+		
+		<!-- Set the classname to the one defined in the ide if available-->
+        <condition property="siris.classname" value="${siris.ide.classname}" else="${siris.propfile.classname}">
+            <or>
+                <isset property="siris.ide.classname"/>
+            </or>
+        </condition>
+
+    </target>
+        
+    <target name="fsc shutdown" description="shuts the fsc process down" depends="init"> 
+        <exec executable="${scala.home}/bin/fsc">
+            <arg line="-shutdown -verbose" />            
+        </exec>
+    </target>
+
+    <target name="build-fsc" description="builds the project using fsc" depends="init">
+                
+        <path id="siris.intern.libs">
+            <path refid="scala.alllibs"/>
+            <path refid="siris.libs.path"/>
+            <pathelement location="${siris.build}"/>
+        </path>
+            
+        <path id="siris.intern.src">
+            <fileset dir="${siris.src}">
+                <include name="**/*.scala"/>
+                <include name="**/*.java"/>
+            </fileset>
+        </path>
+
+        <pathconvert pathsep=" " property="siris.intern.src.converted" refid="siris.intern.src"/>
+            
+        <echo level="info" message="Running fsc with compiler options ${scala.compiler.options}"/>
+        <echo level="info" message="Output directory is ${siris.build}"/>
+            
+            <!-- Create the build directory if it does not exsist -->
+        <mkdir dir="${siris.build}" />
+            
+        <tstamp> 
+            <format property="touch.time.start" pattern="HH:mm:ss" unit="hour"/>
+        </tstamp>
+        <echo level="info" message="Starting build at ${touch.time.start}"/>
+            
+        <exec executable="${scala.home}/bin/fsc">
+            <arg line="${scala.compiler.options} -classpath ${toString:siris.intern.libs} -d ${siris.build} -make:transitive -dependencyfile ${build.dir}/.scala_dependencies ${siris.intern.src.converted}" />            
+        </exec>	
+            
+        <tstamp>
+            <format property="touch.time.end" pattern="HH:mm:ss" unit="hour"/>
+        </tstamp>
+        <echo level="info" message="Build ended at ${touch.time.end}"/>
+            
+    </target>	
+	
+    <target name="build-scalac" depends="init" description="builds the project using scalac">
+	
+		<!-- Print the time -->
+        <tstamp>
+            <format property="touch.time.begin" pattern="HH:mm:ss"
+         unit="hour"/>
+        </tstamp>
+        <echo level="info" message="Starting build at ${touch.time.begin}"/>
+        <echo level="info" message="Compiler options are: ${scala.compiler.options}"/>
+		
+		<!-- Create the build directory if it does not exsist -->
+        <mkdir dir="${siris.build}" />
+
+        <scalac srcdir="${siris.src}" destdir="${siris.build}" addparams="${scala.compiler.options}">
+            <classpath>
+                <path refid="scala.alllibs"/>
+                <path refid="siris.libs.path"/>
+                <pathelement location="${siris.build}"/>
+            </classpath>
+        </scalac>
+		
+		<!-- Print the time -->
+        <tstamp>
+            <format property="touch.time.end" pattern="HH:mm:ss" unit="hour"/>
+        </tstamp>
+        <echo level="info" message="Build ended at ${touch.time.end}"/>
+
+    </target>
+
+    <target name="clean" description="clears all class files">
+		<!-- Delete the ${siris.build} directory trees -->
+        <delete dir="${siris.build}"/>
+    </target>
+	
+    <target name="run" depends="init" description="runs the project using the classname specified in the build.properties file">
+		
+        <echo level="info" message="Running ${siris.classname}"/>
+		
+        <java classname="${siris.classname}" fork="true" dir="${siris.jvmdefs.runpath}">
+            <classpath>
+                <path refid="scala.alllibs"/>
+                <path refid="siris.libs.path"/>
+                <pathelement location="${siris.build}"/>
+            </classpath>
+            <jvmarg value="-Xms1g"/>
+            <jvmarg value="-Xmx2048m"/>
+            <jvmarg value="${siris.jvmdefs.nativelibs}"/>
+        </java>
+	
+    </target>
+	
+    <target name="build-clean-fsc" depends="clean,build-fsc" description="clears all class files and then builds the project using fsc"/>
+    <target name="build-clean-scalac" depends="clean,build-fsc" description="clears all class files and then builds the project using scalac"/>
+
+    <target name="build-and-run-fsc" depends="build-fsc, run" description="builds the project using fsc and then runs it"/>
+    <target name="build-and-run-scalac" depends="build-scalac, run" description="builds the project using scalac and then runs it"/>
+	
+</project>
+

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Jcal3d">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jcal3d/jcal3d.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

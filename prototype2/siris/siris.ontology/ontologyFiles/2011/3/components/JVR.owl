@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/components/JVR.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/components/JVR.owl"
+     versionIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/components/JVR-2.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/opt/local/etc/sirisOntology/core/SirisCore.owl</Import>
+    <Declaration>
+        <Class IRI="#BackTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BloomEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Clipping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DepthOfFieldEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DownTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FarClip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FragmentShader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FrontTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Icon1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Icon2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Icon3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interactions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeftTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mirror"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NearClip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PointLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PostProcessingEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Redering_FileFormats"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RightTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SaturationEffect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScreenCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShapeFromFile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShowHeightMap"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkyBox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SkyBoxFog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpotLight"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Texture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UpTexture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VertexShader"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WaveScale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#List[siris.components.renderer.createparameter.ElementManipulator]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_BackTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_DownTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_FarClip"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_FrontTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_LeftTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_NearClip"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_RightTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SkyBoxFog"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_UpTexture"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_WaveScale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_Interactions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_ShowHeightMap"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_RenderingComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#de.bht.jvr.core.Transform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.components.renderer.jvr.PostProcessingEffect"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#BackTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BloomEffect"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Clipping"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DepthOfFieldEffect"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DownTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FarClip"/>
+        <Class IRI="#Clipping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FragmentShader"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FrontTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Icon1"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Icon2"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Icon3"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interactions"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeftTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mirror"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NearClip"/>
+        <Class IRI="#Clipping"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PointLight"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PostProcessingEffect"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Redering_FileFormats"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RightTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SaturationEffect"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScreenCoordinates"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shader"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShapeFromFile"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShowHeightMap"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkyBox"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SkyBoxFog"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpotLight"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Texture"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UpTexture"/>
+        <Class IRI="#Texture"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VertexShader"/>
+        <Class IRI="#Shader"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WaveScale"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Rendering"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#BackTexture"/>
+        <NamedIndividual IRI="#SirisCore_BackTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DownTexture"/>
+        <NamedIndividual IRI="#SirisCore_DownTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FarClip"/>
+        <NamedIndividual IRI="#SirisCore_FarClip"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FrontTexture"/>
+        <NamedIndividual IRI="#SirisCore_FrontTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LeftTexture"/>
+        <NamedIndividual IRI="#SirisCore_LeftTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NearClip"/>
+        <NamedIndividual IRI="#SirisCore_NearClip"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RightTexture"/>
+        <NamedIndividual IRI="#SirisCore_RightTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SkyBoxFog"/>
+        <NamedIndividual IRI="#SirisCore_SkyBoxFog"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UpTexture"/>
+        <NamedIndividual IRI="#SirisCore_UpTexture"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WaveScale"/>
+        <NamedIndividual IRI="#SirisCore_WaveScale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Interactions"/>
+        <NamedIndividual IRI="#SirisJVR_Interactions"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PostProcessingEffect"/>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Scale"/>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ScreenCoordinates"/>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ShowHeightMap"/>
+        <NamedIndividual IRI="#SirisJVR_ShowHeightMap"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#HeadTransform"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Transformation"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#ViewPlatform"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Component"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Component"/>
+        <NamedIndividual IRI="#Siris_RenderingComponent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#HeadTransform"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#ViewPlatform"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#ManipulatorList"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisJVR_ManipulatorList"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_DataType"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisJVR_ManipulatorList"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_BackTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_BackTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_DownTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_DownTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_FarClip"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_FarClip"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_FrontTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_FrontTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_LeftTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_LeftTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_NearClip"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_NearClip"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_RightTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_RightTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SkyBoxFog"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SkyBoxFog"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_UpTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_UpTexture"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_WaveScale"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_WaveScale"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_Interactions"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_AnyList"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_Interactions"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasDataType"/>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+        <NamedIndividual IRI="#siris.components.renderer.jvr.PostProcessingEffect"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Scale"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasDataType"/>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+        <NamedIndividual IRI="#de.bht.jvr.core.Transform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasDataType"/>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#scala.collection.immutable.List[simplex3d.math.floatm.renamed.Vec2]"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_ShowHeightMap"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_ShowHeightMap"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Transform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasDataType"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+        <NamedIndividual IRI="#de.bht.jvr.core.Transform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasDataType"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisJVR_ManipulatorList"/>
+        <NamedIndividual IRI="#List[siris.components.renderer.createparameter.ElementManipulator]"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasConstructor"/>
+        <NamedIndividual IRI="#SirisJVR_PostProcessingEffect"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">new siris.components.renderer.jvr.PostProcessingEffect</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasConstructor"/>
+        <NamedIndividual IRI="#SirisJVR_Scale"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">new de.bht.jvr.core.Transform</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasConstructor"/>
+        <NamedIndividual IRI="#SirisJVR_ScreenCoordinates"/>
+        <Literal datatypeIRI="&xsd;string">Nil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#hasConstructor"/>
+        <NamedIndividual IRI="#SirisJVR_Transformation"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">new de.bht.jvr.core.Transform</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#inPackage"/>
+        <NamedIndividual IRI="#Siris_JVRComponent"/>
+        <Literal datatypeIRI="&xsd;string">siris.components.renderer.jvr</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#inPackage"/>
+        <NamedIndividual IRI="#Siris_RenderingComponent"/>
+        <Literal datatypeIRI="&xsd;string">siris.components.renderer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#inPackage"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisJVR_ManipulatorList"/>
+        <Literal datatypeIRI="&xsd;string">siris.components.renderer.createparameter</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1799) http://owlapi.sourceforge.net -->
+

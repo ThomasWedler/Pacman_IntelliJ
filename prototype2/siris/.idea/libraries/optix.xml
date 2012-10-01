@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="optix">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/optix/OptixWrap.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,27 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="FishtankApp (MacOSX)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="siris.applications.fishtank.FishtankApp" />
+    <option name="VM_PARAMETERS" value="-Xms1g -Xmx2g  -Dsun.java2d.noddraw=true -Djava.library.path=lib/jogl2.0/macosx:lib/vrpn/native:lib/lwjgl-2.6/native/macosx" />
+    <option name="PROGRAM_PARAMETERS" value="2000" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+    <option name="ALTERNATIVE_JRE_PATH" value="" />
+    <option name="ENABLE_SWING_INSPECTOR" value="false" />
+    <option name="ENV_VARIABLES" />
+    <option name="PASS_PARENT_ENVS" value="true" />
+    <module name="siris.applications.fishtank" />
+    <envs />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="" />
+      <option name="TRANSPORT" value="0" />
+      <option name="LOCAL" value="true" />
+    </RunnerSettings>
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Debug" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method>
+      <option name="Make" enabled="false" />
+      <option name="SBT.BeforeRunTask" enabled="true" action="compile" runInCurrentModule="false" />
+    </method>
+  </configuration>
+</component>

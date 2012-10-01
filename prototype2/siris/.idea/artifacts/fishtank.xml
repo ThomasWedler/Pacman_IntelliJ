@@ -1,0 +1,43 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="fishtank">
+    <output-path>$PROJECT_DIR$/out/artifacts/fishtank</output-path>
+    <root id="archive" name="fishtank.jar">
+      <element id="module-output" name="ext.applications.christian" />
+      <element id="module-output" name="ext.applications.christoph" />
+      <element id="module-output" name="ext.applications.graphvis" />
+      <element id="module-output" name="ext.applications.hivemind" />
+      <element id="module-output" name="ext.components.animation" />
+      <element id="module-output" name="ext.components.graph" />
+      <element id="module-output" name="ext.components.scripting" />
+      <element id="module-output" name="siris.applications.annualfair" />
+      <element id="module-output" name="siris.applications.BasicExample" />
+      <element id="module-output" name="siris.applications.fishtank" />
+      <element id="module-output" name="siris.applications.simthief" />
+      <element id="module-output" name="siris.benchmarks" />
+      <element id="module-output" name="siris.benchmarks.barrelstack" />
+      <element id="module-output" name="siris.benchmarks.fireworks" />
+      <element id="module-output" name="siris.benchmarks.flocks" />
+      <element id="module-output" name="siris.components" />
+      <element id="module-output" name="siris.components.editor" />
+      <element id="module-output" name="siris.components.fishtank" />
+      <element id="module-output" name="siris.components.network" />
+      <element id="module-output" name="siris.components.physics.jbullet" />
+      <element id="module-output" name="siris.components.remote" />
+      <element id="module-output" name="siris.components.renderer" />
+      <element id="module-output" name="siris.components.renderer.GLRenderer" />
+      <element id="module-output" name="siris.components.renderer.jvr" />
+      <element id="module-output" name="siris.components.renderer.jvr.examples" />
+      <element id="module-output" name="siris.components.renderer.optix" />
+      <element id="module-output" name="siris.components.sound" />
+      <element id="module-output" name="siris.components.steering" />
+      <element id="module-output" name="siris.components.tuio" />
+      <element id="module-output" name="siris.components.vrpn" />
+      <element id="module-output" name="siris.components.worldinterface" />
+      <element id="module-output" name="siris.core" />
+      <element id="module-output" name="siris.frameworks.steering" />
+      <element id="module-output" name="siris.javainterface" />
+      <element id="module-output" name="siris.mmi" />
+      <element id="module-output" name="siris.ontology" />
+    </root>
+  </artifact>
+</component>

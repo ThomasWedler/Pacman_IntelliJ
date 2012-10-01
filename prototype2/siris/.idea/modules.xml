@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ext.applications.christian/ext.applications.christian.iml" filepath="$PROJECT_DIR$/ext.applications.christian/ext.applications.christian.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.applications.christoph/ext.applications.christoph.iml" filepath="$PROJECT_DIR$/ext.applications.christoph/ext.applications.christoph.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.applications.graphvis/ext.applications.graphvis.iml" filepath="$PROJECT_DIR$/ext.applications.graphvis/ext.applications.graphvis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.applications.hivemind/ext.applications.hivemind.iml" filepath="$PROJECT_DIR$/ext.applications.hivemind/ext.applications.hivemind.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.components.animation/ext.components.animation.iml" filepath="$PROJECT_DIR$/ext.components.animation/ext.components.animation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.components.GraphVis/ext.components.graph.iml" filepath="$PROJECT_DIR$/ext.components.GraphVis/ext.components.graph.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ext.components.repository/ext.components.scripting.iml" filepath="$PROJECT_DIR$/ext.components.repository/ext.components.scripting.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.applications.BasicExample/siris.applications.BasicExample.iml" filepath="$PROJECT_DIR$/siris.applications.BasicExample/siris.applications.BasicExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.applications.annualfair/siris.applications.annualfair.iml" filepath="$PROJECT_DIR$/siris.applications.annualfair/siris.applications.annualfair.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.applications.fishtank/siris.applications.fishtank.iml" filepath="$PROJECT_DIR$/siris.applications.fishtank/siris.applications.fishtank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.applications.simthief/siris.applications.simthief.iml" filepath="$PROJECT_DIR$/siris.applications.simthief/siris.applications.simthief.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.benchmarks/siris.benchmarks.iml" filepath="$PROJECT_DIR$/siris.benchmarks/siris.benchmarks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.benchmarks.barrelstack/siris.benchmarks.barrelstack.iml" filepath="$PROJECT_DIR$/siris.benchmarks.barrelstack/siris.benchmarks.barrelstack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.benchmarks.fireworks/siris.benchmarks.fireworks.iml" filepath="$PROJECT_DIR$/siris.benchmarks.fireworks/siris.benchmarks.fireworks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.benchmarks.flocks/siris.benchmarks.flocks.iml" filepath="$PROJECT_DIR$/siris.benchmarks.flocks/siris.benchmarks.flocks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components/siris.components.iml" filepath="$PROJECT_DIR$/siris.components/siris.components.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.editor/siris.components.editor.iml" filepath="$PROJECT_DIR$/siris.components.editor/siris.components.editor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.fishtank/siris.components.fishtank.iml" filepath="$PROJECT_DIR$/siris.components.fishtank/siris.components.fishtank.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.mesh/siris.components.mesh.iml" filepath="$PROJECT_DIR$/siris.components.mesh/siris.components.mesh.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.network/siris.components.network.iml" filepath="$PROJECT_DIR$/siris.components.network/siris.components.network.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.physics.jbullet/siris.components.physics.jbullet.iml" filepath="$PROJECT_DIR$/siris.components.physics.jbullet/siris.components.physics.jbullet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.remote/siris.components.remote.iml" filepath="$PROJECT_DIR$/siris.components.remote/siris.components.remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.renderer/siris.components.renderer.iml" filepath="$PROJECT_DIR$/siris.components.renderer/siris.components.renderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.renderer.GLRenderer/siris.components.renderer.GLRenderer.iml" filepath="$PROJECT_DIR$/siris.components.renderer.GLRenderer/siris.components.renderer.GLRenderer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.renderer.jvr/siris.components.renderer.jvr.iml" filepath="$PROJECT_DIR$/siris.components.renderer.jvr/siris.components.renderer.jvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.renderer.jvr.examples/siris.components.renderer.jvr.examples.iml" filepath="$PROJECT_DIR$/siris.components.renderer.jvr.examples/siris.components.renderer.jvr.examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.renderer.optix/siris.components.renderer.optix.iml" filepath="$PROJECT_DIR$/siris.components.renderer.optix/siris.components.renderer.optix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.sound/siris.components.sound.iml" filepath="$PROJECT_DIR$/siris.components.sound/siris.components.sound.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.steering/siris.components.steering.iml" filepath="$PROJECT_DIR$/siris.components.steering/siris.components.steering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.tuio/siris.components.tuio.iml" filepath="$PROJECT_DIR$/siris.components.tuio/siris.components.tuio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.vrpn/siris.components.vrpn.iml" filepath="$PROJECT_DIR$/siris.components.vrpn/siris.components.vrpn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.components.worldinterface/siris.components.worldinterface.iml" filepath="$PROJECT_DIR$/siris.components.worldinterface/siris.components.worldinterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.core/siris.core.iml" filepath="$PROJECT_DIR$/siris.core/siris.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.frameworks.steering/siris.frameworks.steering.iml" filepath="$PROJECT_DIR$/siris.frameworks.steering/siris.frameworks.steering.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.javainterface/siris.javainterface.iml" filepath="$PROJECT_DIR$/siris.javainterface/siris.javainterface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.mmi/siris.mmi.iml" filepath="$PROJECT_DIR$/siris.mmi/siris.mmi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/siris.ontology/siris.ontology.iml" filepath="$PROJECT_DIR$/siris.ontology/siris.ontology.iml" />
+    </modules>
+  </component>
+</project>
+

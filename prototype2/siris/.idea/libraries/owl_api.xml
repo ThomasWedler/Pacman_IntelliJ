@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="owl api">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/owl/owlapi-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/owl/javadoc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/owl/owlapi-src.jar!/" />
+    </SOURCES>
+  </library>
+</component>

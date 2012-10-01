@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="FishtankApp (Win32)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="siris.applications.fishtank.FishtankApp" />
+    <option name="VM_PARAMETERS" value="-Xms1g -Xmx1500m  -Dsun.java2d.noddraw=true -Djava.library.path=lib/jogl2.0/win32;lib/vrpn/native;lib/lwjgl-2.6/native/windows" />
+    <option name="PROGRAM_PARAMETERS" value="2000" />
+    <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+    <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files (x86)/Java/jdk1.6.0_31" />
+    <option name="ENABLE_SWING_INSPECTOR" value="false" />
+    <option name="ENV_VARIABLES" />
+    <option name="PASS_PARENT_ENVS" value="true" />
+    <module name="siris.applications.fishtank" />
+    <envs />
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method>
+      <option name="Make" enabled="false" />
+      <option name="SBT.BeforeRunTask" enabled="true" action="compile" runInCurrentModule="false" />
+    </method>
+  </configuration>
+</component>

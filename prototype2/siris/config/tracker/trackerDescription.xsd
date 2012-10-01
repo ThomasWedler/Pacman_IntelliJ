@@ -1,0 +1,102 @@
+<xs:schema xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+
+    <!-- Describes a tracking system -->
+    <xs:element name="trackerDescription">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="connection" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="url" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="trackerCoordinateSystemToDisplayCoordinateSystemTransformation" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="targets" minOccurs='1' maxOccurs='1'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--
+        The type of connection with which the tracker is connected to siris
+        Currently 'vrpn' is the only supported type
+    -->
+    <xs:element name="connection" type="connectionType"/>
+    <xs:simpleType name="connectionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="vrpn"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- The url of the tracking server -->
+    <xs:element name="url" type="xs:string"/>
+
+    <!--
+        The transformation of the tracking coordinate system to the display coordinate system.
+        The display coordinate system is defined in a DisplayDescription, when unsing the JVR renderer
+
+        The transformation is specified by 3 rotations, scaling and 3 translations.
+        They are applied in the following order:
+
+        rotateX, rotateY, rotateZ, scale and then translateXYZ
+
+        By applying this transformation the tracker COORDINATE SYSTEM has to be transformed into the
+        display COORDINATE SYSTEM. Watch out not to specify the transformation of a point in the tracking CS
+        to a point in the display CS!
+    -->
+    <xs:element name="trackerCoordinateSystemToDisplayCoordinateSystemTransformation">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="rotateX" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="rotateY" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="rotateZ" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="scale" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="translateX" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="translateY" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="translateZ" minOccurs='1' maxOccurs='1'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Rotation around the x axis in degrees -->
+    <xs:element name="rotateX" type="xs:float"/>
+    <!-- Rotation around the y axis in degrees -->
+    <xs:element name="rotateY" type="xs:float"/>
+    <!-- Rotation around the z axis in degrees -->
+    <xs:element name="rotateZ" type="xs:float"/>
+    <!-- A uniform scale -->
+    <xs:element name="scale" type="xs:float"/>
+    <!-- Translation along the x axis -->
+    <xs:element name="translateX" type="xs:float"/>
+    <!-- Translation along the y axis -->
+    <xs:element name="translateY" type="xs:float"/>
+    <!-- Translation along the z axis -->
+    <xs:element name="translateZ" type="xs:float"/>
+
+    <!-- Specification of available targets -->
+    <xs:element name="targets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="target" minOccurs='1' maxOccurs='unbounded'/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:unique name="targetNameUniqueness">
+            <xs:selector xpath="target"/>
+            <xs:field xpath="name"/>
+        </xs:unique>
+    </xs:element>
+
+    <!--
+        A tracking target consisting of a id comming from the tracking server and a name to refer to it in the program.
+        The name has to be unique.
+    -->
+    <xs:element name="target">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="name" minOccurs='1' maxOccurs='1'/>
+                <xs:element ref="id" minOccurs='1' maxOccurs='1'/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- A unique name -->
+    <xs:element name="name" type="xs:string"/>
+    <!-- An id of a traget comming from the tracking server -->
+    <xs:element name="id" type="xs:string"/>
+
+</xs:schema>

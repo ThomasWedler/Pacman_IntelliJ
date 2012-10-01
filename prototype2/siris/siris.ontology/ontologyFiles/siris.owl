@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2010/8/siris.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2010/8/siris.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#ApplicatonElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Function"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JBulletDataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#JVRDataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matrix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OntologyDataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Representations"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Simplex3DDataType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#belongsToPackage"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConstructor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ontology_Transform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ontology_Vector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RowMajorMatrix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vector"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DataType"/>
+        <Class IRI="#ApplicatonElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Function"/>
+        <Class IRI="#ApplicatonElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JBulletDataType"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#JVRDataType"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matrix"/>
+        <Class IRI="#Representations"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyDataType"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Simplex3DDataType"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Matrix"/>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JBulletDataType"/>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#JBulletDataType"/>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OntologyDataType"/>
+        <NamedIndividual IRI="#Ontology_Transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OntologyDataType"/>
+        <NamedIndividual IRI="#Ontology_Vector"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Matrix"/>
+        <NamedIndividual IRI="#RowMajorMatrix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Simplex3DDataType"/>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Simplex3DDataType"/>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Matrix"/>
+        <NamedIndividual IRI="#Vector"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+        <NamedIndividual IRI="#Vector"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#Ontology_Transform"/>
+        <NamedIndividual IRI="#RowMajorMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#Ontology_Vector"/>
+        <NamedIndividual IRI="#Vector"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+        <NamedIndividual IRI="#ColumnMajorMatrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#represents"/>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+        <NamedIndividual IRI="#Vector"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <NamedIndividual IRI="#Vector"/>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <NamedIndividual IRI="#Vector"/>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+        <Literal datatypeIRI="&xsd;string">com.bulletphysics.linearmath</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#JBullet_Transform"/>
+        <Literal datatypeIRI="&xsd;string">new com.bulletphysics.linearmath.Transform()</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+        <Literal datatypeIRI="&xsd;string">com.bulletphysics.linearmath</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#JBullet_Vector3f"/>
+        <Literal datatypeIRI="&xsd;string">new javax.vecmath.Vector3f()</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#Ontology_Transform"/>
+        <Literal datatypeIRI="&xsd;string">siris.core.entity.typeconversion.types</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#Ontology_Transform"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.Mat4x4f.Identity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#Ontology_Vector"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#Ontology_Vector"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.Vec3f.Zero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#Simplex3D_Mat4x4f"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.Mat4x4f.Identity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#belongsToPackage"/>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#Simplex3D_Vec3f"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.Vec3f.Zero</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#represents"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <ObjectProperty IRI="#represents"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <Class IRI="#Representations"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#DataType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <Class IRI="#DataType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Matrix"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#belongsToPackage"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasConstructor"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#belongsToPackage"/>
+        <Class IRI="#ApplicatonElement"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConstructor"/>
+        <Class IRI="#DataType"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#belongsToPackage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConstructor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+

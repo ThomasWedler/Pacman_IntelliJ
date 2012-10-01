@@ -1,0 +1,19 @@
+<trackerDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation='trackerDescription.xsd'>
+    <connection>vrpn</connection>
+    <url>iotracker@141.64.64.62</url>
+    <trackerCoordinateSystemToDisplayCoordinateSystemTransformation>
+        <rotateX>90</rotateX>
+        <rotateY>0</rotateY>
+        <rotateZ>0</rotateZ>
+        <scale>100</scale>
+        <translateX>0</translateX>
+        <translateY>0</translateY>
+        <translateZ>0</translateZ>
+    </trackerCoordinateSystemToDisplayCoordinateSystemTransformation>
+    <targets>
+        <target>
+            <name>head</name>
+            <id>1</id>
+        </target>
+    </targets>
+</trackerDescription>

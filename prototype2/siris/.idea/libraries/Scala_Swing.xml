@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Scala Swing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../scala/current/lib/scala-swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-swing-tree-wrapper/scalaswingtreewrapper_2.8.1.RC3-1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../scala/current/src/scala-swing-src.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../scala/kenbot-ScalaSwingTreeWrapper/src/main/scala/scala" />
+    </SOURCES>
+  </library>
+</component>

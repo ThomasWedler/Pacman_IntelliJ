@@ -1,0 +1,3535 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl"
+     versionIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore-2.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Acceleration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alignment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AngularDamping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AngularFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnimationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnyList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attenuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Begin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Boolean"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Box"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button_Center"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button_Left"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button_Right"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Capsule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CastShadow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Collada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColladaFile"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ColladaObjectId"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Collision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Color"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComponentType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Configuration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ConstantAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Container"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cylinder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiffuseColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Direction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Edge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Editor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#End"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Enumeration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExistingNode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Factor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#File"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FileFormat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frame"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameLogic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gesture"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graph"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Graphics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gravity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HalfExtends"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeadTransform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Health"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Height"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IRI"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Identifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Impulse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Initialize"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Integer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intensity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interface"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ip"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_Down"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_Left"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_Right"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_Space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_Up"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_a"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_b"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_c"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_d"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_e"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_f"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_g"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_h"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_i"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_j"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_k"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_l"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_m"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_n"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_o"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_p"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_q"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_r"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_s"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_t"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_u"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_v"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_w"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_x"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_y"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Key_z"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinearAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinearDamping"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Live"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lives"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Local"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Long"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ManipulatorList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Material"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matrix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NamedContainer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neighbor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Network"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Normal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NullType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Orientation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Origin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParentElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Particle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Physics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Port"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Position2D"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Probability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuadraticAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Radius"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Real"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RefreshRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Remote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restitution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Root"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SVarActor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Saturation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scale"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShadowBias"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shapes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimulationSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Buttons"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Component"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Core"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_DataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Geometry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Gestures"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_IO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Keyboard"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_LinearAlgebra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Math"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Misc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Physics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Rendering"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_Sound"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Size"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sound"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpecularColor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sphere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpotCutOff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpotExponent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StateVariable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#State_Changed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#String"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SubElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thickness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Threshold"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Token"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TorqueImpulse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tuio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#URL"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UpVector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#User"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector3"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector4"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Velocity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vertex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ViewPlatform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vrpn"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#basedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#forComponent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_a"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConstructor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#inPackage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Acceleration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Alignment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_AngularDamping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_AngularFactor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Button_Center"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Button_Left"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Button_Right"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_CastShadow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ColladaFile"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ColladaObjectId"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Configuration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ConstantAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_DiffuseColor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Direction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Factor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_File"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Gravity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_HalfExtends"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Health"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Height"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Impulse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Initialize"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Intensity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Ip"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_Down"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_Left"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_Right"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_Space"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_Up"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_a"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_b"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_c"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_d"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_e"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_f"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_g"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_h"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_i"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_j"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_k"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_l"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_m"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_n"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_o"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_p"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_q"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_r"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_s"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_t"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_u"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_v"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_w"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_x"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Key_z"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_LinearAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_LinearDamping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Lives"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Mana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ManipulatorList"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Mass"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Neighbor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Normal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Origin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ParentElement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Port"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Position2D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Probability"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_QuadraticAttenuation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Radius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Restitution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Saturation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Scale"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_ShadowBias"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SimulationSpeed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Size"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SpecularColor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SpotCutOff"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SpotExponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_SubElement"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Thickness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Threshold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Transform"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_UpVector"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisCore_Velocity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisJVR_ManipulatorList"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java.awt.image.BufferedImage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java.lang.String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.Boolean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.Float"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.Int"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.Long"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.Symbol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.collection.immutable.List[_]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scala.collection.immutable.List[simplex3d.math.floatm.renamed.Vec2]"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.components.eventhandling.EventDescription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.core.entity.Entity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.core.entity.description.NamedSValList"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.core.entity.description.SValList"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.core.helper.BoundingBox"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#siris.ontology.types.TypeDefinitions.Enum"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Acceleration"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ai"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alignment"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AngularDamping"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AngularFactor"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnimationObject"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnyList"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Application"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Attenuation"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Begin"/>
+        <Class IRI="#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boolean"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BoundingBox"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Box"/>
+        <Class IRI="#Shapes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <Class IRI="#Siris_Buttons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button_Center"/>
+        <Class IRI="#Siris_Buttons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button_Left"/>
+        <Class IRI="#Siris_Buttons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button_Right"/>
+        <Class IRI="#Siris_Buttons"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Capsule"/>
+        <Class IRI="#Shapes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CastShadow"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Collada"/>
+        <Class IRI="#FileFormat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColladaFile"/>
+        <Class IRI="#Collada"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ColladaObjectId"/>
+        <Class IRI="#Collada"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Collision"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Color"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComponentType"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Configuration"/>
+        <Class IRI="#NamedContainer"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConstantAttenuation"/>
+        <Class IRI="#Attenuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Container"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cylinder"/>
+        <Class IRI="#Shapes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiffuseColor"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Direction"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Edge"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Editor"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#End"/>
+        <Class IRI="#Time"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Enumeration"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventDescription"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExistingNode"/>
+        <Class IRI="#Structure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Factor"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#File"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FileFormat"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fog"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frame"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GameLogic"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gesture"/>
+        <Class IRI="#Siris_Gestures"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Graph"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Graphics"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gravity"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HalfExtends"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeadTransform"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Health"/>
+        <Class IRI="#GameLogic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Height"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IRI"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Identifier"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Impulse"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Initialize"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Integer"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intensity"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interface"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interval"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ip"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_Down"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_Left"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_Right"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_Space"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_Up"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_a"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_b"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_c"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_d"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_e"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_f"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_g"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_h"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_i"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_j"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_k"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_l"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_m"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_n"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_o"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_p"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_q"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_r"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_s"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_t"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_u"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_v"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_w"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_x"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_y"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Key_z"/>
+        <Class IRI="#Siris_Keyboard"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinearAttenuation"/>
+        <Class IRI="#Attenuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinearDamping"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Live"/>
+        <Class IRI="#GameLogic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lives"/>
+        <Class IRI="#GameLogic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Local"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Long"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mana"/>
+        <Class IRI="#GameLogic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ManipulatorList"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mass"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Material"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matrix"/>
+        <Class IRI="#Siris_LinearAlgebra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Name"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedContainer"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Neighbor"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Network"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Normal"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NullType"/>
+        <Class IRI="#Siris_Core"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Orientation"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Origin"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParentElement"/>
+        <Class IRI="#Structure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Particle"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Physics"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plane"/>
+        <Class IRI="#Shapes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Port"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position"/>
+        <Class IRI="#Transformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Position2D"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Probability"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuadraticAttenuation"/>
+        <Class IRI="#Attenuation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Radius"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Real"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RefreshRate"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Remote"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restitution"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Root"/>
+        <Class IRI="#Structure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SVarActor"/>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Saturation"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scale"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ShadowBias"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shapes"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimulationSpeed"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Buttons"/>
+        <Class IRI="#Siris_IO"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Component"/>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Core"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Geometry"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Gestures"/>
+        <Class IRI="#Siris_IO"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_IO"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Keyboard"/>
+        <Class IRI="#Siris_IO"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_LinearAlgebra"/>
+        <Class IRI="#Siris_Math"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Math"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Misc"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Physics"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Rendering"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_Sound"/>
+        <Class IRI="#Siris_Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Size"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sound"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpecularColor"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sphere"/>
+        <Class IRI="#Shapes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpotCutOff"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpotExponent"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StateVariable"/>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#State_Changed"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#String"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structure"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SubElement"/>
+        <Class IRI="#Structure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thickness"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Threshold"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Token"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TorqueImpulse"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transformation"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tuio"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#URL"/>
+        <Class IRI="#Identifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UpVector"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#User"/>
+        <Class IRI="#GameLogic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vector2"/>
+        <Class IRI="#Siris_LinearAlgebra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vector3"/>
+        <Class IRI="#Siris_LinearAlgebra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vector4"/>
+        <Class IRI="#Siris_LinearAlgebra"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Velocity"/>
+        <Class IRI="#Siris_Physics"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vertex"/>
+        <Class IRI="#Siris_Geometry"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ViewPlatform"/>
+        <Class IRI="#Siris_Rendering"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vrpn"/>
+        <Class IRI="#ComponentType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Siris_Misc"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Acceleration"/>
+        <NamedIndividual IRI="#SirisCore_Acceleration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Alignment"/>
+        <NamedIndividual IRI="#SirisCore_Alignment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AngularDamping"/>
+        <NamedIndividual IRI="#SirisCore_AngularDamping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AngularFactor"/>
+        <NamedIndividual IRI="#SirisCore_AngularFactor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AnyList"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Boolean"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BoundingBox"/>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Button_Center"/>
+        <NamedIndividual IRI="#SirisCore_Button_Center"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Button_Left"/>
+        <NamedIndividual IRI="#SirisCore_Button_Left"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Button_Right"/>
+        <NamedIndividual IRI="#SirisCore_Button_Right"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CastShadow"/>
+        <NamedIndividual IRI="#SirisCore_CastShadow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColladaFile"/>
+        <NamedIndividual IRI="#SirisCore_ColladaFile"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ColladaObjectId"/>
+        <NamedIndividual IRI="#SirisCore_ColladaObjectId"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Color"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Configuration"/>
+        <NamedIndividual IRI="#SirisCore_Configuration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ConstantAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_ConstantAttenuation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Container"/>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DiffuseColor"/>
+        <NamedIndividual IRI="#SirisCore_DiffuseColor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Direction"/>
+        <NamedIndividual IRI="#SirisCore_Direction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Entity"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Enumeration"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#EventDescription"/>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Factor"/>
+        <NamedIndividual IRI="#SirisCore_Factor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#File"/>
+        <NamedIndividual IRI="#SirisCore_File"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Frame"/>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gravity"/>
+        <NamedIndividual IRI="#SirisCore_Gravity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HalfExtends"/>
+        <NamedIndividual IRI="#SirisCore_HalfExtends"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Health"/>
+        <NamedIndividual IRI="#SirisCore_Health"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Height"/>
+        <NamedIndividual IRI="#SirisCore_Height"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Identifier"/>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Impulse"/>
+        <NamedIndividual IRI="#SirisCore_Impulse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Initialize"/>
+        <NamedIndividual IRI="#SirisCore_Initialize"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Integer"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intensity"/>
+        <NamedIndividual IRI="#SirisCore_Intensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ip"/>
+        <NamedIndividual IRI="#SirisCore_Ip"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_Down"/>
+        <NamedIndividual IRI="#SirisCore_Key_Down"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_Left"/>
+        <NamedIndividual IRI="#SirisCore_Key_Left"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_Right"/>
+        <NamedIndividual IRI="#SirisCore_Key_Right"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_Space"/>
+        <NamedIndividual IRI="#SirisCore_Key_Space"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_Up"/>
+        <NamedIndividual IRI="#SirisCore_Key_Up"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_a"/>
+        <NamedIndividual IRI="#SirisCore_Key_a"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_b"/>
+        <NamedIndividual IRI="#SirisCore_Key_b"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_c"/>
+        <NamedIndividual IRI="#SirisCore_Key_c"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_d"/>
+        <NamedIndividual IRI="#SirisCore_Key_d"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_e"/>
+        <NamedIndividual IRI="#SirisCore_Key_e"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_f"/>
+        <NamedIndividual IRI="#SirisCore_Key_f"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_g"/>
+        <NamedIndividual IRI="#SirisCore_Key_g"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_h"/>
+        <NamedIndividual IRI="#SirisCore_Key_h"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_i"/>
+        <NamedIndividual IRI="#SirisCore_Key_i"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_j"/>
+        <NamedIndividual IRI="#SirisCore_Key_j"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_k"/>
+        <NamedIndividual IRI="#SirisCore_Key_k"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_l"/>
+        <NamedIndividual IRI="#SirisCore_Key_l"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_m"/>
+        <NamedIndividual IRI="#SirisCore_Key_m"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_n"/>
+        <NamedIndividual IRI="#SirisCore_Key_n"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_o"/>
+        <NamedIndividual IRI="#SirisCore_Key_o"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_p"/>
+        <NamedIndividual IRI="#SirisCore_Key_p"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_q"/>
+        <NamedIndividual IRI="#SirisCore_Key_q"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_r"/>
+        <NamedIndividual IRI="#SirisCore_Key_r"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_s"/>
+        <NamedIndividual IRI="#SirisCore_Key_s"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_t"/>
+        <NamedIndividual IRI="#SirisCore_Key_t"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_u"/>
+        <NamedIndividual IRI="#SirisCore_Key_u"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_v"/>
+        <NamedIndividual IRI="#SirisCore_Key_v"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_w"/>
+        <NamedIndividual IRI="#SirisCore_Key_w"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_x"/>
+        <NamedIndividual IRI="#SirisCore_Key_x"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_y"/>
+        <NamedIndividual IRI="#SirisCore_Key_y"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Key_z"/>
+        <NamedIndividual IRI="#SirisCore_Key_z"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LinearAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_LinearAttenuation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#LinearDamping"/>
+        <NamedIndividual IRI="#SirisCore_LinearDamping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lives"/>
+        <NamedIndividual IRI="#SirisCore_Lives"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Long"/>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mana"/>
+        <NamedIndividual IRI="#SirisCore_Mana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mass"/>
+        <NamedIndividual IRI="#SirisCore_Mass"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Matrix"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Name"/>
+        <NamedIndividual IRI="#SirisCore_Name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NamedContainer"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Neighbor"/>
+        <NamedIndividual IRI="#SirisCore_Neighbor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Normal"/>
+        <NamedIndividual IRI="#SirisCore_Normal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NullType"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Origin"/>
+        <NamedIndividual IRI="#SirisCore_Origin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParentElement"/>
+        <NamedIndividual IRI="#SirisCore_ParentElement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Port"/>
+        <NamedIndividual IRI="#SirisCore_Port"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Position"/>
+        <NamedIndividual IRI="#SirisCore_Position"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Position2D"/>
+        <NamedIndividual IRI="#SirisCore_Position2D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Probability"/>
+        <NamedIndividual IRI="#SirisCore_Probability"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#QuadraticAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_QuadraticAttenuation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Radius"/>
+        <NamedIndividual IRI="#SirisCore_Radius"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Real"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restitution"/>
+        <NamedIndividual IRI="#SirisCore_Restitution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Saturation"/>
+        <NamedIndividual IRI="#SirisCore_Saturation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Scale"/>
+        <NamedIndividual IRI="#SirisCore_Scale"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ShadowBias"/>
+        <NamedIndividual IRI="#SirisCore_ShadowBias"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SimulationSpeed"/>
+        <NamedIndividual IRI="#SirisCore_SimulationSpeed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Size"/>
+        <NamedIndividual IRI="#SirisCore_Size"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SpecularColor"/>
+        <NamedIndividual IRI="#SirisCore_SpecularColor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SpotCutOff"/>
+        <NamedIndividual IRI="#SirisCore_SpotCutOff"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SpotExponent"/>
+        <NamedIndividual IRI="#SirisCore_SpotExponent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#String"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SubElement"/>
+        <NamedIndividual IRI="#SirisCore_SubElement"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Thickness"/>
+        <NamedIndividual IRI="#SirisCore_Thickness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Threshold"/>
+        <NamedIndividual IRI="#SirisCore_Threshold"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Transformation"/>
+        <NamedIndividual IRI="#SirisCore_Transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UpVector"/>
+        <NamedIndividual IRI="#SirisCore_UpVector"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vector2"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vector3"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vector4"/>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Velocity"/>
+        <NamedIndividual IRI="#SirisCore_Velocity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_Component"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#java.awt.image.BufferedImage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#java.lang.String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.Boolean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.Float"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.Int"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.Long"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.Symbol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.collection.immutable.List[_]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#scala.collection.immutable.List[simplex3d.math.floatm.renamed.Vec2]"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#siris.components.eventhandling.EventDescription"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#siris.core.entity.Entity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#siris.core.entity.description.NamedSValList"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#siris.core.helper.BoundingBox"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Siris_DataType"/>
+        <NamedIndividual IRI="#siris.ontology.types.TypeDefinitions.Enum"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Acceleration"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Acceleration"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Alignment"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Alignment"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_AngularDamping"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_AngularDamping"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_AngularFactor"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_AngularFactor"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+        <NamedIndividual IRI="#scala.collection.immutable.List[_]"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+        <NamedIndividual IRI="#scala.Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+        <NamedIndividual IRI="#siris.core.helper.BoundingBox"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Button_Center"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Button_Center"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Button_Left"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Button_Left"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Button_Right"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Button_Right"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_CastShadow"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_CastShadow"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ColladaFile"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ColladaFile"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ColladaObjectId"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ColladaObjectId"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Configuration"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Configuration"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ConstantAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ConstantAttenuation"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+        <NamedIndividual IRI="#siris.core.entity.description.SValList"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_DiffuseColor"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_DiffuseColor"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Direction"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Direction"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+        <NamedIndividual IRI="#siris.core.entity.Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+        <NamedIndividual IRI="#siris.ontology.types.TypeDefinitions.Enum"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+        <NamedIndividual IRI="#siris.components.eventhandling.EventDescription"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Factor"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Factor"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_File"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_File"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+        <NamedIndividual IRI="#java.awt.image.BufferedImage"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Gravity"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Gravity"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_HalfExtends"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_HalfExtends"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Health"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Health"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Height"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Height"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+        <NamedIndividual IRI="#scala.Symbol"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Impulse"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Impulse"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Initialize"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Initialize"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+        <NamedIndividual IRI="#scala.Int"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Intensity"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Intensity"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Ip"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Ip"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_Down"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_Down"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_Left"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_Left"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_Right"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_Right"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_Space"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_Space"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_Up"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_Up"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_a"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_a"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_b"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_b"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_c"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_c"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_d"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_d"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_e"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_e"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_f"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_f"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_g"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_g"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_h"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_h"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_i"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_i"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_j"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_j"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_k"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_k"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_l"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_l"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_m"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_m"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_n"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_n"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_o"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_o"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_p"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_p"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_q"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_q"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_r"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_r"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_s"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_s"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_t"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_t"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_u"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_u"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_v"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_v"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_w"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_w"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_x"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_x"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_y"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_y"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Key_z"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Key_z"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_LinearAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_LinearAttenuation"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_LinearDamping"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_LinearDamping"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Lives"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Lives"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+        <NamedIndividual IRI="#scala.Long"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Mana"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Mana"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ManipulatorList"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ManipulatorList"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Mass"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Mass"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Name"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Name"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+        <NamedIndividual IRI="#siris.core.entity.description.NamedSValList"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Neighbor"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Neighbor"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Normal"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Normal"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Origin"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Origin"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ParentElement"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ParentElement"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Port"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Port"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Position"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Position"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Position2D"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Position2D"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Probability"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Probability"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_QuadraticAttenuation"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_QuadraticAttenuation"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Radius"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Radius"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+        <NamedIndividual IRI="#scala.Float"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Restitution"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Restitution"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Saturation"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Saturation"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Scale"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Scale"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_ShadowBias"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_ShadowBias"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SimulationSpeed"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SimulationSpeed"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Size"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Size"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SpecularColor"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SpecularColor"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SpotCutOff"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SpotCutOff"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SpotExponent"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SpotExponent"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+        <NamedIndividual IRI="#java.lang.String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_SubElement"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_SubElement"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Thickness"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Thickness"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Threshold"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Threshold"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Transform"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Transform"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_UpVector"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_UpVector"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+        <NamedIndividual IRI="#SirisCore_NullType"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec4"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisCore_Velocity"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisCore_Velocity"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#basedOn"/>
+        <NamedIndividual IRI="#SirisJVR_ManipulatorList"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#forComponent"/>
+        <NamedIndividual IRI="#SirisJVR_ManipulatorList"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/components/JVR.owl#Siris_RenderingComponent"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_AnyList"/>
+        <Literal datatypeIRI="&xsd;string">Nil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Boolean"/>
+        <Literal datatypeIRI="&xsd;string">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_BoundingBox"/>
+        <Literal datatypeIRI="&xsd;string">siris.core.helper.BoundingBox(simplex3d.math.floatm.Vec3f.Zero, simplex3d.math.floatm.Vec3f.One)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Color"/>
+        <Literal datatypeIRI="&xsd;string">java.awt.Color.WHITE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Container"/>
+        <Literal datatypeIRI="&xsd;string">new siris.core.entity.description.SValList()</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Entity"/>
+        <Literal datatypeIRI="&xsd;string">new siris.core.entity.Entity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Enumeration"/>
+        <Literal datatypeIRI="&xsd;string">siris.ontology.types.DefaultEnum.Foo</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_EventDescription"/>
+        <Literal datatypeIRI="&xsd;string">new siris.components.eventhandling.EventDescription(siris.ontology.Symbols.nullType)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Frame"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">new java.awt.image.BufferedImage(1,1,1)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Identifier"/>
+        <Literal datatypeIRI="&xsd;string">Symbol(&quot;&quot;)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Integer"/>
+        <Literal datatypeIRI="&xsd;string">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Long"/>
+        <Literal datatypeIRI="&xsd;string">0L</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_ManipulatorList"/>
+        <Literal datatypeIRI="&xsd;string">Nil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Mass"/>
+        <Literal datatypeIRI="&xsd;string">1f</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Matrix"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Mat4x4.Identity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_NamedContainer"/>
+        <Literal datatypeIRI="&xsd;string">new siris.core.entity.description.NamedSValList(siris.ontology.Symbols.nullType)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Normal"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Vec3(1,0,0)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Real"/>
+        <Literal datatypeIRI="&xsd;string">0f</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_String"/>
+        <Literal datatypeIRI="&xsd;string">&quot;&quot;</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Vec2"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Vec2.Zero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Vec3"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Vec3.Zero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisCore_Vec4"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Vec4.Zero</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#SirisJVR_ManipulatorList"/>
+        <Literal datatypeIRI="&xsd;string">Nil</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#inPackage"/>
+        <NamedIndividual IRI="#Siris_CoreComponent"/>
+        <Literal datatypeIRI="&xsd;string">siris.ontology</Literal>
+    </DataPropertyAssertion>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#basedOn"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#basedOn"/>
+        <Class IRI="#Siris_Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#forComponent"/>
+        <Class IRI="#Siris_Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDataType"/>
+        <Class IRI="#Siris_Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#basedOn"/>
+        <Class IRI="#Siris_Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#forComponent"/>
+        <Class IRI="#Siris_Component"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDataType"/>
+        <Class IRI="#Siris_DataType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Siris_Concept"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConstructor"/>
+        <Class IRI="#Siris_Concept"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#inPackage"/>
+        <Class IRI="#Siris_ArchitectureElement"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConstructor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#inPackage"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NullType</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">The only OntologyMember not beeing generated</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1799) http://owlapi.sourceforge.net -->
+

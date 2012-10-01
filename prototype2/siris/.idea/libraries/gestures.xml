@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gestures">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/gestures/gracia_siris_embedded.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

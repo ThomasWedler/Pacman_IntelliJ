@@ -1,0 +1,435 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/1/core/SirisCore.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/1/core/SirisCore.owl"
+     versionIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/1/core/SirisCore-02022011.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Actor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArchitectureElement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Booleandata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Color"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Colordata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Component"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataRepresentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DataType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doubledata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Floatdata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intdata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Longdata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mathematics"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matrix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Number"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OntologyMember"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SVar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shape"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SymbolData"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Textdata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Transformation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vector"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDataType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_a"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasConstructor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasTypeAnnotations"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boolean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Double"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Float"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Int"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Long"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#String"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Symbol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#box"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#color"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#position"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#radius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#sphere"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#transform"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Actor"/>
+        <Class IRI="#ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Booleandata"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Color"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Colordata"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Component"/>
+        <Class IRI="#ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DataType"/>
+        <Class IRI="#DataRepresentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Description"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Doubledata"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entity"/>
+        <Class IRI="#ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Floatdata"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intdata"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Longdata"/>
+        <Class IRI="#Number"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mathematics"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matrix"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Number"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OntologyMember"/>
+        <Class IRI="#DataRepresentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SVar"/>
+        <Class IRI="#ArchitectureElement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shape"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SymbolData"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Textdata"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Transformation"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vector"/>
+        <Class IRI="#DataType"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Booleandata"/>
+        <NamedIndividual IRI="#Boolean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doubledata"/>
+        <NamedIndividual IRI="#Double"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Floatdata"/>
+        <NamedIndividual IRI="#Float"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Intdata"/>
+        <NamedIndividual IRI="#Int"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Longdata"/>
+        <NamedIndividual IRI="#Long"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Textdata"/>
+        <NamedIndividual IRI="#String"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SymbolData"/>
+        <NamedIndividual IRI="#Symbol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#box"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Color"/>
+        <NamedIndividual IRI="#color"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OntologyMember"/>
+        <NamedIndividual IRI="#color"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Colordata"/>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Description"/>
+        <NamedIndividual IRI="#name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Transformation"/>
+        <NamedIndividual IRI="#position"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mathematics"/>
+        <NamedIndividual IRI="#radius"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Matrix"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vector"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Vec3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shape"/>
+        <NamedIndividual IRI="#sphere"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OntologyMember"/>
+        <NamedIndividual IRI="#transform"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Transformation"/>
+        <NamedIndividual IRI="#transform"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#color"/>
+        <NamedIndividual IRI="#java.awt.Color"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDataType"/>
+        <NamedIndividual IRI="#transform"/>
+        <NamedIndividual IRI="#simplex3d.math.floatm.renamed.Mat4x4"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#color"/>
+        <Literal datatypeIRI="&xsd;string">java.awt.Color.white</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasConstructor"/>
+        <NamedIndividual IRI="#transform"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.renamed.Mat4x4.Identity</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasTypeAnnotations"/>
+        <NamedIndividual IRI="#transform"/>
+        <Literal datatypeIRI="&xsd;string">simplex3d.math.floatm.ConstMat4f</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDataType"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has_a"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#is_a"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#represents"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <ObjectProperty IRI="#represents"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDataType"/>
+        <Class IRI="#OntologyMember"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#DataRepresentation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDataType"/>
+        <Class IRI="#DataType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_a"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isRepresentedBy"/>
+        <Class IRI="#DataRepresentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasConstructor"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#hasTypeAnnotations"/>
+        <DataProperty abbreviatedIRI=":topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasConstructor"/>
+        <Class IRI="#OntologyMember"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTypeAnnotations"/>
+        <Class IRI="#OntologyMember"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasConstructor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasTypeAnnotations"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+

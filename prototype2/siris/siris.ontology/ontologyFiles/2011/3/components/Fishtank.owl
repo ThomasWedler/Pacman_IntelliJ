@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/8/Fishtank.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/8/Fishtank.owl"
+     versionIRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/8/Fishtank.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>file:/opt/local/etc/sirisOntology/core/SirisCore.owl</Import>
+    <Declaration>
+        <Class IRI="#AccelerationFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttractorAttractionFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AttractorStrength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DrawLines"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fish_Ai"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fishtank"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxAccMag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxAttractors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaxNeighbors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinAttractorDistance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinDistanceToNeighbors"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MinDistanceToPredators"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NeighborhoodAttractionFactor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Siris_World"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_AccelerationFactor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorAttractionFactor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorStrength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAccMag"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAttractors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxNeighbors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MinAttractorDistance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToNeighbors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToPredators"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_Fish_Ai_DrawLines"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Siris_Fish_Ai_NeighborhoodAttractionFactor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AccelerationFactor"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttractorAttractionFactor"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AttractorStrength"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DrawLines"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fish"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fish_Ai"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Ai"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fishtank"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxAccMag"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxAttractors"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaxNeighbors"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinAttractorDistance"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinDistanceToNeighbors"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MinDistanceToPredators"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NeighborhoodAttractionFactor"/>
+        <Class IRI="#Siris_World"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Siris_World"/>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Concept"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#AccelerationFactor"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AccelerationFactor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttractorAttractionFactor"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorAttractionFactor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AttractorStrength"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorStrength"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MaxAccMag"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAccMag"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MaxAttractors"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAttractors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MaxNeighbors"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxNeighbors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MinAttractorDistance"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinAttractorDistance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MinDistanceToNeighbors"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToNeighbors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MinDistanceToPredators"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToPredators"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#Siris_Component"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DrawLines"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_DrawLines"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NeighborhoodAttractionFactor"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_NeighborhoodAttractionFactor"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AccelerationFactor"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AccelerationFactor"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorAttractionFactor"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorAttractionFactor"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorStrength"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_AttractorStrength"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAccMag"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAccMag"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAttractors"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxAttractors"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxNeighbors"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Integer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MaxNeighbors"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinAttractorDistance"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinAttractorDistance"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToNeighbors"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToNeighbors"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToPredators"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#SirisFish_Ai_MinDistanceToPredators"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_DrawLines"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Boolean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_DrawLines"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#basedOn"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_NeighborhoodAttractionFactor"/>
+        <NamedIndividual IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#SirisCore_Real"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#forComponent"/>
+        <NamedIndividual IRI="#Siris_Fish_Ai_NeighborhoodAttractionFactor"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="http://www.intelligent-graphics.uni-bayreuth.de/ontologies/2011/3/core/SirisCore.owl#inPackage"/>
+        <NamedIndividual IRI="#Siris_Fish_AiComponent"/>
+        <Literal datatypeIRI="&xsd;string">siris.components.fishtank</Literal>
+    </DataPropertyAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1799) http://owlapi.sourceforge.net -->
+

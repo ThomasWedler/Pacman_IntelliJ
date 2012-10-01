@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="sphinx">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/speech/sphinx" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/speech/sphinx" recursive="false" />
+  </library>
+</component>

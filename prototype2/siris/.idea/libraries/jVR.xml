@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="jVR">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/jvr/jVR.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/jvr/jVR.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,18 @@
+HOW TO USE
+- create a copy of build.properties.template named build.properties  
+- edit build.properties
+- use ant to compile and run the project either from the console or with your ide
+- to specify the class to run you can change the 
+  
+  siris.propfile.classname 
+
+  property in the build.properties file or add an additional argument to ant in the console 
+  (run ant without a target to see the usage info)
+
+HINT
+- intellij supports external ant files and can pass properties from within the ide 
+  pass a property 
+
+  siris.ide.classname
+
+  via intellij to specify which what to run when invoking a "run" target

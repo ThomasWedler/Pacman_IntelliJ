@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA version="1.4.0" xmlns="http://www.collada.org/2005/11/COLLADASchema">
+	<asset>
+		<contributor>
+			<author>Illusoft Collada 1.4.0 plugin for Blender - http://colladablender.illusoft.com</author>
+			<authoring_tool>Blender v:249 - Illusoft Collada Exporter v:0.3.162</authoring_tool>
+			<comments></comments>
+			<copyright></copyright>
+			<source_data>file:///home/fire/Downloads/ghostblend.blend</source_data>
+		</contributor>
+		<created>2010-09-25T14:40:46.947557</created>
+		<modified>2010-09-25T14:40:46.947581</modified>
+		<unit meter="0.01" name="centimeter"/>
+		<up_axis>Z_UP</up_axis>
+	</asset>
+	<library_effects>
+		<effect id="Material_002-fx" name="Material_002-fx">
+			<profile_COMMON>
+				<technique sid="blender">
+					<phong>
+						<emission>
+							<color>0.00000 0.00000 0.00000 1</color>
+						</emission>
+						<ambient>
+							<color>0.00000 0.00000 0.00000 1</color>
+						</ambient>
+						<diffuse>
+							<color>0.00000 0.00000 0.00000 1</color>
+						</diffuse>
+						<specular>
+							<color>0.50000 0.50000 0.50000 1</color>
+						</specular>
+						<shininess>
+							<float>12.5</float>
+						</shininess>
+						<reflective>
+							<color>1.00000 1.00000 1.00000 1</color>
+						</reflective>
+						<reflectivity>
+							<float>0.0</float>
+						</reflectivity>
+						<transparent>
+							<color>1 1 1 1</color>
+						</transparent>
+						<transparency>
+							<float>0.74407</float>
+						</transparency>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+	</library_effects>
+	<library_materials>
+		<material id="Material_002" name="Material_002">
+			<instance_effect url="#Material_002-fx"/>
+		</material>
+	</library_materials>
+	<library_geometries>
+		<geometry id="Circle_002" name="Circle_002">
+			<mesh>
+				<source id="Circle_002-Position">
+					<float_array count="99" id="Circle_002-Position-array">0.70711 0.70711 0.00000 0.83147 0.55557 0.00000 0.92388 0.38268 0.00000 0.98079 0.19509 0.00000 1.00000 0.00000 0.00000 0.98079 -0.19509 0.00000 0.92388 -0.38268 0.00000 0.83147 -0.55557 0.00000 0.70711 -0.70711 0.00000 0.55557 -0.83147 0.00000 0.38268 -0.92388 0.00000 0.19509 -0.98079 0.00000 -0.00000 -1.00000 0.00000 -0.19509 -0.98079 0.00000 -0.38268 -0.92388 0.00000 -0.55557 -0.83147 0.00000 -0.70711 -0.70711 0.00000 -0.83147 -0.55557 0.00000 -0.92388 -0.38268 0.00000 -0.98079 -0.19509 0.00000 -1.00000 0.00000 0.00000 -0.98079 0.19509 0.00000 -0.92388 0.38268 0.00000 -0.83147 0.55557 0.00000 -0.70711 0.70711 0.00000 -0.55557 0.83147 0.00000 -0.38268 0.92388 0.00000 -0.19509 0.98079 0.00000 0.00000 1.00000 0.00000 0.19509 0.98078 0.00000 0.38269 0.92388 0.00000 0.55557 0.83147 0.00000 0.00000 0.00000 0.00000</float_array>
+					<technique_common>
+						<accessor count="33" source="#Circle_002-Position-array" stride="3">
+							<param type="float" name="X"></param>
+							<param type="float" name="Y"></param>
+							<param type="float" name="Z"></param>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Circle_002-Normals">
+					<float_array count="96" id="Circle_002-Normals-array">-0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 0.00000 -0.00000 -1.00000 -0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 -0.00000 0.00000 -1.00000 0.00000 0.00000 -1.00000</float_array>
+					<technique_common>
+						<accessor count="32" source="#Circle_002-Normals-array" stride="3">
+							<param type="float" name="X"></param>
+							<param type="float" name="Y"></param>
+							<param type="float" name="Z"></param>
+						</accessor>
+					</technique_common>
+				</source>
+				<source id="Circle_002-UV">
+					<float_array count="192" id="Circle_002-UV-array">0.31492 0.76788 0.29799 0.77125 0.29765 0.76788 0.29765 0.77123 0.28072 0.77460 0.28039 0.77123 0.29765 0.76786 0.28072 0.77123 0.28039 0.76786 0.29429 0.81505 0.27702 0.81505 0.27735 0.81168 0.29429 0.80832 0.27735 0.81168 0.27702 0.80832 0.31492 0.77798 0.29765 0.77798 0.29799 0.77461 0.29774 0.78474 0.28080 0.78810 0.28047 0.78474 0.29765 0.76617 0.28047 0.76786 0.28047 0.76448 0.26320 0.78810 0.28014 0.78474 0.28047 0.78810 0.28039 0.79484 0.29732 0.79147 0.29765 0.79484 0.29765 0.78472 0.31459 0.78135 0.31492 0.78472 0.28039 0.78135 0.29765 0.78135 0.29732 0.78472 0.29765 0.80495 0.31459 0.80158 0.31492 0.80495 0.28047 0.77629 0.29765 0.77460 0.29765 0.77798 0.28039 0.79147 0.29732 0.78810 0.29765 0.79147 0.29429 0.79779 0.29765 0.81472 0.29429 0.81505 0.27702 0.80452 0.29395 0.80115 0.29429 0.80452 0.28039 0.78135 0.29732 0.77798 0.29765 0.78135 0.29765 0.77798 0.31492 0.77798 0.31459 0.78135 0.29765 0.81168 0.31459 0.80832 0.31492 0.81168 0.29765 0.79484 0.31492 0.79484 0.31459 0.79821 0.29765 0.81505 0.31459 0.81168 0.31492 0.81505 0.29765 0.80832 0.31459 0.80495 0.31492 0.80832 0.29765 0.76618 0.31484 0.76449 0.31484 0.76788 0.31492 0.77125 0.29799 0.77461 0.29765 0.77125 0.31492 0.79821 0.29799 0.80158 0.29765 0.79821 0.29429 0.80622 0.27710 0.80791 0.27710 0.80452 0.29429 0.80115 0.27702 0.80115 0.27735 0.79779 0.31492 0.79147 0.29799 0.79484 0.29765 0.79147 0.31492 0.78641 0.29774 0.78810 0.29774 0.78472 0.31492 0.78810 0.29799 0.79147 0.29765 0.78810 0.26329 0.77798 0.26329 0.77460 0.28047 0.77629</float_array>
+					<technique_common>
+						<accessor count="96" source="#Circle_002-UV-array" stride="2">
+							<param type="float" name="S"></param>
+							<param type="float" name="T"></param>
+						</accessor>
+					</technique_common>
+				</source>
+				<vertices id="Circle_002-Vertex">
+					<input semantic="POSITION" source="#Circle_002-Position"/>
+				</vertices>
+				<triangles count="32" material="Material_002">
+					<input offset="0" semantic="VERTEX" source="#Circle_002-Vertex"/>
+					<input offset="1" semantic="NORMAL" source="#Circle_002-Normals"/>
+					<input offset="2" semantic="TEXCOORD" source="#Circle_002-UV"/>
+					<p>32 0 0 0 0 1 1 0 2 32 1 3 1 1 4 2 1 5 32 2 6 2 2 7 3 2 8 32 3 9 3 3 10 4 3 11 32 4 12 4 4 13 5 4 14 32 5 15 5 5 16 6 5 17 32 6 18 6 6 19 7 6 20 32 7 21 7 7 22 8 7 23 32 8 24 8 8 25 9 8 26 32 9 27 9 9 28 10 9 29 32 10 30 10 10 31 11 10 32 32 11 33 11 11 34 12 11 35 32 12 36 12 12 37 13 12 38 32 13 39 13 13 40 14 13 41 32 14 42 14 14 43 15 14 44 32 15 45 15 15 46 16 15 47 32 16 48 16 16 49 17 16 50 32 17 51 17 17 52 18 17 53 32 18 54 18 18 55 19 18 56 32 19 57 19 19 58 20 19 59 32 20 60 20 20 61 21 20 62 32 21 63 21 21 64 22 21 65 32 22 66 22 22 67 23 22 68 32 23 69 23 23 70 24 23 71 32 24 72 24 24 73 25 24 74 32 25 75 25 25 76 26 25 77 32 26 78 26 26 79 27 26 80 32 27 81 27 27 82 28 27 83 32 28 84 28 28 85 29 28 86 32 29 87 29 29 88 30 29 89 32 30 90 30 30 91 31 30 92 31 31 93 0 31 94 32 31 95</p>
+				</triangles>
+			</mesh>
+		</geometry>
+	</library_geometries>
+	<library_visual_scenes>
+		<visual_scene id="Scene" name="Scene">
+			<node layer="L1" id="Circle_001" name="Circle_001">
+				<matrix>
+					-0.01358 -0.09652 -0.00945 -0.51922 
+					-0.02105 0.01225 -0.09485 0.78306 
+					0.09467 -0.01112 -0.02244 2.99327 
+					0.0 0.0 0.0 1.0 
+				</matrix>
+				<instance_geometry url="#Circle_002">
+					<bind_material>
+						<technique_common>
+							<instance_material symbol="Material_002" target="#Material_002">
+								<bind_vertex_input input_semantic="TEXCOORD" input_set="1" semantic="CHANNEL1"/>
+							</instance_material>
+						</technique_common>
+					</bind_material>
+				</instance_geometry>
+			</node>
+		</visual_scene>
+	</library_visual_scenes>
+	<scene>
+		<instance_visual_scene url="#Scene"/>
+	</scene>
+</COLLADA>
