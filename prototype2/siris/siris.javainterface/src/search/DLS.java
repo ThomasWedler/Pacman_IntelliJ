@@ -61,7 +61,7 @@ public class DLS {
 	public MyNode getResult() {
 		return result;
 	}
-	
+
 	public MyNode getCutoff() {
 		return cutoff;
 	}

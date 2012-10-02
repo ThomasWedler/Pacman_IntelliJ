@@ -1,65 +1,66 @@
 package pacman;
-import java.io.IOException;
+
+import basic.*;
 import siris.java.JavaInterface;
 import siris.pacman.BasicPacman;
+import siris.pacman.PacmanAI;
 import siris.pacman.graph.JavaGraphWrapper;
-import basic.MyGoalTestFunction;
-import basic.MyGraphSearch;
-import basic.MyLevel;
-import basic.MyPacman;
-import basic.MyPacmanAI;
-import basic.MyTileNode;
+
+import java.io.File;
+import java.io.IOException;
 
 public class Game {
-	
-	// Martin:
-	// Editor: level direkt laden
-		
-	// Power-Ups wie im Original Pacman
-	// ->> Geister weg von ihm
-	
-	public static MyLevel level;
-	public static int score = 0;
-	public static MyPacman pacman;
-	public static int goodiePower = 0;
-	public static int maximumPowerLevel = 9000;
-	public static float gameSpeed = 0.5f;
-	
-	private String mode = "Normal";
-	private int suddenDeathCounter = 5;
-	
-	public static void main(String[] args) throws IOException, InterruptedException {
-		new Game("siris.javainterface/src/maps/Test.txt");
-	}
-	
-	public Game(String levelname) throws IOException, InterruptedException {
-		MyTileNode startNode = null;
-		level = new MyLevel(levelname);
-		pacman = level.getPacman();
-		goodiePower = maximumPowerLevel / (level.getGoodieCounter() - suddenDeathCounter - 1);
-		for (MyTileNode n : level.getTileNodes().keySet()) {
-			startNode = n;
-			break;
-		}
-		if (mode.equals("Normal"))
-			start(startNode);
-		if (mode.equals("TestSearch"))
-			testSearch(startNode);
-	}
-	
-	private void start(MyTileNode startNode) {
-		MyGraphSearch gs = new MyGraphSearch();
-		BasicPacman.startPacman(new MyPacmanAI(), startNode, gs, true);
-	}
-	
-	private void testSearch(MyTileNode startNode) throws InterruptedException {
-		JavaInterface ji = new JavaInterface(true, true);
-		ji.startRenderer(800, 600);
-		MyGraphSearch gs = new MyGraphSearch();
-		MyGoalTestFunction gtf = new MyGoalTestFunction();
-		JavaGraphWrapper.drawGraph(startNode, ji);
-		Thread.sleep(10000);			
-		gs.search(startNode, gtf);
-	}
 
+    private MyLevel level;
+    private MyPacman pacman;
+    private int goodiePower;
+    private int score = 0;
+
+    private String mode = "Normal";
+
+    private MyPacmanAI pacmanAI = new MyPacmanAI();
+    private MyGraphSearch gs = new MyGraphSearch();
+
+    public Game(File file) throws IOException, InterruptedException {
+        level = new MyLevel(file);
+        setComponentAttributes();
+
+        if (mode.equals("Normal"))
+            BasicPacman.startPacman(pacmanAI, getStartNode(), gs, true);
+        if (mode.equals("TestSearch"))
+            testSearch();
+    }
+
+    private void testSearch() throws InterruptedException {
+        JavaInterface ji = new JavaInterface(true, true);
+        ji.startRenderer(800, 600);
+        MyGoalTestFunction gtf = new MyGoalTestFunction();
+        JavaGraphWrapper.drawGraph(getStartNode(), ji);
+        Thread.sleep(10000);
+        gs.search(getStartNode(), gtf);
+    }
+
+    private MyTileNode getStartNode() {
+        for (MyTileNode n : level.getTileNodes().keySet()) {
+            return n;
+        }
+        return null;
+    }
+
+    private void setComponentAttributes() {
+        pacman = level.getPacman();
+        goodiePower = 9000 / (level.getGoodieCounter() - 4);
+
+        pacmanAI.setPacman(pacman);
+        pacmanAI.setGoodiePower(goodiePower);
+        pacmanAI.setLevel(level);
+        pacmanAI.setScore(score);
+
+        pacman.setLevel(level);
+
+        for (MyGhost ghost : level.getGhosts()) {
+            ghost.setPacman(pacman);
+            ghost.setLevel(level);
+        }
+    }
 }

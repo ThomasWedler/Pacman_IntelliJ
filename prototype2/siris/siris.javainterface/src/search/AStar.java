@@ -18,11 +18,10 @@ public class AStar {
 	private float tentativeG = 0;
 
 	public AStar(MyEntityNode e1, MyEntityNode e2) {
-		MyTileNode start = (MyTileNode) e1.getTileNode();
-		MyTileNode goal = (MyTileNode) e2.getTileNode();
+		MyTileNode start = e1.getTileNode();
+		MyTileNode goal = e2.getTileNode();
 		start.setG(0);
 		start.setF(start.getG() + h(start, goal));
-		openSet.add(start);
 		result = compute(start, goal);
 		result.add(goal);
 	}
@@ -32,7 +31,8 @@ public class AStar {
 	}
 
 	private LinkedList<MyTileNode> compute(MyTileNode start, MyTileNode goal) {
-		while (!openSet.isEmpty()) {
+        openSet.add(start);
+        while (!openSet.isEmpty()) {
 			MyTileNode current = openSet.poll();
 
 			if (current.equals(goal))

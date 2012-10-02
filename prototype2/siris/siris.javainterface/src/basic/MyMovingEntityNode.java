@@ -1,6 +1,7 @@
 package basic;
 
 import pacman.Game;
+import pacman.Main;
 
 public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.graph.MovingEntityNode {
 
@@ -8,7 +9,7 @@ public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.gra
 	private int cmdY = 0;
 	private int dmdX = 0;
 	private int dmdY = 0;
-	private float speed = 3f * Game.gameSpeed;
+	private float speed = 1f;
 	private String direction = "none";
 
 	@Override

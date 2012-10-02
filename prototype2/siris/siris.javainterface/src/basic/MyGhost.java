@@ -1,191 +1,324 @@
 package basic;
 
 import java.util.LinkedList;
-import pacman.Game;
 
 public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Ghost {
+    private int number = 0;
 
-	private LinkedList<MyTileNode> desiredPath = new LinkedList<MyTileNode>();
-	private int number = 0;
-	private boolean seePacman = false;
-	private boolean hearPacman = false;
-	private boolean visionPacman = false;
-	private boolean feelPacman = false;
-	private int hearRange = 1;
-	private int visionRange = 2;
-	private boolean found = false;
+    private LinkedList<MyTileNode> desiredPath = new LinkedList<MyTileNode>();
 
-	public void setNr(int x) {
-		number = x;
-	}
+    private boolean seePacman = false;
+    private boolean hearPacman = false;
+    private boolean visionPacman = false;
+    private boolean feelPacman = false;
 
-	@Override
-	public int getNr() {
-		return number;
-	}
+    private float hearRange = 1f;
+    private float visionRange = 2f;
+    private float visionTimer = 0f;
 
-	public boolean lookForPacman() {
-		MyTileNode position = (MyTileNode) this.getEntryNode();
-		if (position != null) {
-			for (MyNode n : position.getNeighbors()) {
-				if (n instanceof MyPacman)
-					return true;
-				if (n instanceof MyTileNode) {
-					MyTileNode node = (MyTileNode) n;
-					String direction = position.getDifferenceBetweenPositions(node);
-					if (direction.equals("left") && !this.getDirection().equals("right")) {
-						for (MyTileNode tilenode : Game.level.getTileNodes().keySet()) {
-							for (int i = 0; i < 100; i++) {
-								if (tilenode.position().x() == node.position().x() - i && tilenode.position().y() == node.position().y()) {
-									if (Game.pacman.getTileNode().position().x() == tilenode.position().x() && Game.pacman.getTileNode().position().y() == tilenode.position().y())
-										return true;
-								}
-							}
-						}
-					}
-					if (direction.equals("right") && !this.getDirection().equals("left")) {
-						for (MyTileNode tilenode : Game.level.getTileNodes().keySet()) {
-							for (int i = 0; i < 100; i++) {
-								if (tilenode.position().x() == node.position().x() + i && tilenode.position().y() == node.position().y()) {
-									if (Game.pacman.getTileNode().position().x() == tilenode.position().x() && Game.pacman.getTileNode().position().y() == tilenode.position().y())
-										return true;
-								}
-							}
-						}
-					}
-					if (direction.equals("up") && !this.getDirection().equals("down")) {
-						for (MyTileNode tilenode : Game.level.getTileNodes().keySet()) {
-							for (int i = 0; i < 100; i++) {
-								if (tilenode.position().x() == node.position().x() && tilenode.position().y() == node.position().y() + i) {
-									if (Game.pacman.getTileNode().position().x() == tilenode.position().x() && Game.pacman.getTileNode().position().y() == tilenode.position().y())
-										return true;
-								}
-							}
-						}
-					}
-					if (direction.equals("down") && !this.getDirection().equals("up")) {
-						for (MyTileNode tilenode : Game.level.getTileNodes().keySet()) {
-							for (int i = 0; i < 100; i++) {
-								if (tilenode.position().x() == node.position().x() && tilenode.position().y() == node.position().y() - i) {
-									if (Game.pacman.getTileNode().position().x() == tilenode.position().x() && Game.pacman.getTileNode().position().y() == tilenode.position().y())
-										return true;
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		return false;
-	}
+    private boolean hasRandomed = false;
+    private boolean foundPacman = false;
 
-	public boolean hearForPacman() {
-		int xMax = this.getTileNode().position().x() + hearRange;
-		int xMin = this.getTileNode().position().x() - hearRange;
-		int yMax = this.getTileNode().position().y() + hearRange;
-		int yMin = this.getTileNode().position().y() - hearRange;
-		for (MyTileNode node : Game.level.getTileNodes().keySet()) {
-			if (node.position().x() <= xMax && node.position().x() >= xMin && node.position().y() <= yMax && node.position().y() >= yMin) {
-				if (Game.pacman.getTileNode().position().equals(node.position()))
-					return true;
-			}
-		}
-		return false;
-	}
+    public boolean checkSenses() {
+        if (feelsPacman()) {
+            foundPacman = true;
+            setSpeed(1.2f);
+            System.out.println("felt");
+            setSensesFalse();
+            return true;
+        }
+        if (visionsPacman()) {
+            foundPacman = true;
+            setSpeed(2f);
+            System.out.println("visioned");
+            setSensesFalse();
+            return true;
+        }
+        if (seesPacman()) {
+            foundPacman = true;
+            setSpeed(1.2f);
+            System.out.println("seen");
+            setSensesFalse();
+            return true;
+        }
+        if (hearsPacman()) {
+            foundPacman = true;
+            setSpeed(0.8f);
+            System.out.println("heard");
+            setSensesFalse();
+            return true;
+        }
+        return false;
+    }
 
-	public boolean visionForPacman() {
-		int counter = 0;
-		int random = (int) (Math.random() * Game.level.getTileNodes().keySet().size());
-		MyTileNode randomNode = null;
-		for (MyTileNode node : Game.level.getTileNodes().keySet()) {
-			if (counter == random) {
-				randomNode = node;
-				break;
-			} else
-				counter++;
-		}
-		int xMax = randomNode.position().x() + visionRange;
-		int xMin = randomNode.position().x() - visionRange;
-		int yMax = randomNode.position().y() + visionRange;
-		int yMin = randomNode.position().y() - visionRange;
-		for (MyTileNode node : Game.level.getTileNodes().keySet()) {
-			if (node.position().x() <= xMax && node.position().x() >= xMin && node.position().y() <= yMax && node.position().y() >= yMin) {
-				if (Game.pacman.getTileNode().position().equals(node.position()))
-					return true;
-			}
-		}
-		return false;
-	}
+    private void setSensesFalse() {
+        setSeePacman(false);
+        setHearPacman(false);
+        setVisionPacman(false);
+        setFeelPacman(false);
+    }
 
-	private boolean power = true;
+    public boolean lookForPacman() {
+        MyTileNode position = getTileNode();
+        for (MyNode n : position.getNeighbors()) {
+            if (n instanceof MyPacman)
+                return true;
 
-	public boolean feelForPacman() {
-		if (Game.pacman.getPowerLevel() > Game.maximumPowerLevel) {
-			if (power) {
-				System.out.println("Over 9000!!!");
-				power = false;
-			}
-			return true;
-		}
-		return false;
-	}
+            if (n instanceof MyTileNode) {
+                MyTileNode neighbourNode = (MyTileNode) n;
+                String direction = position.getDifferenceBetweenPositions(neighbourNode);
 
-	public MyTileNode getEntryNode() {
-		int x = this.getTileNode().position().x() + this.getCurrentMovementDirectionX();
-		int y = this.getTileNode().position().y() + this.getCurrentMovementDirectionY();
-		for (MyTileNode node : Game.level.getTileNodes().keySet()) {
-			if (node.position().x() == x && node.position().y() == y)
-				return node;
-		}
-		return null;
-	}
+                if (direction.equals("left") && !this.getDirection().equals("right")) {
+                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                        for (int i = 0; i < 100; i++) {
+                            if (tilenode.position().x() == neighbourNode.position().x() - i && tilenode.position().y() == neighbourNode.position().y()) {
+                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                                    return true;
+                            }
+                        }
+                    }
+                }
+                if (direction.equals("right") && !this.getDirection().equals("left")) {
+                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                        for (int i = 0; i < 100; i++) {
+                            if (tilenode.position().x() == neighbourNode.position().x() + i && tilenode.position().y() == neighbourNode.position().y()) {
+                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                                    return true;
+                            }
+                        }
+                    }
+                }
+                if (direction.equals("up") && !this.getDirection().equals("down")) {
+                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                        for (int i = 0; i < 100; i++) {
+                            if (tilenode.position().x() == neighbourNode.position().x() && tilenode.position().y() == neighbourNode.position().y() + i) {
+                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                                    return true;
+                            }
+                        }
+                    }
+                }
+                if (direction.equals("down") && !this.getDirection().equals("up")) {
+                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                        for (int i = 0; i < 100; i++) {
+                            if (tilenode.position().x() == neighbourNode.position().x() && tilenode.position().y() == neighbourNode.position().y() - i) {
+                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                                    return true;
+                            }
+                        }
+                    }
+                }
+            }
 
-	public LinkedList<MyTileNode> getDesiredPath() {
-		return desiredPath;
-	}
+        }
+        return false;
+    }
 
-	public void setDesiredPath(LinkedList<MyTileNode> desiredPath) {
-		this.desiredPath = desiredPath;
-	}
 
-	public boolean seesPacman() {
-		return seePacman;
-	}
+    /*public boolean lookForPacman() {
+        boolean result = false;
+        boolean doSearch = false;
+        MyTileNode startingPosition = getTileNode();
+        for (MyNode n : startingPosition.getNeighbors()) {
+            if (n instanceof MyTileNode) {
+                MyTileNode neighbourNode = (MyTileNode) n;
+                String direction = startingPosition.getDifferenceBetweenPositions(neighbourNode);
+                if (getDirection().equals("left") && !direction.equals("right")) {
+                    doSearch = true;
+                } else if (getDirection().equals("right") && !direction.equals("left")) {
+                    doSearch = true;
+                } else if (getDirection().equals("up") && !direction.equals("down")) {
+                    doSearch = true;
+                } else if (getDirection().equals("down") && !direction.equals("up")) {
+                    doSearch = true;
+                }
+                if (doSearch) {
+                    if (lookOut(neighbourNode, direction))
+                        result = true;
+                }
+            }
+        }
+        return result;
+    } */
 
-	public boolean hearsPacman() {
-		return hearPacman;
-	}
+    /*private boolean lookOut(MyTileNode position, String direction) {
+        for (MyNode n : position.getNeighbors()) {
+            if (n instanceof MyPacman)
+                return true;
 
-	public boolean visionsPacman() {
-		return visionPacman;
-	}
+            if (n instanceof MyTileNode) {
+                MyTileNode neighbourNode = (MyTileNode) n;
+                String dir = position.getDifferenceBetweenPositions(neighbourNode);
 
-	public boolean feelsPacman() {
-		return feelPacman;
-	}
+                if (direction.equals("left") && dir.equals("left"))
+                    return lookOut(neighbourNode, dir);
+                if (direction.equals("right") && dir.equals("right"))
+                    return lookOut(neighbourNode, dir);
+                if (direction.equals("up") && dir.equals("up"))
+                    return lookOut(neighbourNode, dir);
+                if (direction.equals("down") && dir.equals("down"))
+                    return lookOut(neighbourNode, dir);
+            }
+        }
 
-	public void setSeePacman(boolean seePacman) {
-		this.seePacman = seePacman;
-	}
+        return false;
+    } */
 
-	public void setHearPacman(boolean hearPacman) {
-		this.hearPacman = hearPacman;
-	}
+    public boolean hearForPacman() {
+        float c = rangeCheck(getPositionX(), getPositionY());
+        if (c < hearRange)
+            return true;
+        return false;
+    }
 
-	public void setVisionPacman(boolean visionPacman) {
-		this.visionPacman = visionPacman;
-	}
+    public boolean visionForPacman(float elapsed) {
+        visionTimer += elapsed;
 
-	public void setFeelPacman(boolean feelPacman) {
-		this.feelPacman = feelPacman;
-	}
+        if (visionTimer > 10f) {
+            visionTimer = 0f;
+            int counter = 0;
+            int random = (int) (Math.random() * getLevel().getTileNodes().keySet().size());
+            float x = 0;
+            float y = 0;
 
-	public boolean getFound() {
-		return found;
-	}
+            for (MyTileNode node : getLevel().getTileNodes().keySet()) {
+                if (counter == random) {
+                    x = node.position().x();
+                    y = node.position().y();
+                    break;
+                } else
+                    counter++;
+            }
 
-	public void setFound(boolean found) {
-		this.found = found;
-	}
+            float c = rangeCheck(x, y);
+            if (c < visionRange)
+                return true;
+        }
+
+        return false;
+    }
+
+    private float rangeCheck(float x, float y) {
+        float a = getPacman().getPositionX() - x;
+        float b = getPacman().getPositionY() - y;
+        float c = (float) Math.sqrt((a * a) + (b * b));
+        return c;
+    }
+
+    public boolean feelForPacman() {
+        if (getPacman().getPowerLevel() > 9000)
+            return true;
+        return false;
+    }
+
+    public void randomDirection() {
+        int x = 0;
+        int y = 0;
+        String s = getLevel().getTileNodes().get(getTileNode());
+        boolean notFound = true;
+
+        if (s.equals("X") || s.equals("P") || s.equals("G")) {
+            switch ((int) (Math.random() * (5 - 1) + 1)) {
+                case 1:
+                    x = 1;
+                    break;
+                case 2:
+                    y = 1;
+                    break;
+                case 3:
+                    x = -1;
+                    break;
+                case 4:
+                    y = -1;
+                    break;
+            }
+
+            if (getTileNode() != null) {
+                for (MyNode node : getTileNode().getNeighbors()) {
+                    if (node instanceof MyTileNode) {
+                        MyTileNode n = (MyTileNode) node;
+                        s = getTileNode().getDifferenceBetweenPositions(n);
+                        if ((s.equals("left") && x == -1) || (s.equals("right") && x == 1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+                            setDesiredMovementDirection(x, y);
+                            notFound = false;
+                        }
+                    }
+                }
+                if (notFound)
+                    randomDirection();
+            }
+        }
+        setDecidedRandom(true);
+    }
+
+    public boolean onLastPathStep() {
+        MyTileNode position = getTileNode();
+        MyTileNode lastTileNode = desiredPath.getLast();
+        String result = position.getDifferenceBetweenPositions(lastTileNode);
+        if (result.equals("none"))
+            return true;
+        return false;
+    }
+
+    public LinkedList<MyTileNode> getDesiredPath() {
+        return desiredPath;
+    }
+
+    public void setDesiredPath(LinkedList<MyTileNode> desiredPath) {
+        this.desiredPath = desiredPath;
+    }
+
+    public boolean seesPacman() {
+        return seePacman;
+    }
+
+    public boolean hearsPacman() {
+        return hearPacman;
+    }
+
+    public boolean visionsPacman() {
+        return visionPacman;
+    }
+
+    public boolean feelsPacman() {
+        return feelPacman;
+    }
+
+    public void setSeePacman(boolean seePacman) {
+        this.seePacman = seePacman;
+    }
+
+    public void setHearPacman(boolean hearPacman) {
+        this.hearPacman = hearPacman;
+    }
+
+    public void setVisionPacman(boolean visionPacman) {
+        this.visionPacman = visionPacman;
+    }
+
+    public void setFeelPacman(boolean feelPacman) {
+        this.feelPacman = feelPacman;
+    }
+
+    public boolean getFoundPacman() {
+        return foundPacman;
+    }
+
+    public void setFoundPacman(boolean foundPacman) {
+        this.foundPacman = foundPacman;
+    }
+
+    @Override
+    public int getNr() {
+        return number;
+    }
+
+    public boolean decidedRandom() {
+        return hasRandomed;
+    }
+
+    public void setDecidedRandom(boolean hasRandomed) {
+        this.hasRandomed = hasRandomed;
+    }
 
 }

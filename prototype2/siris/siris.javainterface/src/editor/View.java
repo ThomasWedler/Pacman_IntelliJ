@@ -18,13 +18,6 @@ import net.miginfocom.swing.MigLayout;
 public class View extends JFrame {
 	private static final long serialVersionUID = -2325156572708621182L;
 
-	JFrame window = new JFrame("Pacman - Level Editor");
-	JPanel view = new JPanel();
-	JPanel items = new JPanel();
-	GridLayout grid = new GridLayout(1, 2);
-	MigLayout left = new MigLayout("wrap 15", "[]0", "[]0");
-	MigLayout right = new MigLayout("", "20[]", "[65!]10");
-	
 	public JTextField levelname = new JTextField(15);
 	public JLabel lblBlankIcon = new JLabel();
 	public JLabel lblCrossingIcon = new JLabel();
@@ -47,6 +40,12 @@ public class View extends JFrame {
 	public LinkedList<JLabel> dnd = new LinkedList<JLabel>();
 
 	public View() {
+        JPanel view = new JPanel();
+        JPanel items = new JPanel();
+        GridLayout grid = new GridLayout(1, 2);
+        MigLayout left = new MigLayout("wrap 15", "[]0", "[]0");
+        MigLayout right = new MigLayout("", "20[]", "[65!]10");
+
 		setTitle("Pacman - Level Editor");
 		setSize(1280, 720);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -64,7 +63,7 @@ public class View extends JFrame {
 		items.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
 		JLabel lblLevel = new JLabel("Level:");
-		lblLevel.setFont(new Font("Dialog Bold", 1, 14));
+		lblLevel.setFont(new Font("Dialog Bold", Font.BOLD, 14));
 		view.add(lblLevel, new CC().wrap().gapBottom("20px"));
 
 		ImageIcon image = new ImageIcon("pacman/images/gray.png");
@@ -81,7 +80,7 @@ public class View extends JFrame {
 		}
 		
 		JLabel lblLevelname = new JLabel("Levelname:");
-		lblLevelname.setFont(new Font("Dialog Bold", 1, 14));
+		lblLevelname.setFont(new Font("Dialog Bold", Font.BOLD, 14));
 		items.add(lblLevelname, new CC().gapBottom("50px"));
 		levelname.setText("New Level");
 		items.add(levelname, new CC().wrap());

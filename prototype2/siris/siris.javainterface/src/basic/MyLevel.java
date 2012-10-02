@@ -16,29 +16,8 @@ public class MyLevel {
 	private int goodieCounter = 0;
 	private MyPacman pacman;
 	
-	public MyLevel(String filename) throws IOException {
-		File file = new File(filename);
+	public MyLevel(File file) throws IOException {
 		renderLevel(file);
-	}
-
-	public HashMap<MyTileNode, String> getTileNodes() {
-		return tileNodes;
-	}
-
-	public LinkedList<MyGhost> getGhosts() {
-		return ghosts;
-	}
-
-	public MyPacman getPacman() {
-		return pacman;
-	}
-	
-	public int getGoodieCounter() {
-		return goodieCounter;
-	}
-
-	public void setGoodieCounter(int goodieCounter) {
-		this.goodieCounter = goodieCounter;
 	}
 
 	public void renderLevel(File file) throws IOException {
@@ -116,5 +95,25 @@ public class MyLevel {
 		br.close();
 		return row;
 	}
+
+    public HashMap<MyTileNode, String> getTileNodes() {
+        return tileNodes;
+    }
+
+    public LinkedList<MyGhost> getGhosts() {
+        return ghosts;
+    }
+
+    public MyPacman getPacman() {
+        return pacman;
+    }
+
+    public int getGoodieCounter() {
+        return goodieCounter;
+    }
+
+    public void setGoodieCounter(int goodieCounter) {
+        this.goodieCounter = goodieCounter;
+    }
 
 }

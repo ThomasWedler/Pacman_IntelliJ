@@ -87,7 +87,7 @@ public class Control {
 					if (result == JOptionPane.YES_OPTION) {
 						try {
 							view.dispose();
-							new Game("siris.javainterface/src/maps/" + view.levelname.getText() + ".txt");
+							new Game(new File("siris.javainterface/src/maps/" + view.levelname.getText() + ".txt"));
 						} catch (Exception exc) {
 							exc.printStackTrace();
 						}
