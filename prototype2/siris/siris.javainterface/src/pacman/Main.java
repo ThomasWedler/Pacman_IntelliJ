@@ -1,10 +1,5 @@
 package pacman;
 
-import siris.pacman.util.TilePosition;
-
-import java.io.File;
-import java.io.IOException;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Thomas
@@ -14,10 +9,13 @@ import java.io.IOException;
  */
 public class Main {
 
+    // Martin:
+    // Sehen funktioniert auch furch Wände. Warum geht rekursiver Aufruf nicht?
+
     public static Game game;
 
-    public static void main(String[] args) throws IOException, InterruptedException {
-        game = new Game(new File("siris.javainterface/src/maps/testlevel.txt"));
+    public static void main(String[] args) {
+        new startupscreen.Control();
     }
 
 }

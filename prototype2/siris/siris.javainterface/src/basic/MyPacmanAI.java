@@ -17,19 +17,19 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
 
     @Override
     public void onSimulationStep(float deltaT) {
-        pacman.checkForBulletTime();
+        boolean bulletTime = pacman.checkForBulletTime();
 
         for (MyGhost ghost : level.getGhosts()) {
             if (ghost.lookForPacman())
                 ghost.setSeePacman(true);
-           /* if (ghost.hearForPacman())
+            if (ghost.hearForPacman())
                 ghost.setHearPacman(true);
             if (ghost.visionForPacman(deltaT))
                 ghost.setVisionPacman(true);
             if (ghost.feelForPacman())
-                ghost.setFeelPacman(true); */
+                ghost.setFeelPacman(true);
 
-            ghost.checkSenses();
+            ghost.checkSenses(bulletTime);
         }
     }
 
@@ -105,7 +105,7 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                 System.exit(0);
             } else if (e2 instanceof MyGoodie) {
                 level.setGoodieCounter(level.getGoodieCounter() - 1);
-                score += goodiePower;
+                score += 100;
                 pacman.setPowerLevel(pacman.getPowerLevel() + goodiePower);
                 if (level.getGoodieCounter() == 0) {
                     System.out.println("Winner!");

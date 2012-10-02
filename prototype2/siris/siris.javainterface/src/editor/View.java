@@ -16,7 +16,7 @@ import net.miginfocom.layout.CC;
 import net.miginfocom.swing.MigLayout;
 
 public class View extends JFrame {
-	private static final long serialVersionUID = -2325156572708621182L;
+	private static final long serialVersionUID = -2325155572708621182L;
 
 	public JTextField levelname = new JTextField(15);
 	public JLabel lblBlankIcon = new JLabel();
@@ -33,7 +33,8 @@ public class View extends JFrame {
 	public JLabel lblTPieceFourIcon = new JLabel();
 	public JLabel lblPacmanIcon = new JLabel();
 	public JLabel lblGhostIcon = new JLabel();
-	public JButton btnSave = new JButton("Save");
+    public JLabel lblPowerUpIcon = new JLabel();
+    public JButton btnSave = new JButton("Save");
 	public JButton btnCancel = new JButton("Cancel");
 
 	public LinkedList<JLabel> labels = new LinkedList<JLabel>();
@@ -44,7 +45,7 @@ public class View extends JFrame {
         JPanel items = new JPanel();
         GridLayout grid = new GridLayout(1, 2);
         MigLayout left = new MigLayout("wrap 15", "[]0", "[]0");
-        MigLayout right = new MigLayout("", "20[]", "[65!]10");
+        MigLayout right = new MigLayout("", "20[]", "[55!]10");
 
 		setTitle("Pacman - Level Editor");
 		setSize(1280, 720);
@@ -58,9 +59,6 @@ public class View extends JFrame {
 
 		view.setLayout(left);
 		items.setLayout(right);
-
-		view.setBorder(BorderFactory.createLineBorder(Color.black, 1));
-		items.setBorder(BorderFactory.createLineBorder(Color.black, 1));
 
 		JLabel lblLevel = new JLabel("Level:");
 		lblLevel.setFont(new Font("Dialog Bold", Font.BOLD, 14));
@@ -81,12 +79,12 @@ public class View extends JFrame {
 		
 		JLabel lblLevelname = new JLabel("Levelname:");
 		lblLevelname.setFont(new Font("Dialog Bold", Font.BOLD, 14));
-		items.add(lblLevelname, new CC().gapBottom("50px"));
+		items.add(lblLevelname, new CC().gapBottom("55px"));
 		levelname.setText("New Level");
 		items.add(levelname, new CC().wrap());
 		
 		ImageIcon icon = new ImageIcon("pacman/images/gray.png");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblBlank = new JLabel("Blank: ");
 		items.add(lblBlank, new CC());
@@ -95,7 +93,7 @@ public class View extends JFrame {
 		dnd.add(lblBlankIcon);
 		
 		icon = new ImageIcon("pacman/images/crossing.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblCrossing = new JLabel("Crossing: ");
 		items.add(lblCrossing, new CC());
@@ -104,7 +102,7 @@ public class View extends JFrame {
 		dnd.add(lblCrossingIcon);
 		
 		icon = new ImageIcon("pacman/images/curve.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 
 		JLabel lblCurveOne = new JLabel("Curve One: ");
 		items.add(lblCurveOne, new CC());
@@ -113,7 +111,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveOneIcon);
 		
 		icon = new ImageIcon("pacman/images/curveTwo.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblCurveTwo = new JLabel("Curve Two: ");
 		items.add(lblCurveTwo, new CC());
@@ -122,7 +120,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveTwoIcon);
 
 		icon = new ImageIcon("pacman/images/curveThree.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblCurveThree = new JLabel("Curve Three: ");
 		items.add(lblCurveThree, new CC());
@@ -131,7 +129,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveThreeIcon);
 
 		icon = new ImageIcon("pacman/images/curveFour.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblCurveFour = new JLabel("Curve Four: ");
 		items.add(lblCurveFour, new CC());
@@ -140,7 +138,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveFourIcon);
 
 		icon = new ImageIcon("pacman/images/line.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 
 		JLabel lblVerticalLine = new JLabel("Vertical Line: ");
 		items.add(lblVerticalLine, new CC());
@@ -149,7 +147,7 @@ public class View extends JFrame {
 		dnd.add(lblVerticalLineIcon);
 		
 		icon = new ImageIcon("pacman/images/lineHorizontal.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 
 		JLabel lblHorizontalLine = new JLabel("Horizontal Line: ");
 		items.add(lblHorizontalLine, new CC());
@@ -158,7 +156,7 @@ public class View extends JFrame {
 		dnd.add(lblHorizontalLineIcon);
 
 		icon = new ImageIcon("pacman/images/t-piece.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 
 		JLabel lblTPieceOne = new JLabel("T-Piece One: ");
 		items.add(lblTPieceOne, new CC());
@@ -167,7 +165,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceOneIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceTwo.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblTPieceTwo = new JLabel("T-Piece Two: ");
 		items.add(lblTPieceTwo, new CC());
@@ -176,7 +174,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceTwoIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceThree.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblTPieceThree = new JLabel("T-Piece Three: ");
 		items.add(lblTPieceThree, new CC());
@@ -185,7 +183,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceThreeIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceFour.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblTPieceFour = new JLabel("T-Piece Four: ");
 		items.add(lblTPieceFour, new CC());
@@ -194,7 +192,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceFourIcon);
 		
 		icon = new ImageIcon("pacman/images/pacman.png");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblPacman = new JLabel("Pacman: ");
 		items.add(lblPacman, new CC());
@@ -203,18 +201,27 @@ public class View extends JFrame {
 		dnd.add(lblPacmanIcon);
 
 		icon = new ImageIcon("pacman/images/ghost.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(65, 65, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
 		
 		JLabel lblGhost = new JLabel("Ghost: ");
 		items.add(lblGhost, new CC());
 		items.add(lblGhostIcon, new CC().wrap());
 		lblGhostIcon.setIcon(icon);
 		dnd.add(lblGhostIcon);
+
+        icon = new ImageIcon("pacman/images/powerup-ambient-hotfix.png");
+        icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+
+        JLabel lblPowerUp = new JLabel("Power Up: ");
+        items.add(lblPowerUp, new CC());
+        items.add(lblPowerUpIcon, new CC().wrap());
+        lblPowerUpIcon.setIcon(icon);
+        dnd.add(lblPowerUpIcon);
 		
 		JPanel bot = new JPanel();
 		bot.add(btnSave);
 		bot.add(btnCancel);
-		items.add(bot, new CC().gapTop("40px").gapLeft("435px").span(4));
+		items.add(bot, new CC().gapTop("50px").gapLeft("435px").span(4));
 		
 		setVisible(true);
 	}

@@ -6,7 +6,7 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
 
     private int powerLevel = 1;
 
-    public void checkForBulletTime() {
+    public boolean checkForBulletTime() {
         float slowFactor = 1f;
 
         LinkedList<Float> distances = new LinkedList<Float>();
@@ -27,8 +27,6 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
             }
         }
 
-        System.out.println("MIN : " +minValue);
-
         if (minValue > 0f && minValue <= 0.5f)
             slowFactor = 0.1f;
         else if (minValue > 0.5f && minValue < 1f)
@@ -39,9 +37,6 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
             slowFactor = 0.75f;
         else if (minValue > 2f)
             slowFactor = 1f;
-
-        System.out.println("SF : " +slowFactor);
-
 
         if (slowFactor == 0.1f && getSpeed() != 0.1f)
             setSpeed(0.1f);
@@ -66,6 +61,10 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
             else if (slowFactor == 1f && ghost.getSpeed() != 1f)
                 ghost.setSpeed(1f);
         }
+
+        if (minValue <= 2f)
+            return true;
+        return false;
     }
 
     public int getPowerLevel() {

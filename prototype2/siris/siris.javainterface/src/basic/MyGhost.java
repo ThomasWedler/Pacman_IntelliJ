@@ -19,31 +19,35 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     private boolean hasRandomed = false;
     private boolean foundPacman = false;
 
-    public boolean checkSenses() {
+    public boolean checkSenses(boolean bulletTime) {
         if (feelsPacman()) {
             foundPacman = true;
-            setSpeed(1.2f);
+            if (!bulletTime)
+                setSpeed(1.2f);
             System.out.println("felt");
             setSensesFalse();
             return true;
         }
         if (visionsPacman()) {
             foundPacman = true;
-            setSpeed(2f);
+            if (!bulletTime)
+                setSpeed(2f);
             System.out.println("visioned");
             setSensesFalse();
             return true;
         }
         if (seesPacman()) {
             foundPacman = true;
-            setSpeed(1.2f);
+            if (!bulletTime)
+                setSpeed(1.2f);
             System.out.println("seen");
             setSensesFalse();
             return true;
         }
         if (hearsPacman()) {
             foundPacman = true;
-            setSpeed(0.8f);
+            if (!bulletTime)
+                setSpeed(0.8f);
             System.out.println("heard");
             setSensesFalse();
             return true;
@@ -68,41 +72,45 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
                 MyTileNode neighbourNode = (MyTileNode) n;
                 String direction = position.getDifferenceBetweenPositions(neighbourNode);
 
-                if (direction.equals("left") && !this.getDirection().equals("right")) {
-                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                int neighbourNodeX = neighbourNode.position().x();
+                int neighbourNodeY = neighbourNode.position().y();
+                MyTileNode pacmanNode = getPacman().getTileNode();
+
+                if (direction.equals("left") && !getDirection().equals("right")) {
+                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
                         for (int i = 0; i < 100; i++) {
-                            if (tilenode.position().x() == neighbourNode.position().x() - i && tilenode.position().y() == neighbourNode.position().y()) {
-                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                            if (nodeToCheck.position().x() == neighbourNodeX - i && nodeToCheck.position().y() == neighbourNodeY) {
+                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
                                     return true;
                             }
                         }
                     }
                 }
-                if (direction.equals("right") && !this.getDirection().equals("left")) {
-                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                if (direction.equals("right") && !getDirection().equals("left")) {
+                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
                         for (int i = 0; i < 100; i++) {
-                            if (tilenode.position().x() == neighbourNode.position().x() + i && tilenode.position().y() == neighbourNode.position().y()) {
-                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                            if (nodeToCheck.position().x() == neighbourNodeX + i && nodeToCheck.position().y() == neighbourNodeY) {
+                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
                                     return true;
                             }
                         }
                     }
                 }
-                if (direction.equals("up") && !this.getDirection().equals("down")) {
-                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                if (direction.equals("up") && !getDirection().equals("down")) {
+                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
                         for (int i = 0; i < 100; i++) {
-                            if (tilenode.position().x() == neighbourNode.position().x() && tilenode.position().y() == neighbourNode.position().y() + i) {
-                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                            if (nodeToCheck.position().x() == neighbourNodeX && nodeToCheck.position().y() == neighbourNodeY + i) {
+                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
                                     return true;
                             }
                         }
                     }
                 }
-                if (direction.equals("down") && !this.getDirection().equals("up")) {
-                    for (MyTileNode tilenode : getLevel().getTileNodes().keySet()) {
+                if (direction.equals("down") && !getDirection().equals("up")) {
+                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
                         for (int i = 0; i < 100; i++) {
-                            if (tilenode.position().x() == neighbourNode.position().x() && tilenode.position().y() == neighbourNode.position().y() - i) {
-                                if (getPacman().getTileNode().position().x() == tilenode.position().x() && getPacman().getTileNode().position().y() == tilenode.position().y())
+                            if (nodeToCheck.position().x() == neighbourNodeX && nodeToCheck.position().y() == neighbourNodeY - i) {
+                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
                                     return true;
                             }
                         }
@@ -115,7 +123,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     }
 
 
-    /*public boolean lookForPacman() {
+ /*   public boolean lookForPacman() {
         boolean result = false;
         boolean doSearch = false;
         MyTileNode startingPosition = getTileNode();
@@ -139,9 +147,9 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
             }
         }
         return result;
-    } */
+    }
 
-    /*private boolean lookOut(MyTileNode position, String direction) {
+    private boolean lookOut(MyTileNode position, String direction) {
         for (MyNode n : position.getNeighbors()) {
             if (n instanceof MyPacman)
                 return true;
@@ -162,7 +170,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         }
 
         return false;
-    } */
+    }  */
 
     public boolean hearForPacman() {
         float c = rangeCheck(getPositionX(), getPositionY());

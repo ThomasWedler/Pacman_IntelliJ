@@ -29,6 +29,8 @@ public class Game {
             BasicPacman.startPacman(pacmanAI, getStartNode(), gs, true);
         if (mode.equals("TestSearch"))
             testSearch();
+
+        Main.game = this;
     }
 
     private void testSearch() throws InterruptedException {
