@@ -162,7 +162,7 @@ public class Control {
         public void drop(DropTargetDropEvent dtde) {
             if (!view.dnd.contains(label)) {
                 ImageIcon image = new ImageIcon(model.getActualIcon().toString());
-                image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_DEFAULT));
+                image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_SMOOTH));
                 label.setIcon(image);
             }
         }

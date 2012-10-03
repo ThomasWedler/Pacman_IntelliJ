@@ -65,7 +65,7 @@ public class View extends JFrame {
 		view.add(lblLevel, new CC().wrap().gapBottom("20px"));
 
 		ImageIcon image = new ImageIcon("pacman/images/gray.png");
-		image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_DEFAULT));
+		image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_SMOOTH));
 
 		for (int i = 0; i < 225; i++) {
 			JLabel label = new JLabel(image);
@@ -84,7 +84,7 @@ public class View extends JFrame {
 		items.add(levelname, new CC().wrap());
 		
 		ImageIcon icon = new ImageIcon("pacman/images/gray.png");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblBlank = new JLabel("Blank: ");
 		items.add(lblBlank, new CC());
@@ -93,7 +93,7 @@ public class View extends JFrame {
 		dnd.add(lblBlankIcon);
 		
 		icon = new ImageIcon("pacman/images/crossing.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblCrossing = new JLabel("Crossing: ");
 		items.add(lblCrossing, new CC());
@@ -102,7 +102,7 @@ public class View extends JFrame {
 		dnd.add(lblCrossingIcon);
 		
 		icon = new ImageIcon("pacman/images/curve.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 
 		JLabel lblCurveOne = new JLabel("Curve One: ");
 		items.add(lblCurveOne, new CC());
@@ -111,7 +111,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveOneIcon);
 		
 		icon = new ImageIcon("pacman/images/curveTwo.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblCurveTwo = new JLabel("Curve Two: ");
 		items.add(lblCurveTwo, new CC());
@@ -120,7 +120,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveTwoIcon);
 
 		icon = new ImageIcon("pacman/images/curveThree.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblCurveThree = new JLabel("Curve Three: ");
 		items.add(lblCurveThree, new CC());
@@ -129,7 +129,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveThreeIcon);
 
 		icon = new ImageIcon("pacman/images/curveFour.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblCurveFour = new JLabel("Curve Four: ");
 		items.add(lblCurveFour, new CC());
@@ -138,7 +138,7 @@ public class View extends JFrame {
 		dnd.add(lblCurveFourIcon);
 
 		icon = new ImageIcon("pacman/images/line.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 
 		JLabel lblVerticalLine = new JLabel("Vertical Line: ");
 		items.add(lblVerticalLine, new CC());
@@ -147,7 +147,7 @@ public class View extends JFrame {
 		dnd.add(lblVerticalLineIcon);
 		
 		icon = new ImageIcon("pacman/images/lineHorizontal.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 
 		JLabel lblHorizontalLine = new JLabel("Horizontal Line: ");
 		items.add(lblHorizontalLine, new CC());
@@ -156,7 +156,7 @@ public class View extends JFrame {
 		dnd.add(lblHorizontalLineIcon);
 
 		icon = new ImageIcon("pacman/images/t-piece.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 
 		JLabel lblTPieceOne = new JLabel("T-Piece One: ");
 		items.add(lblTPieceOne, new CC());
@@ -165,7 +165,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceOneIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceTwo.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblTPieceTwo = new JLabel("T-Piece Two: ");
 		items.add(lblTPieceTwo, new CC());
@@ -174,7 +174,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceTwoIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceThree.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblTPieceThree = new JLabel("T-Piece Three: ");
 		items.add(lblTPieceThree, new CC());
@@ -183,7 +183,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceThreeIcon);
 
 		icon = new ImageIcon("pacman/images/t-pieceFour.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblTPieceFour = new JLabel("T-Piece Four: ");
 		items.add(lblTPieceFour, new CC());
@@ -192,7 +192,7 @@ public class View extends JFrame {
 		dnd.add(lblTPieceFourIcon);
 		
 		icon = new ImageIcon("pacman/images/pacman.png");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblPacman = new JLabel("Pacman: ");
 		items.add(lblPacman, new CC());
@@ -201,7 +201,7 @@ public class View extends JFrame {
 		dnd.add(lblPacmanIcon);
 
 		icon = new ImageIcon("pacman/images/ghost.jpg");
-		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+		icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 		
 		JLabel lblGhost = new JLabel("Ghost: ");
 		items.add(lblGhost, new CC());
@@ -210,7 +210,7 @@ public class View extends JFrame {
 		dnd.add(lblGhostIcon);
 
         icon = new ImageIcon("pacman/images/powerup-ambient-hotfix.png");
-        icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_DEFAULT));
+        icon.setImage(icon.getImage().getScaledInstance(55, 55, Image.SCALE_SMOOTH));
 
         JLabel lblPowerUp = new JLabel("Power Up: ");
         items.add(lblPowerUp, new CC());
