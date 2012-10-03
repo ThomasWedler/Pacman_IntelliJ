@@ -16,6 +16,10 @@ public class Game {
     private int goodiePower;
     private int score = 0;
 
+    /* set mode to
+       "Normal" to start game,
+       "TestSearch" to start graphical representation of used search-algorithm (see MyGraphSearch() to specify method)
+     */
     private String mode = "Normal";
 
     private MyPacmanAI pacmanAI = new MyPacmanAI();

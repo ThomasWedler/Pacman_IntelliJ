@@ -9,7 +9,14 @@ import siris.pacman.graph.Node;
 
 public class MyGraphSearch implements siris.pacman.graph.GraphSearch {
 
+    /* set search to
+       "BFS" - Breadth First Search
+       "DFS" - Depth First Search
+       "DLS" - Depth Limited Search
+       "IDS" - Iterative Deepening Search
+     */
 	private String search = "DFS";
+
 	private MyNode result = null;
 
 	@Override
