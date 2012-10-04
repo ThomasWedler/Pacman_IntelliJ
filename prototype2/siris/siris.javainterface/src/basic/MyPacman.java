@@ -62,9 +62,7 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
                 ghost.setSpeed(1f);
         }
 
-        if (minValue <= 2f)
-            return true;
-        return false;
+        return minValue <= 2f;
     }
 
     public int getPowerLevel() {

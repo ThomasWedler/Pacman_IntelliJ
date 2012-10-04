@@ -39,10 +39,10 @@ public class DLS {
 		visited.add(n);
 		if (!depthMap.containsKey(n))
 			depthMap.put(n, depth);
-		depth = depthMap.get(n).intValue() + 1;
+		depth = depthMap.get(n) + 1;
 		if (goalTest.testGoal(n)) {
 			return n;
-		} else if (depthMap.get(n).intValue() == limit) {
+		} else if (depthMap.get(n) == limit) {
 			cutoff = n;
 			if (!sFringe.isEmpty()) {
 				recursiveDLS(sFringe.pop(), goalTest, limit);

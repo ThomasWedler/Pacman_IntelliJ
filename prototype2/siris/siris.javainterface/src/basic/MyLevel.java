@@ -35,12 +35,12 @@ public class MyLevel {
 		
 		while ((str = br.readLine()) != null) {
 			String[] parts = str.split("(?<=\\G.)");
-			for (int i = 0; i < parts.length; i++) {
-				if (!parts[i].equals(" ")) {
-					createTile(parts[i], row, col);
-				}
-				col++;
-			}
+            for (String part : parts) {
+                if (!part.equals(" ")) {
+                    createTile(part, row, col);
+                }
+                col++;
+            }
 			row--;
 			col = 0;
 		}

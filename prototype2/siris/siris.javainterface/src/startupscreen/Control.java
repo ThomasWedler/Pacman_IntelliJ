@@ -9,13 +9,6 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Thomas
- * Date: 02.10.12
- * Time: 11:09
- * To change this template use File | Settings | File Templates.
- */
 public class Control {
 
     View view = new View();

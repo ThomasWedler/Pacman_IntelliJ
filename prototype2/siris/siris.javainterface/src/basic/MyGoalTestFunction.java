@@ -10,10 +10,8 @@ public class MyGoalTestFunction implements siris.pacman.graph.GoalTestFunction {
 	@Override
 	public boolean testGoal(Node n) {
         String goal = "basic.MyPacman";
-        if (n.getClass().getName().equals(goal))
-			return true;
-		return false ;
-	}
+        return n.getClass().getName().equals(goal);
+    }
 	
 	
 	

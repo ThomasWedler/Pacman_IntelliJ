@@ -173,9 +173,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     public boolean hearForPacman() {
         float c = rangeCheck(getPositionX(), getPositionY());
-        if (c < hearRange)
-            return true;
-        return false;
+        return c < hearRange;
     }
 
     public boolean visionForPacman(float elapsed) {
@@ -208,14 +206,11 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     private float rangeCheck(float x, float y) {
         float a = getPacman().getPositionX() - x;
         float b = getPacman().getPositionY() - y;
-        float c = (float) Math.sqrt((a * a) + (b * b));
-        return c;
+        return (float) Math.sqrt((a * a) + (b * b));
     }
 
     public boolean feelForPacman() {
-        if (getPacman().getPowerLevel() > 9000)
-            return true;
-        return false;
+        return getPacman().getPowerLevel() > 9000;
     }
 
     public void randomDirection() {
@@ -262,9 +257,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         MyTileNode position = getTileNode();
         MyTileNode lastTileNode = desiredPath.getLast();
         String result = position.getDifferenceBetweenPositions(lastTileNode);
-        if (result.equals("none"))
-            return true;
-        return false;
+        return result.equals("none");
     }
 
     public LinkedList<MyTileNode> getDesiredPath() {
@@ -317,8 +310,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     @Override
     public int getNr() {
-        int number = 0;
-        return number;
+        return 0;
     }
 
     public boolean decidedRandom() {

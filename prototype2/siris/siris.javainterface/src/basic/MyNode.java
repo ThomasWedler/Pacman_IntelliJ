@@ -23,8 +23,7 @@ public class MyNode implements siris.pacman.graph.Node {
 	@Override
 	public MyNode[] neighbors() {
 		MyNode[] array = new MyNode[neighbors.size()];
-		MyNode[] neighbours = neighbors.toArray(array);
-		return neighbours;
+        return neighbors.toArray(array);
 	}
 
     @Override

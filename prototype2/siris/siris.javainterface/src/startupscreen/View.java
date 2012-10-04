@@ -7,13 +7,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Thomas
- * Date: 02.10.12
- * Time: 11:08
- * To change this template use File | Settings | File Templates.
- */
 public class View extends JFrame {
 
     public JList levelList;
@@ -53,11 +46,13 @@ public class View extends JFrame {
         listModel = new DefaultListModel();
 
         File[] fileList = new File("siris.javainterface/src/maps/").listFiles();
-        if (fileList.length != 0) {
-            for (File f : fileList) {
-                String filename = f.getName();
-                if (!filename.startsWith("."))
-                    listModel.addElement(filename.substring(0, filename.length()-4));
+        if (fileList != null) {
+            if (fileList.length != 0) {
+                for (File f : fileList) {
+                    String filename = f.getName();
+                    if (!filename.startsWith("."))
+                        listModel.addElement(filename.substring(0, filename.length()-4));
+                }
             }
         }
 
