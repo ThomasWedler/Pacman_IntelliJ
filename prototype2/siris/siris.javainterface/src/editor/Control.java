@@ -52,7 +52,7 @@ public class Control {
                     model.setActualIcon(label.getIcon());
                     label.getTransferHandler().exportAsDrag(label, e, TransferHandler.COPY);
                     ImageIcon image = new ImageIcon("pacman/images/gray.png");
-                    image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_DEFAULT));
+                    image.setImage(image.getImage().getScaledInstance(38, 38, Image.SCALE_SMOOTH));
                     label.setIcon(image);
                 }
             });
@@ -117,14 +117,16 @@ public class Control {
             }
 
             String s = result.toString();
-            int pacmanCount = 0;
 
+            // Count used Pacmans in case editor places no or more than one Pacman in level.
+            int pacmanCount = 0;
             Pattern pacman = Pattern.compile(Pattern.quote("P"));
             Matcher p = pacman.matcher(s);
             while (p.find()) {
                 pacmanCount++;
             }
 
+            // Check if only one Pacman is used in level.
             if (pacmanCount != 1) {
                 JOptionPane.showMessageDialog(null, "There has to be exactly one Pacman!", "Pacman Error", JOptionPane.ERROR_MESSAGE);
                 out.close();

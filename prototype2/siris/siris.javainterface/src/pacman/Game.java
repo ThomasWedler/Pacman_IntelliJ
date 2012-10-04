@@ -12,9 +12,6 @@ import java.io.IOException;
 public class Game {
 
     private MyLevel level;
-    private MyPacman pacman;
-    private int goodiePower;
-    private int score = 0;
 
     /* set mode to
        - "Normal" to start game
@@ -22,9 +19,18 @@ public class Game {
      */
     private String mode = "Normal";
 
+    // Set pacmanAI to use for BasicPacman.startPacman
     private MyPacmanAI pacmanAI = new MyPacmanAI();
+
+    // Set MyGraphSearch to use for BasicPacman.startPacman or testSearch
     private MyGraphSearch gs = new MyGraphSearch();
 
+    /**
+     * Start Pacman or testSearch
+     * @param file Level to use for BasicPacman.startPacman or testSearch
+     * @throws IOException if file not found/not readable
+     * @throws InterruptedException
+     */
     public Game(File file) throws IOException, InterruptedException {
         level = new MyLevel(file);
         setComponentAttributes();
@@ -37,6 +43,10 @@ public class Game {
         Main.game = this;
     }
 
+    /**
+     * Start graphical representation of used search-algorithm
+     * @throws InterruptedException
+     */
     private void testSearch() throws InterruptedException {
         JavaInterface ji = new JavaInterface(true, true);
         ji.startRenderer(800, 600);
@@ -54,12 +64,13 @@ public class Game {
     }
 
     private void setComponentAttributes() {
-        pacman = level.getPacman();
-        goodiePower = 9000 / (level.getGoodieCounter() - 4);
+        MyPacman pacman = level.getPacman();
+        int goodiePower = 9000 / (level.getGoodieCounter() - 4);
 
         pacmanAI.setPacman(pacman);
         pacmanAI.setGoodiePower(goodiePower);
         pacmanAI.setLevel(level);
+        int score = 0;
         pacmanAI.setScore(score);
 
         pacman.setLevel(level);

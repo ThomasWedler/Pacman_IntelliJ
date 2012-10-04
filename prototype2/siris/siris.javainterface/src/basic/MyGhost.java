@@ -3,7 +3,6 @@ package basic;
 import java.util.LinkedList;
 
 public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Ghost {
-    private int number = 0;
 
     private LinkedList<MyTileNode> desiredPath = new LinkedList<MyTileNode>();
 
@@ -318,6 +317,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     @Override
     public int getNr() {
+        int number = 0;
         return number;
     }
 

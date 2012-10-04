@@ -4,14 +4,13 @@ import siris.pacman.graph.Node;
 
 public class MyGoalTestFunction implements siris.pacman.graph.GoalTestFunction {
 
-	private String goal = "basic.MyPacman" ;
-
-	public MyGoalTestFunction() {
+    public MyGoalTestFunction() {
 	}
 	
 	@Override
 	public boolean testGoal(Node n) {
-		if (n.getClass().getName().equals(goal))
+        String goal = "basic.MyPacman";
+        if (n.getClass().getName().equals(goal))
 			return true;
 		return false ;
 	}
