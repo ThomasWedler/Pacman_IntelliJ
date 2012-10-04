@@ -17,8 +17,8 @@ public class Game {
     private int score = 0;
 
     /* set mode to
-       "Normal" to start game,
-       "TestSearch" to start graphical representation of used search-algorithm (see MyGraphSearch() to specify method)
+       - "Normal" to start game
+       - "TestSearch" to start graphical representation of used search-algorithm (@see basic.MyGraphSearch to specify method)
      */
     private String mode = "Normal";
 

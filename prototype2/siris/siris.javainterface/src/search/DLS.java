@@ -17,11 +17,23 @@ public class DLS {
 	private MyNode result;
 	private int depth = 0;
 
+    /**
+     * Depth-Limited Search call
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     * @param limit Limiter for cutoff
+     */
 	public DLS(MyNode n, GoalTestFunction goalTest, int limit) {
 		result = recursiveDLS(n, goalTest, limit);
 	}
 
-	// Depth-Limited-Search
+    /**
+     * Depth-Limited Search
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     * @param limit Limiter for cutoff
+     * @return MyNode if n matches goalTest or if limit is reached (cutoff) or null
+     */
 	private MyNode recursiveDLS(MyNode n, GoalTestFunction goalTest, int limit) {
 		boolean cutoffocc = false;
 		visited.add(n);
@@ -58,11 +70,19 @@ public class DLS {
 		return null;
 	}
 
+    /**
+     * Depth-Limited Search result
+     * @return MyNode or null
+     */
 	public MyNode getResult() {
 		return result;
 	}
 
-	public MyNode getCutoff() {
+    /**
+     * Depth-Limited Search cutoff
+     * @return MyNode of cutoff occurs
+     */
+    public MyNode getCutoff() {
 		return cutoff;
 	}
 

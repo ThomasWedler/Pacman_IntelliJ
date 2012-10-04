@@ -11,11 +11,22 @@ public class BFS {
 	private LinkedList<MyNode> qFringe = new LinkedList<MyNode>();
 	private MyNode result;
 
+    /**
+     * Breadth-First Search call
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     */
 	public BFS(MyNode n, GoalTestFunction goalTest) {
+        // Set result  in getResult()
 		result = recursiveBFS(n, goalTest);
 	}
 
-	// Breadth-First-Search
+    /**
+     * Breath-First Search
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     * @return MyNode if n matches goalTest, null if not found at all
+     */
 	private MyNode recursiveBFS(MyNode n, GoalTestFunction goalTest) {
 		if (goalTest.testGoal(n)) {
 			return n;
@@ -32,7 +43,11 @@ public class BFS {
 		}
 		return null;
 	}
-	
+
+    /**
+     * Breath-First Search result
+     * @return MyNode or null
+     */
 	public MyNode getResult() {
 		return result;
 	}

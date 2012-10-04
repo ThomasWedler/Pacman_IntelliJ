@@ -12,11 +12,21 @@ public class DFS {
 	private Stack<MyNode> sFringe = new Stack<MyNode>();
 	private MyNode result;
 
+    /**
+     * Depth-First Search call
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     */
 	public DFS(MyNode n, GoalTestFunction goalTest) {
 		result = recursiveDFS(n, goalTest);
 	}
 
-	// Depth-First-Search
+    /**
+     * Depth-First Search
+     * @param n Start node of search
+     * @param goalTest Goal/target of search
+     * @return MyNode if n matches goalTest, null if not found at all
+     */
 	private MyNode recursiveDFS(MyNode n, GoalTestFunction goalTest) {
 		if (goalTest.testGoal(n)) {
 			return n;
@@ -34,6 +44,10 @@ public class DFS {
 		return null;
 	}
 
+    /**
+     * Depth-First Search result
+     * @return MyNode or null
+     */
 	public MyNode getResult() {
 		return result;
 	}
