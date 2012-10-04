@@ -19,21 +19,21 @@ public class View extends JFrame {
 	private static final long serialVersionUID = -2325155572708621182L;
 
 	public JTextField levelname = new JTextField(15);
-	public JLabel lblBlankIcon = new JLabel();
-	public JLabel lblCrossingIcon = new JLabel();
-	public JLabel lblCurveOneIcon = new JLabel();
-	public JLabel lblCurveTwoIcon = new JLabel();
-	public JLabel lblCurveThreeIcon = new JLabel();
-	public JLabel lblCurveFourIcon = new JLabel();
-	public JLabel lblVerticalLineIcon = new JLabel();
-	public JLabel lblHorizontalLineIcon = new JLabel();
-	public JLabel lblTPieceOneIcon = new JLabel();
-	public JLabel lblTPieceTwoIcon = new JLabel();
-	public JLabel lblTPieceThreeIcon = new JLabel();
-	public JLabel lblTPieceFourIcon = new JLabel();
-	public JLabel lblPacmanIcon = new JLabel();
-	public JLabel lblGhostIcon = new JLabel();
-    public JLabel lblPowerUpIcon = new JLabel();
+	private JLabel lblBlankIcon = new JLabel();
+	private JLabel lblCrossingIcon = new JLabel();
+	private JLabel lblCurveOneIcon = new JLabel();
+	private JLabel lblCurveTwoIcon = new JLabel();
+    private JLabel lblCurveThreeIcon = new JLabel();
+    private JLabel lblCurveFourIcon = new JLabel();
+    private JLabel lblVerticalLineIcon = new JLabel();
+    private JLabel lblHorizontalLineIcon = new JLabel();
+    private JLabel lblTPieceOneIcon = new JLabel();
+    private JLabel lblTPieceTwoIcon = new JLabel();
+    private JLabel lblTPieceThreeIcon = new JLabel();
+    private JLabel lblTPieceFourIcon = new JLabel();
+    private JLabel lblPacmanIcon = new JLabel();
+    private JLabel lblGhostIcon = new JLabel();
+    private JLabel lblPowerUpIcon = new JLabel();
     public JButton btnSave = new JButton("Save");
 	public JButton btnCancel = new JButton("Cancel");
 

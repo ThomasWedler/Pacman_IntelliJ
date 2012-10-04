@@ -25,7 +25,7 @@ public class MyLevel {
      * @param file of level to parse
      * @throws IOException if file doesn't exist or isn't readable
      */
-	public void renderLevel(File file) throws IOException {
+	void renderLevel(File file) throws IOException {
 		int col = 0;
 		int row = countRows(file);
 		
@@ -54,7 +54,7 @@ public class MyLevel {
      * @param row of item
      * @param col of item
      */
-	public void createTile(String s, int row, int col) {
+	void createTile(String s, int row, int col) {
 		MyTileNode n = new MyTileNode();
 		n.setPosition(new TilePosition(col, row));
 		tileNodes.put(n, s);
@@ -103,7 +103,7 @@ public class MyLevel {
      * @return number of rows
      * @throws IOException
      */
-	public int countRows(File file) throws IOException {
+	int countRows(File file) throws IOException {
         // Set row count to -1 to set row to 0 by first row++ call
         int row = -1;
 		FileReader fr = new FileReader(file);

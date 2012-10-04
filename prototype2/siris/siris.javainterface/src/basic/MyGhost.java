@@ -268,19 +268,19 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         this.desiredPath = desiredPath;
     }
 
-    public boolean seesPacman() {
+    boolean seesPacman() {
         return seePacman;
     }
 
-    public boolean hearsPacman() {
+    boolean hearsPacman() {
         return hearPacman;
     }
 
-    public boolean visionsPacman() {
+    boolean visionsPacman() {
         return visionPacman;
     }
 
-    public boolean feelsPacman() {
+    boolean feelsPacman() {
         return feelPacman;
     }
 

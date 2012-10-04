@@ -10,7 +10,7 @@ import basic.MyNode;
 
 public class DLS {
 
-	LinkedList<MyNode> visited = new LinkedList<MyNode>();
+	private LinkedList<MyNode> visited = new LinkedList<MyNode>();
 	private Stack<MyNode> sFringe = new Stack<MyNode>();
 	private Map<MyNode, Integer> depthMap = new HashMap<MyNode, Integer>();
 	private MyNode cutoff = null;

@@ -7,14 +7,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
-public class View extends JFrame {
+class View extends JFrame {
 
     public JList levelList;
-    public DefaultListModel listModel;
+    private DefaultListModel listModel;
     public JButton btnPlay = new JButton("Play");
     public JButton btnCreateLevel = new JButton("Create Level");
     public JButton btnClose = new JButton("Quit");
-    public JTextField gameSpeed = new JTextField(2);
+    private JTextField gameSpeed = new JTextField(2);
 
     public View() {
         JPanel selection = new JPanel();

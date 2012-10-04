@@ -41,7 +41,7 @@ public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.gra
 		this.speed = speed;
 	}
 	
-	public String getDirection() {
+	String getDirection() {
 		return direction;
 	}
 

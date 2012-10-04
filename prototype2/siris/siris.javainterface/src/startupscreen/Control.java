@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Control {
 
-    View view = new View();
+    private View view = new View();
 
     public Control() {
         registerActionListeners();

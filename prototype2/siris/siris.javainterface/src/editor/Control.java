@@ -16,8 +16,8 @@ import java.util.regex.Pattern;
 
 public class Control {
 
-    View view = new View();
-    Model model = new Model();
+    private View view = new View();
+    private Model model = new Model();
 
     public Control() {
         setDragAndDrop();

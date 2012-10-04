@@ -2,7 +2,7 @@ package editor;
 
 import javax.swing.Icon;
 
-public class Model {
+class Model {
 
 	private Icon actualIcon;
 
