@@ -11,7 +11,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     private boolean visionPacman = false;
     private boolean feelPacman = false;
 
-    private float hearRange = 1f;
+    private float hearRange = 1.5f;
     private float visionRange = 2f;
     private float visionTimer = 0f;
 
@@ -61,115 +61,52 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         setFeelPacman(false);
     }
 
+    private LinkedList<MyTileNode> pathToCheck;
+
     public boolean lookForPacman() {
-        MyTileNode position = getTileNode();
-        for (MyNode n : position.getNeighbors()) {
-            if (n instanceof MyPacman)
-                return true;
+        MyTileNode pacmanNode = getPacman().getTileNode();
+        pathToCheck = new LinkedList<MyTileNode>();
+        MyTileNode startingPosition = getTileNode();
 
-            if (n instanceof MyTileNode) {
-                MyTileNode neighbourNode = (MyTileNode) n;
-                String direction = position.getDifferenceBetweenPositions(neighbourNode);
-
-                int neighbourNodeX = neighbourNode.position().x();
-                int neighbourNodeY = neighbourNode.position().y();
-                MyTileNode pacmanNode = getPacman().getTileNode();
-
-                if (direction.equals("left") && !getDirection().equals("right")) {
-                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
-                        for (int i = 0; i < 100; i++) {
-                            if (nodeToCheck.position().x() == neighbourNodeX - i && nodeToCheck.position().y() == neighbourNodeY) {
-                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
-                                    return true;
-                            }
-                        }
-                    }
-                }
-                if (direction.equals("right") && !getDirection().equals("left")) {
-                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
-                        for (int i = 0; i < 100; i++) {
-                            if (nodeToCheck.position().x() == neighbourNodeX + i && nodeToCheck.position().y() == neighbourNodeY) {
-                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
-                                    return true;
-                            }
-                        }
-                    }
-                }
-                if (direction.equals("up") && !getDirection().equals("down")) {
-                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
-                        for (int i = 0; i < 100; i++) {
-                            if (nodeToCheck.position().x() == neighbourNodeX && nodeToCheck.position().y() == neighbourNodeY + i) {
-                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
-                                    return true;
-                            }
-                        }
-                    }
-                }
-                if (direction.equals("down") && !getDirection().equals("up")) {
-                    for (MyTileNode nodeToCheck : getLevel().getTileNodes().keySet()) {
-                        for (int i = 0; i < 100; i++) {
-                            if (nodeToCheck.position().x() == neighbourNodeX && nodeToCheck.position().y() == neighbourNodeY - i) {
-                                if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
-                                    return true;
-                            }
-                        }
-                    }
-                }
-            }
-
+        if (getDirection().equals("left")) {
+            look(startingPosition, "left");
+            look(startingPosition, "up");
+            look(startingPosition, "down");
+        } else if (getDirection().equals("right")) {
+            look(startingPosition, "right");
+            look(startingPosition, "up");
+            look(startingPosition, "down");
+        } else if (getDirection().equals("up")) {
+            look(startingPosition, "left");
+            look(startingPosition, "up");
+            look(startingPosition, "right");
+        } else if (getDirection().equals("down")) {
+            look(startingPosition, "left");
+            look(startingPosition, "right");
+            look(startingPosition, "down");
         }
+
+        for (MyTileNode nodeToCheck : pathToCheck) {
+            if (pacmanNode.getDifferenceBetweenPositions(nodeToCheck).equals("none"))
+                return true;
+        }
+
         return false;
     }
 
-
- /*   public boolean lookForPacman() {
-        boolean result = false;
-        boolean doSearch = false;
-        MyTileNode startingPosition = getTileNode();
-        for (MyNode n : startingPosition.getNeighbors()) {
-            if (n instanceof MyTileNode) {
-                MyTileNode neighbourNode = (MyTileNode) n;
-                String direction = startingPosition.getDifferenceBetweenPositions(neighbourNode);
-                if (getDirection().equals("left") && !direction.equals("right")) {
-                    doSearch = true;
-                } else if (getDirection().equals("right") && !direction.equals("left")) {
-                    doSearch = true;
-                } else if (getDirection().equals("up") && !direction.equals("down")) {
-                    doSearch = true;
-                } else if (getDirection().equals("down") && !direction.equals("up")) {
-                    doSearch = true;
-                }
-                if (doSearch) {
-                    if (lookOut(neighbourNode, direction))
-                        result = true;
-                }
-            }
-        }
-        return result;
-    }
-
-    private boolean lookOut(MyTileNode position, String direction) {
+    private void look(MyTileNode position, String direction) {
         for (MyNode n : position.getNeighbors()) {
-            if (n instanceof MyPacman)
-                return true;
-
             if (n instanceof MyTileNode) {
                 MyTileNode neighbourNode = (MyTileNode) n;
                 String dir = position.getDifferenceBetweenPositions(neighbourNode);
+                if (direction.equals(dir)) {
+                    pathToCheck.add(neighbourNode);
+                    look(neighbourNode, direction);
+                }
 
-                if (direction.equals("left") && dir.equals("left"))
-                    return lookOut(neighbourNode, dir);
-                if (direction.equals("right") && dir.equals("right"))
-                    return lookOut(neighbourNode, dir);
-                if (direction.equals("up") && dir.equals("up"))
-                    return lookOut(neighbourNode, dir);
-                if (direction.equals("down") && dir.equals("down"))
-                    return lookOut(neighbourNode, dir);
             }
         }
-
-        return false;
-    }  */
+    }
 
     public boolean hearForPacman() {
         float c = rangeCheck(getPositionX(), getPositionY());
@@ -213,7 +150,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         return getPacman().getPowerLevel() > 9000;
     }
 
-    public void randomDirection() {
+    public void randomDirection(String direction) {
         int x = 0;
         int y = 0;
         String s = getLevel().getTileNodes().get(getTileNode());
@@ -235,22 +172,47 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
                     break;
             }
 
-            if (getTileNode() != null) {
-                for (MyNode node : getTileNode().getNeighbors()) {
-                    if (node instanceof MyTileNode) {
-                        MyTileNode n = (MyTileNode) node;
-                        s = getTileNode().getDifferenceBetweenPositions(n);
-                        if ((s.equals("left") && x == -1) || (s.equals("right") && x == 1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+            for (MyNode node : getTileNode().getNeighbors()) {
+                if (node instanceof MyTileNode) {
+                    MyTileNode neighbourNode = (MyTileNode) node;
+                    s = getTileNode().getDifferenceBetweenPositions(neighbourNode);
+
+                    if (direction.equals("none")) {
+                        if ((s.equals("left") && x == -1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1) || (s.equals("right") && x == 1)) {
+                            setDesiredMovementDirection(x, y);
+                            notFound = false;
+                        }
+                    }
+                    if (direction.equals("left")) {
+                        if ((s.equals("left") && x == -1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+                            setDesiredMovementDirection(x, y);
+                            notFound = false;
+                        }
+                    }
+                    if (direction.equals("right")) {
+                        if ((s.equals("right") && x == 1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+                            setDesiredMovementDirection(x, y);
+                            notFound = false;
+                        }
+                    }
+                    if (direction.equals("up")) {
+                        if ((s.equals("left") && x == -1) || (s.equals("up") && y == 1) || (s.equals("right") && x == 1)) {
+                            setDesiredMovementDirection(x, y);
+                            notFound = false;
+                        }
+                    }
+                    if (direction.equals("down")) {
+                        if ((s.equals("left") && x == -1) || (s.equals("right") && x == 1) || (s.equals("down") && y == -1)) {
                             setDesiredMovementDirection(x, y);
                             notFound = false;
                         }
                     }
                 }
-                if (notFound)
-                    randomDirection();
             }
+            if (notFound)
+                randomDirection(getDirection());
         }
-        setDecidedRandom(true);
+        hasRandomed = true;
     }
 
     public boolean onLastPathStep() {

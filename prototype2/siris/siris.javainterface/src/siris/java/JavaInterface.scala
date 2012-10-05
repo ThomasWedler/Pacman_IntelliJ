@@ -79,7 +79,7 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
     private val mouseListeners = scala.collection.mutable.Set[MouseListener]()
     private val windowListeners = scala.collection.mutable.Set[WindowListener]()
     private val me = new java.awt.Component{}
-    private val jvr: JVRConnector = new JVRConnector('renderer)
+    val jvr: JVRConnector = new JVRConnector('renderer)
     private var camera : Option[Entity] = None
     private var lastMousePos = Vec2i(0, 0)
     private var initialDist = 5f
@@ -182,7 +182,7 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
 
       scheduleExecution(1000L) {
         if(!ambientLightingOnly) Actor.self ! LightRequest()
-        println(ambientColor.getRed)
+       // println(ambientColor.getRed)
         val color =
           new de.bht.jvr.util.Color(
             ambientColor.getRed.toFloat / 255f,
@@ -580,7 +580,7 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
   def swap(id: UUID) =
     appActor ! SwapRequest(id)
 
-  private def customSingleWindowFixedBigViewPort(widthInPx: Int, heightinPx: Int) :DisplaySetupDesc ={
+  def customSingleWindowFixedBigViewPort(widthInPx: Int, heightinPx: Int) :DisplaySetupDesc ={
     val displaySetupDesc = new DisplaySetupDesc
 
     val oneMeterInInches = 39.3700787
@@ -597,4 +597,5 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
   }
 
   appActor.start
+
 }

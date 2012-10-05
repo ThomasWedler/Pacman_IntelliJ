@@ -1,8 +1,11 @@
 package basic;
 
+import pacman.Game;
 import search.AStar;
+import siris.pacman.BasicPacman;
 import siris.pacman.graph.EntityNode;
 import siris.pacman.graph.MovingEntityNode;
+import startupscreen.Control;
 
 import java.util.LinkedList;
 
@@ -13,11 +16,25 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
     private MyLevel level;
     private int goodiePower;
 
+    private boolean freeze = false;
+    private float freezeTimer = 0f;
+
     private String behaviour = "NORMAL";
 
     @Override
     public void onSimulationStep(float deltaT) {
-        boolean bulletTime = pacman.checkForBulletTime();
+        boolean bulletTime = false;
+
+        if (!pacman.isPoweredUp())
+            bulletTime = pacman.checkForBulletTime();
+        else {
+            pacman.setSpeed(1f);
+            for (MyGhost ghost : level.getGhosts()) {
+                ghost.setSpeed(0.8f);
+            }
+        }
+
+        pacman.checkForPowerUp(deltaT);
 
         for (MyGhost ghost : level.getGhosts()) {
             if (ghost.lookForPacman())
@@ -26,10 +43,23 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                 ghost.setHearPacman(true);
             if (ghost.visionForPacman(deltaT))
                 ghost.setVisionPacman(true);
-            if (ghost.feelForPacman())
+            if (ghost.feelForPacman()) {
                 ghost.setFeelPacman(true);
+                BasicPacman.setColorToRed();
+            }
 
             ghost.checkSenses(bulletTime);
+
+            if (freeze) {
+                freezeTimer += deltaT;
+                ghost.setSpeed(0f);
+            }
+            if (freezeTimer > 5f) {
+                freezeTimer = 0f;
+                freeze = false;
+                ghost.randomDirection(ghost.getDirection());
+                ghost.setSpeed(1f);
+            }
         }
     }
 
@@ -45,17 +75,31 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
             if (ghost.getFoundPacman())
                 ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
 
+            if (pacman.isPoweredUp()) {
+                ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
+                MyTileNode firstStep = ghost.getDesiredPath().get(1);
+                String direction = ghostPosition.getDifferenceBetweenPositions(firstStep);
+                if (direction.equals("left"))
+                    ghost.randomDirection("right");
+                else if (direction.equals("right"))
+                    ghost.randomDirection("left");
+                else if (direction.equals("up"))
+                    ghost.randomDirection("down");
+                else if (direction.equals("down"))
+                    ghost.randomDirection("up");
+                ghost.setFoundPacman(false);
+            }
+
             LinkedList<MyTileNode> desiredPath = ghost.getDesiredPath();
 
             if (behaviour.equals("DUMB")) {
-                if (entityToDecideFor instanceof MyGhost)
-                    ghost.randomDirection();
+                ghost.randomDirection(ghost.getDirection());
             } else if (behaviour.equals("ALLKNOWING")) {
                 ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
             } else if (behaviour.equals("NORMAL")) {
                 if (!ghost.getFoundPacman()) {
                     if (desiredPath.isEmpty()) {
-                        ghost.randomDirection();
+                        ghost.randomDirection(ghost.getDirection());
                         ghost.setSpeed(1f);
                     }
                 }
@@ -100,9 +144,15 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
     public void onCollision(EntityNode e1, EntityNode e2) {
         if (e1 instanceof MyPacman) {
             if (e2 instanceof MyGhost) {
-                System.out.println("Loser!");
-                System.out.println("Your Score: " + score);
-                System.exit(0);
+                if (pacman.isPoweredUp()) {
+                    if (!freeze)
+                        score += 500;
+                    freeze = true;
+                } else {
+                    System.out.println("Loser!");
+                    System.out.println("Your Score: " + score);
+                    System.exit(0);
+                }
             } else if (e2 instanceof MyGoodie) {
                 level.setGoodieCounter(level.getGoodieCounter() - 1);
                 score += 100;
@@ -112,6 +162,10 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                     System.out.println("Your Score: " + score);
                     System.exit(0);
                 }
+            } else if (e2 instanceof MyPowerUp) {
+                BasicPacman.setColorToBlue();
+                pacman.setPowerUpTimer(0f);
+                pacman.setPoweredUp(true);
             }
         }
     }

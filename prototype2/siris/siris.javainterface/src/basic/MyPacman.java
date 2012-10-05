@@ -1,10 +1,15 @@
 package basic;
 
+import siris.pacman.BasicPacman;
+
 import java.util.LinkedList;
 
 public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.Pacman {
 
     private int powerLevel = 1;
+    private boolean isPoweredUp = false;
+
+    private float powerUpTimer = 0f;
 
     public boolean checkForBulletTime() {
         float slowFactor = 1f;
@@ -65,12 +70,34 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
         return minValue <= 2f;
     }
 
+    public void checkForPowerUp(float deltaT) {
+        if (isPoweredUp)
+            powerUpTimer += deltaT;
+        if (powerUpTimer > 15f) {
+            powerUpTimer = 0f;
+            isPoweredUp = false;
+            BasicPacman.setColorToNormal();
+        }
+    }
+
     public int getPowerLevel() {
         return powerLevel;
     }
 
     public void setPowerLevel(int powerLevel) {
         this.powerLevel = powerLevel;
+    }
+
+    public boolean isPoweredUp() {
+        return isPoweredUp;
+    }
+
+    public void setPoweredUp(boolean poweredUp) {
+        isPoweredUp = poweredUp;
+    }
+
+    public void setPowerUpTimer(float powerUpTimer) {
+        this.powerUpTimer = powerUpTimer;
     }
 
 }

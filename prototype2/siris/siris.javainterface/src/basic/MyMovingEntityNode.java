@@ -1,7 +1,6 @@
 package basic;
 
-import pacman.Game;
-import pacman.Main;
+import siris.pacman.BasicPacman;
 
 public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.graph.MovingEntityNode {
 
@@ -49,16 +48,20 @@ public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.gra
 	public void setCurrentMovementDirection(int x, int y) {
 		if (x > 0) {
 			direction = "right";
+            BasicPacman.rotateEntityTo(id(), -80f);
 		}
 		if (x < 0) {
 			direction = "left";
-		}
+            BasicPacman.rotateEntityTo(id(), 80f);
+        }
 		if (y > 0) {
 			direction = "up";
-		}
+            BasicPacman.rotateEntityTo(id(), 160.25f);
+        }
 		if (y < 0) {
 			direction = "down";
-		}
+            BasicPacman.rotateEntityTo(id(), 0f);
+        }
 		cmdX = x;
 		cmdY = y;
 	}

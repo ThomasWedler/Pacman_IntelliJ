@@ -3,13 +3,16 @@ package pacman;
 import basic.*;
 import siris.java.JavaInterface;
 import siris.pacman.BasicPacman;
-import siris.pacman.PacmanAI;
 import siris.pacman.graph.JavaGraphWrapper;
 
 import java.io.File;
 import java.io.IOException;
 
 public class Game {
+
+    public static void main(String[] args) {
+        new startupscreen.Control();
+    }
 
     private MyLevel level;
 
@@ -39,8 +42,6 @@ public class Game {
             BasicPacman.startPacman(pacmanAI, getStartNode(), gs, true);
         if (mode.equals("TestSearch"))
             testSearch();
-
-        Main.game = this;
     }
 
     /**

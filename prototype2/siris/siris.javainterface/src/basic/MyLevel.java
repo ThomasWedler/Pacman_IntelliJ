@@ -13,6 +13,7 @@ public class MyLevel {
 
 	private HashMap<MyTileNode, String> tileNodes = new HashMap<MyTileNode, String>();
 	private LinkedList<MyGhost> ghosts = new LinkedList<MyGhost>();
+    private LinkedList<MyPowerUp> powerUps = new LinkedList<MyPowerUp>();
 	private int goodieCounter = 0;
 	private MyPacman pacman;
 	
@@ -88,6 +89,13 @@ public class MyLevel {
 			ghost.setPosition(col, row);
 			ghosts.add(ghost);
 		}
+
+        if (s.equals("U")) {
+            MyPowerUp powerUp = new MyPowerUp();
+            powerUp.setTileNode(n);
+            powerUp.setPosition(col, row);
+            powerUps.add(powerUp);
+        }
 
 		if (s.equals("-") || s.equals("X") || s.equals("I")) {
 			MyGoodie goodie = new MyGoodie();
