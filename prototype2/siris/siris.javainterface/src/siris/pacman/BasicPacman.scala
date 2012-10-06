@@ -1,12 +1,14 @@
 package siris.pacman
 
 import graph._
-import siris.components.renderer.jvr.{JVRConnector, SetAmbientColor}
+import siris.components.renderer.jvr.{JVRRenderWindowClosed, JVRConnector, SetAmbientColor}
 import actors.Actor
+import siris.components.worldinterface.WorldInterface
+import siris.core.component.Component
 
 //import impl.Test
 
-import siris.core.svaractor.SVarActorLW
+import siris.core.svaractor.{SVarActorImpl, SVarActorLW}
 import siris.core.helper.TimeMeasurement
 import siris.java.JavaInterface
 import simplex3d.math.intm.Vec2i
@@ -57,6 +59,10 @@ object BasicPacman {
     _inst.moveObjectTo(id, x, y, z)
   }
 
+  def close {
+    _inst.appActor ! JVRRenderWindowClosed(_inst.appActor)
+  }
+
   /**
    * Sets up and starts a basic pacman application
    * @param ai An object controlling some ai operations
@@ -87,7 +93,7 @@ object BasicPacman {
 
       //This method is called once after the actor is started
       override def startUp() {
-        _inst.startRenderer(1440, 900)
+        _inst.startRenderer(800, 600)
         createGraphics(levelRoot, _inst)
         registerKeyhandler()
       }

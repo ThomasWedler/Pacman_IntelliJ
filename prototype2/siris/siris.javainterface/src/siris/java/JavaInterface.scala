@@ -77,7 +77,7 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
 
     private val keyListeners = scala.collection.mutable.Set[KeyListener]()
     private val mouseListeners = scala.collection.mutable.Set[MouseListener]()
-    private val windowListeners = scala.collection.mutable.Set[WindowListener]()
+    val windowListeners = scala.collection.mutable.Set[WindowListener]()
     private val me = new java.awt.Component{}
     val jvr: JVRConnector = new JVRConnector('renderer)
     private var camera : Option[Entity] = None
@@ -278,9 +278,9 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
       WorldInterface.shutdown
       Component.shutdownAll
       SVarActorImpl.self.shutdown
-      windowListeners.foreach( _.windowClosed(null) )
+      windowListeners.foreach(  _.windowClosed(null) )
       Thread.sleep(500)
-      sys.exit(0)
+      new startupscreen.Control
     }
 
     addHandler[LightRequest] { msg =>

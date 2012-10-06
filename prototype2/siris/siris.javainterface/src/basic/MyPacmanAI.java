@@ -1,6 +1,5 @@
 package basic;
 
-import pacman.Game;
 import search.AStar;
 import siris.pacman.BasicPacman;
 import siris.pacman.graph.EntityNode;
@@ -151,7 +150,7 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                 } else {
                     System.out.println("Loser!");
                     System.out.println("Your Score: " + score);
-                    System.exit(0);
+                    BasicPacman.close();
                 }
             } else if (e2 instanceof MyGoodie) {
                 level.setGoodieCounter(level.getGoodieCounter() - 1);
