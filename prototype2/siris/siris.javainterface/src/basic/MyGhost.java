@@ -6,6 +6,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     private LinkedList<MyTileNode> desiredPath = new LinkedList<MyTileNode>();
 
+    // Set all senses to false
     private boolean seePacman = false;
     private boolean hearPacman = false;
     private boolean visionPacman = false;
@@ -13,11 +14,18 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     private float hearRange = 1.5f;
     private float visionRange = 2f;
+
+    // Vision timer is for checking if visions may occur.
     private float visionTimer = 0f;
 
     private boolean hasRandomed = false;
     private boolean foundPacman = false;
 
+    /**
+     * Check all senses of ghost
+     * @param bulletTime to check if bulletTime is set
+     * @return if Pacman is sensed by one of the ghost's senses
+     */
     public boolean checkSenses(boolean bulletTime) {
         if (feelsPacman()) {
             foundPacman = true;
@@ -63,6 +71,10 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     private LinkedList<MyTileNode> pathToCheck;
 
+    /**
+     * Check if Pacman can be seen by ghost on its position.
+     * @return if Pacman is seen
+     */
     public boolean lookForPacman() {
         MyTileNode pacmanNode = getPacman().getTileNode();
         pathToCheck = new LinkedList<MyTileNode>();
@@ -94,6 +106,11 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         return false;
     }
 
+    /**
+     * Look in direction until sight is blocked.
+     * @param position of where to look from
+     * @param direction in where to look to
+     */
     private void look(MyTileNode position, String direction) {
         for (MyNode n : position.getNeighbors()) {
             if (n instanceof MyTileNode) {
@@ -108,11 +125,20 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         }
     }
 
+    /**
+     * Check if Pacman can be heard by ghost.
+     * @return if Pacman can be heard.
+     */
     public boolean hearForPacman() {
         float c = rangeCheck(getPositionX(), getPositionY());
         return c < hearRange;
     }
 
+    /**
+     * Check if Pacman can be visioned by ghost.
+     * @param elapsed time
+     * @return if Pacman is visioned
+     */
     public boolean visionForPacman(float elapsed) {
         visionTimer += elapsed;
 
@@ -146,16 +172,27 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         return (float) Math.sqrt((a * a) + (b * b));
     }
 
+    /**
+     * If power level of Pacman is > 9000 ghosts can feel Pacman.
+     * @return if power level is over 9000
+     */
     public boolean feelForPacman() {
         return getPacman().getPowerLevel() > 9000;
     }
 
+    /**
+     * Randomize ghost's movement.
+     * @param direction where ghost comes from to avoid going back
+     */
     public void randomDirection(String direction) {
         int x = 0;
         int y = 0;
         String s = getLevel().getTileNodes().get(getTileNode());
         boolean notFound = true;
 
+        // Change direction only on crossings (because P and G positions CAN be
+        // crossings but is not checked here, changing of direction is allowed on this
+        // positions as well)
         if (s.equals("X") || s.equals("P") || s.equals("G")) {
             switch ((int) (Math.random() * (5 - 1) + 1)) {
                 case 1:

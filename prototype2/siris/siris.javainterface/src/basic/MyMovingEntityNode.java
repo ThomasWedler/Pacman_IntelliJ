@@ -44,6 +44,11 @@ public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.gra
 		return direction;
 	}
 
+    /**
+     * Set current movement direction of ghosts and Pacman (and rotate them in according to direction).
+     * @param x The x value of the current movement direction.
+     * @param y The y value of the current movement direction.
+     */
 	@Override
 	public void setCurrentMovementDirection(int x, int y) {
 		if (x > 0) {
