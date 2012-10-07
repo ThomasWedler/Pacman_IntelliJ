@@ -14,7 +14,6 @@ class View extends JFrame {
     public JButton btnPlay = new JButton("Play");
     public JButton btnCreateLevel = new JButton("Create Level");
     public JButton btnClose = new JButton("Quit");
-    private JTextField gameSpeed = new JTextField(2);
 
     public View() {
         JPanel selection = new JPanel();
@@ -72,15 +71,7 @@ class View extends JFrame {
         image.setImage(image.getImage().getScaledInstance(365, 350, Image.SCALE_DEFAULT));
 
         JLabel lblPacmanPicture = new JLabel(image);
-        main.add(lblPacmanPicture, new CC().wrap().gapBottom("20px").cell(0, 0, 2, 1));
-
-        JLabel lblGameSpeed = new JLabel("Game Speed: ");
-        main.add(lblGameSpeed);
-
-        lblGameSpeed.setFont(new Font("Dialog Bold", Font.BOLD, 12));
-        main.add(lblGameSpeed, new CC().gapBottom("20px"));
-        gameSpeed.setText("1");
-        main.add(gameSpeed, new CC().wrap());
+        main.add(lblPacmanPicture, new CC().wrap().gapBottom("70px").cell(0, 0, 2, 1));
 
         main.add(btnPlay, new CC().wrap().width("365!").span(2));
         main.add(btnCreateLevel, new CC().wrap().width("365!").span(2));

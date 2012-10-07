@@ -24,15 +24,6 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
     public void onSimulationStep(float deltaT) {
         boolean bulletTime = false;
 
-        if (!pacman.isPoweredUp())
-            bulletTime = pacman.checkForBulletTime();
-        else {
-            pacman.setSpeed(1f);
-            for (MyGhost ghost : level.getGhosts()) {
-                ghost.setSpeed(0.8f);
-            }
-        }
-
         pacman.checkForPowerUp(deltaT);
 
         for (MyGhost ghost : level.getGhosts()) {
@@ -43,12 +34,19 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                     ghost.setHearPacman(true);
                 if (ghost.visionForPacman(deltaT))
                     ghost.setVisionPacman(true);
-                if (ghost.feelForPacman()) {
+                if (ghost.feelForPacman() && !pacman.isPoweredUp()) {
                     ghost.setFeelPacman(true);
                     BasicPacman.setColorToRed();
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+
+            if (!pacman.isPoweredUp())
+                bulletTime = pacman.checkForBulletTime();
+            else {
+                pacman.setSpeed(1f);
+                ghost.setSpeed(0.5f);
             }
 
             ghost.checkSenses(bulletTime);
@@ -78,6 +76,22 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
             if (ghost.getFoundPacman())
                 ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
 
+            if (pacman.isPoweredUp()) {
+                ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
+                MyTileNode firstStep = ghost.getDesiredPath().get(1);
+                String direction = ghostPosition.getDifferenceBetweenPositions(firstStep);
+                System.out.println(direction);
+                if (direction.equals("left"))
+                    ghost.flee("right");
+                else if (direction.equals("right"))
+                    ghost.flee("left");
+                else if (direction.equals("up"))
+                    ghost.flee("down");
+                else if (direction.equals("down"))
+                    ghost.flee("up");
+                ghost.setFoundPacman(false);
+            }
+
             LinkedList<MyTileNode> desiredPath = ghost.getDesiredPath();
 
             if (behaviour.equals("DUMB")) {
@@ -85,21 +99,6 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
             } else if (behaviour.equals("ALLKNOWING")) {
                 ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
             } else if (behaviour.equals("NORMAL")) {
-                if (pacman.isPoweredUp()) {
-                    ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
-                    MyTileNode firstStep = ghost.getDesiredPath().get(1);
-                    String direction = ghostPosition.getDifferenceBetweenPositions(firstStep);
-                    System.out.println(direction);
-                    if (direction.equals("left"))
-                        ghost.randomDirection("right");
-                    else if (direction.equals("right"))
-                        ghost.randomDirection("left");
-                    else if (direction.equals("up"))
-                        ghost.randomDirection("down");
-                    else if (direction.equals("down"))
-                        ghost.randomDirection("up");
-                    ghost.setFoundPacman(false);
-                }
                 if (!ghost.getFoundPacman()) {
                     if (desiredPath.isEmpty()) {
                         ghost.randomDirection(ghost.getDirection());
@@ -165,6 +164,9 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                 }
             } else if (e2 instanceof MyPowerUp) {
                 BasicPacman.setColorToBlue();
+                for (MyGhost ghost : level.getGhosts()) {
+                    ghost.setDesiredPath(new LinkedList<MyTileNode>());
+                }
                 pacman.setPowerUpTimer(0f);
                 pacman.setPoweredUp(true);
             }

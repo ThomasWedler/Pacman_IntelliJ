@@ -94,12 +94,12 @@ object BasicPacman {
 
       //This method is called once after the actor is started
       override def startUp() {
-        _inst.startRenderer(800, 600)
-        //_inst.startRenderer(1440, 810)
+        //_inst.startRenderer(800, 600)
+        _inst.startRenderer(1440, 810)
         createGraphics(levelRoot, _inst)
         registerKeyhandler()
         Thread.sleep(1000);
-        JOptionPane.showMessageDialog(null, "Press OK when you are ready to start.", "Start", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Press OK when rendering Game is completed.", "Start", JOptionPane.INFORMATION_MESSAGE);
         self ! WakeUpMessage
       }
 

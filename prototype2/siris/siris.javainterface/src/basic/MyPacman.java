@@ -43,28 +43,44 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
         else if (minValue > 2f)
             slowFactor = 1f;
 
-        if (slowFactor == 0.1f && getSpeed() != 0.1f)
+        if (slowFactor == 0.1f)
             setSpeed(0.1f);
-        else if (slowFactor == 0.25f && getSpeed() != 0.25f)
+        else if (slowFactor == 0.25f)
             setSpeed(0.25f);
-        else if (slowFactor == 0.5f && getSpeed() != 0.5f)
+        else if (slowFactor == 0.5f)
             setSpeed(0.5f);
-        else if (slowFactor == 0.75f && getSpeed() != 0.75f)
+        else if (slowFactor == 0.75f)
             setSpeed(0.75f);
-        else if (slowFactor == 1f && getSpeed() != 1f)
+        else if (slowFactor == 1f)
             setSpeed(1f);
 
         for (MyGhost ghost : getLevel().getGhosts()) {
-            if (slowFactor == 0.1f && ghost.getSpeed() != 0.1f)
-                ghost.setSpeed(0.1f);
-            else if (slowFactor == 0.25f && ghost.getSpeed() != 0.25f)
-                ghost.setSpeed(0.25f);
-            else if (slowFactor == 0.5f && ghost.getSpeed() != 0.5f)
-                ghost.setSpeed(0.5f);
-            else if (slowFactor == 0.75f && ghost.getSpeed() != 0.75f)
-                ghost.setSpeed(0.75f);
-            else if (slowFactor == 1f && ghost.getSpeed() != 1f)
-                ghost.setSpeed(1f);
+            if (slowFactor == 0.1f) {
+                if (ghost.seesPacman() || ghost.feelsPacman())
+                    ghost.setSpeed(0.1f * 1.2f);
+                else if (ghost.hearsPacman())
+                    ghost.setSpeed(0.1f * 0.6f);
+            } else if (slowFactor == 0.25f) {
+                if (ghost.seesPacman() || ghost.feelsPacman())
+                    ghost.setSpeed(0.25f * 1.2f);
+                else if (ghost.hearsPacman())
+                    ghost.setSpeed(0.25f * 0.6f);
+            } else if (slowFactor == 0.5f) {
+                if (ghost.seesPacman() || ghost.feelsPacman())
+                    ghost.setSpeed(0.5f * 1.2f);
+                else if (ghost.hearsPacman())
+                    ghost.setSpeed(0.5f * 0.6f);
+            } else if (slowFactor == 0.75f) {
+                if (ghost.seesPacman() || ghost.feelsPacman())
+                    ghost.setSpeed(0.75f * 1.2f);
+                else if (ghost.hearsPacman())
+                    ghost.setSpeed(0.75f * 0.6f);
+            } else if (slowFactor == 1f) {
+                if (ghost.seesPacman() || ghost.feelsPacman())
+                    ghost.setSpeed(1f * 1.2f);
+                else if (ghost.hearsPacman())
+                    ghost.setSpeed(1f * 0.6f);
+            }
         }
 
         return minValue <= 2f;
@@ -77,6 +93,9 @@ public class MyPacman extends MyMovingEntityNode implements siris.pacman.graph.P
             powerUpTimer = 0f;
             isPoweredUp = false;
             BasicPacman.setColorToNormal();
+            for (MyGhost ghost : getLevel().getGhosts()) {
+                ghost.setDesiredPath(new LinkedList<MyTileNode>());
+            }
         }
     }
 

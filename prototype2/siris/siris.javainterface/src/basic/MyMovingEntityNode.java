@@ -53,11 +53,11 @@ public class MyMovingEntityNode extends MyEntityNode implements siris.pacman.gra
 	public void setCurrentMovementDirection(int x, int y) {
 		if (x > 0) {
 			direction = "right";
-            BasicPacman.rotateEntityTo(id(), -80f);
+            BasicPacman.rotateEntityTo(id(), -80.125f);
 		}
 		if (x < 0) {
 			direction = "left";
-            BasicPacman.rotateEntityTo(id(), 80f);
+            BasicPacman.rotateEntityTo(id(), 80.125f);
         }
 		if (y > 0) {
 			direction = "up";

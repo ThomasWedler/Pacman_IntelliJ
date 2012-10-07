@@ -32,7 +32,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     public boolean checkSenses(boolean bulletTime) {
         if (feelsPacman()) {
             foundPacman = true;
-            if (!bulletTime)
+            if (!bulletTime && !getPacman().isPoweredUp())
                 setSpeed(1.2f);
             System.out.println("felt");
             setSensesFalse();
@@ -40,7 +40,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         }
         if (visionsPacman()) {
             foundPacman = true;
-            if (!bulletTime)
+            if (!bulletTime && !getPacman().isPoweredUp())
                 setSpeed(2f);
             System.out.println("visioned");
             setSensesFalse();
@@ -48,7 +48,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         }
         if (seesPacman()) {
             foundPacman = true;
-            if (!bulletTime)
+            if (!bulletTime && !getPacman().isPoweredUp())
                 setSpeed(1.2f);
             System.out.println("seen");
             setSensesFalse();
@@ -56,8 +56,8 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
         }
         if (hearsPacman()) {
             foundPacman = true;
-            if (!bulletTime)
-                setSpeed(0.8f);
+            if (!bulletTime && !getPacman().isPoweredUp())
+                setSpeed(0.6f);
             System.out.println("heard");
             setSensesFalse();
             return true;
@@ -258,6 +258,63 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
                             setDesiredMovementDirection(x, y);
                             notFound = false;
                         }
+                    }
+                }
+            }
+            if (notFound)
+                randomDirection(getDirection());
+        }
+
+        hasRandomed = true;
+    }
+
+    public void flee(String direction) {
+        int x = 0;
+        int y = 0;
+        boolean notFound = true;
+
+        switch ((int) (Math.random() * (5 - 1) + 1)) {
+            case 1:
+                x = 1;
+                break;
+            case 2:
+                y = 1;
+                break;
+            case 3:
+                x = -1;
+                break;
+            case 4:
+                y = -1;
+                break;
+        }
+
+        for (MyNode node : getTileNode().getNeighbors()) {
+            if (node instanceof MyTileNode) {
+                MyTileNode neighbourNode = (MyTileNode) node;
+                String s = getTileNode().getDifferenceBetweenPositions(neighbourNode);
+
+                if (direction.equals("left")) {
+                    if ((s.equals("left") && x == -1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+                        setDesiredMovementDirection(x, y);
+                        notFound = false;
+                    }
+                }
+                if (direction.equals("right")) {
+                    if ((s.equals("right") && x == 1) || (s.equals("up") && y == 1) || (s.equals("down") && y == -1)) {
+                        setDesiredMovementDirection(x, y);
+                        notFound = false;
+                    }
+                }
+                if (direction.equals("up")) {
+                    if ((s.equals("left") && x == -1) || (s.equals("up") && y == 1) || (s.equals("right") && x == 1)) {
+                        setDesiredMovementDirection(x, y);
+                        notFound = false;
+                    }
+                }
+                if (direction.equals("down")) {
+                    if ((s.equals("left") && x == -1) || (s.equals("right") && x == 1) || (s.equals("down") && y == -1)) {
+                        setDesiredMovementDirection(x, y);
+                        notFound = false;
                     }
                 }
             }
