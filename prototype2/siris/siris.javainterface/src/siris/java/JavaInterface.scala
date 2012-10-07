@@ -280,7 +280,7 @@ class JavaInterface (ambientColor: Color = new Color(0.3f, 0.3f, 0.3f), ambientL
       SVarActorImpl.self.shutdown
       windowListeners.foreach(  _.windowClosed(null) )
       Thread.sleep(500)
-      new startupscreen.Control
+      sys.exit(0);
     }
 
     addHandler[LightRequest] { msg =>

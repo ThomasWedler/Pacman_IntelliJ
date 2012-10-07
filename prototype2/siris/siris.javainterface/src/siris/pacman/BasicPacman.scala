@@ -5,6 +5,7 @@ import siris.components.renderer.jvr.{JVRRenderWindowClosed, JVRConnector, SetAm
 import actors.Actor
 import siris.components.worldinterface.WorldInterface
 import siris.core.component.Component
+import javax.swing.JOptionPane
 
 //import impl.Test
 
@@ -94,8 +95,12 @@ object BasicPacman {
       //This method is called once after the actor is started
       override def startUp() {
         _inst.startRenderer(800, 600)
+        //_inst.startRenderer(1440, 810)
         createGraphics(levelRoot, _inst)
         registerKeyhandler()
+        Thread.sleep(1000);
+        JOptionPane.showMessageDialog(null, "Press OK when you are ready to start.", "Start", JOptionPane.INFORMATION_MESSAGE);
+        self ! WakeUpMessage
       }
 
       //Register for notification on certain keypresses
@@ -128,10 +133,10 @@ object BasicPacman {
           if (e.getKeyCode == KeyEvent.VK_RIGHT) pacman.collect {
             case p => p.setDesiredMovementDirection(1, 0)
           }
-          if (e.getKeyCode == KeyEvent.VK_SPACE) if (!started) {
+          /*if (e.getKeyCode == KeyEvent.VK_SPACE) if (!started) {
             self ! WakeUpMessage;
             started = true
-          }
+          }*/
       }
 
       //The application actors "main loop"

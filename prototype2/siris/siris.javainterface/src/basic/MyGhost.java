@@ -1,5 +1,7 @@
 package basic;
 
+import siris.pacman.BasicPacman;
+
 import java.util.LinkedList;
 
 public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Ghost {
@@ -23,6 +25,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Check all senses of ghost
+     *
      * @param bulletTime to check if bulletTime is set
      * @return if Pacman is sensed by one of the ghost's senses
      */
@@ -73,6 +76,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Check if Pacman can be seen by ghost on its position.
+     *
      * @return if Pacman is seen
      */
     public boolean lookForPacman() {
@@ -108,7 +112,8 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Look in direction until sight is blocked.
-     * @param position of where to look from
+     *
+     * @param position  of where to look from
      * @param direction in where to look to
      */
     private void look(MyTileNode position, String direction) {
@@ -127,6 +132,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Check if Pacman can be heard by ghost.
+     *
      * @return if Pacman can be heard.
      */
     public boolean hearForPacman() {
@@ -136,10 +142,11 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Check if Pacman can be visioned by ghost.
+     *
      * @param elapsed time
      * @return if Pacman is visioned
      */
-    public boolean visionForPacman(float elapsed) {
+    public boolean visionForPacman(float elapsed) throws InterruptedException {
         visionTimer += elapsed;
 
         if (visionTimer > 10f) {
@@ -159,8 +166,14 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
             }
 
             float c = rangeCheck(x, y);
-            if (c < visionRange)
+            if (c < visionRange) {
+                if (!getPacman().isPoweredUp() && !feelsPacman()) {
+                    BasicPacman.setColorToRed();
+                    Thread.sleep(100);
+                    BasicPacman.setColorToNormal();
+                }
                 return true;
+            }
         }
 
         return false;
@@ -174,6 +187,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * If power level of Pacman is > 9000 ghosts can feel Pacman.
+     *
      * @return if power level is over 9000
      */
     public boolean feelForPacman() {
@@ -182,6 +196,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     /**
      * Randomize ghost's movement.
+     *
      * @param direction where ghost comes from to avoid going back
      */
     public void randomDirection(String direction) {
@@ -249,6 +264,7 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
             if (notFound)
                 randomDirection(getDirection());
         }
+
         hasRandomed = true;
     }
 
