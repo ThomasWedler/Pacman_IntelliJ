@@ -1,17 +1,17 @@
-X--X-----X  X-G---X--X
-I  G     I  I     I  I
-I  I     I  I     G  I
+XU-X-----X  X-GU--X--X
+I  G     I  I     U  I
+I  U     I  I     G  I
 X--X--X--X--X--X--X--X
 I  I  I        I  I  I
-X--X  X--X  X--X  X--X
+XU-X  X--X  X--X  X--X
    I     I  I     I
-   G  X--X--X--X  I
-   I  I        I  I
+   G  X--X--XU-X  I
+   I  I        I  U
    X--X        X--X
-   I  I        I  I
-X--X  X--------X  X--X
+   U  I        I  I
+X--X  X------U-X  X--X
 I  I  I        I  I  I
-X--X--X--X--X--X--X--X
+X--X--XU-X--X--X--X--X
 I  I     I  I     I  I
-I  I     I  I     I  I
-X--X-----X  XP----X--X
+I  I     I  I     U  I
+X--X-U---X  XP----X--X

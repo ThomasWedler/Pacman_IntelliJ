@@ -15,9 +15,6 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
     private MyLevel level;
     private int goodiePower;
 
-    private boolean freeze = false;
-    private float freezeTimer = 0f;
-
     private String behaviour = "NORMAL";
 
     @Override
@@ -51,13 +48,13 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
 
             ghost.checkSenses(bulletTime);
 
-            if (freeze) {
-                freezeTimer += deltaT;
+            if (ghost.getFreeze()) {
+                ghost.setFreezeTimer(ghost.getFreezeTimer() + deltaT);
                 ghost.setSpeed(0f);
             }
-            if (freezeTimer > 5f) {
-                freezeTimer = 0f;
-                freeze = false;
+            if (ghost.getFreezeTimer() > 5f) {
+                ghost.setFreezeTimer(0f);
+                ghost.setFreeze(false);
                 ghost.randomDirection(ghost.getDirection());
                 ghost.setSpeed(1f);
             }
@@ -80,7 +77,6 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
                 ghost.setDesiredPath(new AStar(ghost, pacman).getResult());
                 MyTileNode firstStep = ghost.getDesiredPath().get(1);
                 String direction = ghostPosition.getDifferenceBetweenPositions(firstStep);
-                System.out.println(direction);
                 if (direction.equals("left"))
                     ghost.flee("right");
                 else if (direction.equals("right"))
@@ -147,9 +143,9 @@ public class MyPacmanAI implements siris.pacman.PacmanAI {
         if (e1 instanceof MyPacman) {
             if (e2 instanceof MyGhost) {
                 if (pacman.isPoweredUp()) {
-                    if (!freeze)
+                    if (!((MyGhost) e2).getFreeze())
                         score += 500;
-                    freeze = true;
+                    ((MyGhost) e2).setFreeze(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "You lost!\nYour Score: " + score, "Loser!", JOptionPane.INFORMATION_MESSAGE);
                     System.exit(0);

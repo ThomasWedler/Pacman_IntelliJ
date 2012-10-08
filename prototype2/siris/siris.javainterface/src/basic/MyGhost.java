@@ -23,6 +23,9 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
     private boolean hasRandomed = false;
     private boolean foundPacman = false;
 
+    private boolean freeze = false;
+    private float freezeTimer = 0f;
+
     /**
      * Check all senses of ghost
      *
@@ -391,6 +394,22 @@ public class MyGhost extends MyMovingEntityNode implements siris.pacman.graph.Gh
 
     public void setDecidedRandom(boolean hasRandomed) {
         this.hasRandomed = hasRandomed;
+    }
+
+    public float getFreezeTimer() {
+        return freezeTimer;
+    }
+
+    public void setFreezeTimer(float freezeTimer) {
+        this.freezeTimer = freezeTimer;
+    }
+
+    public boolean getFreeze() {
+        return freeze;
+    }
+
+    public void setFreeze(boolean freeze) {
+        this.freeze = freeze;
     }
 
 }
